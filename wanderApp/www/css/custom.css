@@ -11,8 +11,12 @@
 #panel ul li a span { display:block; text-align:center; }
 #header { background:#5F9FB5; border:0; }
 #header a.panel-toggle { text-indent: -999999px; overflow:hidden; width:30px; height:24px; background:url(../icons/tabMenu.png) no-repeat; border:0; padding:0; box-shadow:none; top:0.69em; border-radius:0; }
-
+#header h1{color:white;}
 /***************Activity Feed****************/
+
+
+
+
 /*iscroll*/
 
 #scroll ul {
