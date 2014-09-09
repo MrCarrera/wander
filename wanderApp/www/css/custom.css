@@ -12,3 +12,37 @@
 #header { background:#5F9FB5; border:0; }
 #header a.panel-toggle { text-indent: -999999px; overflow:hidden; width:30px; height:24px; background:url(../icons/tabMenu.png) no-repeat; border:0; padding:0; box-shadow:none; top:0.69em; border-radius:0; }
 
+/***************Activity Feed****************/
+/*iscroll*/
+
+#scroll ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#listScroll ul > li {
+    padding: 10px;
+    border-top: 1px solid #AAA;
+}
+
+#listScroll ul {
+    background: rgb(240, 240, 240);
+}
+
+#scroll h1 {
+    background: -webkit-linear-gradient(top, #333 0%, #2E2E2E 100%);
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #1A1A1A;
+    color: #EEE;
+    padding: 0 10px;
+    margin: 0;
+    opacity: .8;
+}
+
+#scroll {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}

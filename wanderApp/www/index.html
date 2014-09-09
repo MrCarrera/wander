@@ -35,6 +35,7 @@
 <!----------------------------------Custom CSS----->
         <link rel="stylesheet" href="css/custom.css" />
         
+        
         <title>Wander</title>
     </head>
     <body>
@@ -50,16 +51,181 @@
 
 <div data-role="page" id="page-activity" class="page-panel">
 
-    <div data-role="header" id="header">
+    <div data-role="header" id="header" data-position="fixed">
         <h1>Activity</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
-    <div data-role="content">
-		activity
+    <div data-role="content" id="messagesContent">
+    	
+		<div class="scroll" id="scroll">
+		    <ul id="listScroll">
+		        <li>
+		            <h1>A</h1>
+		            <ul>
+		                <li>Aa</li>
+		                <li>Aa</li>
+		                <li>Aa</li>
+		                <li>Aa</li>
+		                <li>Aa</li>
+		            </ul>
+		        </li>
+		        <li>
+		            <h1>B</h1>
+		            <ul>
+		                <li>Bb</li>
+		                <li>Bb</li>
+		                <li>Bb</li>
+		                <li>Bb</li>
+		                <li>Bb</li>
+		                <li>Bb</li>
+		            </ul>
+		        </li>
+		        <li>
+		            <h1>C</h1>
+		            <ul>
+		                <li>Cc</li>
+		                <li>Cc</li>
+		                <li>Cc</li>
+		                <li>Cc</li>
+		                <li>Cc</li>
+		                <li>Cc</li>
+		            </ul>
+		        </li>
+		        <li>
+		            <h1>D</h1>
+		            <ul>
+		                <li>Dd</li>
+		                <li>Dd</li>
+		                <li>Dd</li>
+		                <li>Dd</li>
+		            </ul>
+		        </li>
+		        <li>
+		            <h1>E</h1>
+		            <ul>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		                <li>Ee</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>F</h1>
+		            <ul>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		                <li>Ff</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>G</h1>
+		            <ul>
+		                <li>Gg</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>H</h1>
+		            <ul>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		                <li>Hh</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>I</h1>
+		            <ul>
+		                <li>Ii</li>
+		                <li>Ii</li>
+		                <li>Ii</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>J</h1>
+		            <ul>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		                <li>Jj</li>
+		            </ul>
+		        </li>        <li>
+		            <h1>K</h1>
+		            <ul>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		                <li>Kk</li>
+		            </ul>
+		        </li>
+		    </ul>
+		</div><!-- /iscroll list -->
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/iscroll.stickyheaders.js"></script>
+<script type="text/javascript">
+    var scroll = new IScroll('#scroll', {
+        probeType: 3,
+        useTransition: true
+    });
+    scroll.enableStickyHeaders('h1');
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27773239-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> <!-- /iscroll FUNCTION -->
+
     </div><!-- /content -->
 	
 </div>
+
+<!--------ACTIVITY PAGE FEED ENDS HERE---------->
 
 <div data-role="page" id="page-messages" class="page-panel">
 
@@ -74,6 +240,8 @@
 	
 </div>
 
+<!--------MESSAGES PAGE ENDS HERE---------->
+
 <div data-role="page" id="page-profile" class="page-panel">
 
     <div data-role="header" id="header">
@@ -86,6 +254,8 @@
     </div><!-- /content -->
 	
 </div>
+
+<!--------PROFILE PAGE ENDS HERE---------->
 
 <div data-role="page" id="page-settings" class="page-panel">
 
@@ -100,6 +270,8 @@
 	
 </div>
 
+<!--------SETTINGS PAGE ENDS HERE---------->
+
 <div data-role="page" id="page-logout" class="page-panel">
 
     <div data-role="header" id="header">
@@ -113,6 +285,7 @@
 	
 </div>
 	
+<!--------LOGOUT PAGE ENDS HERE---------->	
 	
 	
 	
