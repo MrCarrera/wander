@@ -53,11 +53,13 @@
 
 /***************Settings Page****************/
 /*Content*/
-#searchDistance{
-	border:1px 0 1px 0;
-	border-color: black;
+#settingsPanel p{
+	color:#A8A8A8;
+	font-size: .8em;
 }
 .kilometer{
 	float:right;
 	margin-right:20px;
 }
+
+
