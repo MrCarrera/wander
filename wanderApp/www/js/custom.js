@@ -1,3 +1,17 @@
+
+// -------- Status bar for IOS7
+function onDeviceReady() {
+    if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
+        $('.ui-header > *').css('margin-top', function (index, curValue) {
+            return parseInt(curValue, 10) + 20 + 'px';
+        });
+    }
+}
+
+document.addEventListener('deviceready', onDeviceReady, false);
+
+
+
 // -------- Panel function by: Devika
 var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 					'<ul id="icons">'+
