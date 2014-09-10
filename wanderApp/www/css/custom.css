@@ -1,7 +1,7 @@
 
 
 
-/***************Pannel ****************/
+/***************Slide Pannel ****************/
 
 @charset "utf-8";
 #panel { background:#5F9FB5; box-shadow:none; }
@@ -13,7 +13,7 @@
 #header { background:#5F9FB5; border-bottom-width: 3px; solid #999;border-bottom-style: solid; border-bottom-color: #ff847c;}
 #header a.panel-toggle { text-indent: -999999px; overflow:hidden; width:30px; height:24px; background:url(../icons/tabMenu.png) no-repeat; border:0; padding:0; box-shadow:none; top:0.69em; border-radius:0; }
 #header h1{color:white;}
-/***************Activity Feed****************/
+/***************Activity Feed Page****************/
 #activityContent {
 	margin:0;
 	padding:0;
@@ -49,4 +49,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
+}
+
+/***************Settings Page****************/
+/*Content*/
+#searchDistance{
+	border:1px 0 1px 0;
+	border-color: black;
+}
+.kilometer{
+	float:right;
+	margin-right:20px;
 }

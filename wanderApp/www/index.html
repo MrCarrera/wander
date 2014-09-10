@@ -264,8 +264,15 @@
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
-    <div data-role="content">
-		<p>Search Distance:</p>
+    <div data-role="content" id="settingsPanel">
+    	
+		<div data-role="fieldcontain" id="searchDistance">			
+		    <label for="slider-1">Search Distance <span class="kilometer">km</span></label>	
+		    <input type="range" name="slider-1" id="slider-1" min="0" max="25" value="10">
+		</div>
+		
+		
+		</div>
 		
     </div><!-- /content -->
 	
