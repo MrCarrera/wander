@@ -29,6 +29,8 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+        <script src="openfb.js"></script>
+        <script src="inappbrowser.js"></script>
 <!----------------------------------Custom JScript--->
 		<script type="text/javascript" src="js/custom.js"></script>
 
@@ -40,14 +42,46 @@
     </head>
     <body>
     	
-<!------------------------------------------------------------------------------------- Initialize app in cordova-->   	
+<!----------------------------------------------------- Initialize app in cordova-->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-<!------------------------------------------------------------------------------------- Initialize app in cordova-->
-<!----------------------------Pages start here----------------------------------------->	
+<!---------------------------------------------------- Initialize app in cordova-->
+
+<!-------------------- Push Content Down - Reveal Status Bar ------------->
+
+<script>
+    var updateStatusBar = navigator.userAgent.match(/iphone|ipad|ipod/i) &&
+    parseInt(navigator.appVersion.match(/OS (\d)/)[1], 10) >= 7;
+    if (updateStatusBar) {
+        document.body.style.webkitTransform = 'translate3d(0, 20px, 0)';
+        
+    }
+</script>
+
+
+<!----------------------------Pages start here----------------------------------------->
+
+<div data-role="page" id="loginPage">
+    
+    <div data-role="header">
+    	<h1>Wander Login</h1>
+    	
+    </div>
+    
+    <div data-role="content">
+        
+        <button class="btn btn-block" onclick="loginButton()">Login with Facebook</button>
+        
+        
+        
+        
+    </div>
+</div>
+
+<!----------------------------Login Page Ends----------------------------------------->
 
 <div data-role="page" id="page-activity" class="page-panel">
 
@@ -250,7 +284,13 @@
     </div><!-- /header -->
 	
     <div data-role="content">
-		Profile
+		
+        
+        <img id="userPic"/>
+        <p>Name: <span id="userName"></span></p>
+        <p>Gender: <span id="userGender"></span></p>
+        
+        
     </div><!-- /content -->
 	
 </div>
@@ -264,8 +304,44 @@
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
-    <div data-role="content">
-		Settings
+    <div data-role="content" id="settingsPanel">
+    	
+		<div data-role="fieldcontain" id="searchDistance">			
+		    <label for="slider-1">Search Distance <span class="kilometer">km</span></label>	
+		    <input type="range" name="slider-1" id="slider-1" min="0" max="25" value="10">    
+		   <p>Select a search radius for finding post from other users.</p>
+		</div> 
+		
+		<div data-role="fieldcontain" id="menSelector">	
+		<label for="flip-1">Men</label>
+			<select name="flip-1" id="flip-1" data-role="slider"data-mini="true">
+				<option value="off"></option>
+				<option selected="selected" value="on"></option>
+			</select> 
+		</div>
+		<div data-role="fieldcontain" id="womenSelector">	
+		<label for="flip-2">Women</label>
+			<select name="flip-2" id="flip-2" data-role="slider"data-mini="true">
+				<option value="off"></option>
+				<option selected="selected" value="on"></option>				
+			</select> 
+			<p>Select a gender preference for finding other users post</p>
+		</div>
+		<div data-role="fieldcontain" id="vibrateSelector">	
+		<label for="flip-3">Vibrate on Notification</label>
+			<select name="flip-3" id="flip-3" data-role="slider"data-mini="true">
+				<option value="off"></option>
+				<option selected="selected" value="on"></option>				
+			</select> 
+		</div>
+		<div class="ui-btn ui-input-btn ui-shadow">
+  			Log out
+  			<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
+		</div>
+		
+		</div>
+	</div>
+		
     </div><!-- /content -->
 	
 </div>
@@ -285,7 +361,60 @@
 	
 </div>
 	
-<!--------LOGOUT PAGE ENDS HERE---------->	
+<!--------LOGOUT PAGE ENDS HERE---------->
+
+<!--------FACEBOOK LOGIN---------->
+
+<script>
+    
+    // Defaults to sessionStorage for storing the Facebook token
+    //openFB.init({appId: '371025573052266'});
+    
+    //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
+    openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
+    
+    
+    
+    function loginButton() {
+        openFB.login(
+                     function(response) {
+                     if(response.status === 'connected') {
+                     
+                     } else {
+                     alert('Facebook login failed: ' + response.error);
+                     }
+                     }, {scope: 'email,user_location,user_photos,user_hometown'});
+                     
+                     
+                     $.mobile.changePage("#page-activity")
+                     
+                     
+                     
+                     
+                     
+                     openFB.api({
+                                path: '/me',
+                                success: function(data) {
+                                console.log(JSON.stringify(data));
+                                document.getElementById("userName").innerHTML = data.first_name;
+                                document.getElementById("userGender").innerHTML = data.gender;
+                                document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
+                                document.getElementById("userCover").src = 'http://graph.facebook.com/'+data.id+'/cover_source?type=large';
+                                
+                                },
+                                
+                                error: errorHandler});
+    }
+
+function errorHandler(error) {
+    alert(error.message);
+}
+
+
+// <!--------FACEBOOK LOGOUT----------> //
+
+
+    </script>
 	
 	
 	
