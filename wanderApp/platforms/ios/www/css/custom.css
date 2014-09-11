@@ -63,3 +63,22 @@
 }
 
 
+.profilePicture {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 150px;
+                height: 150px;
+                
+            }
+            .profilePicture img {
+                display: block;
+            /* Stretch 
+                  height: 100%;
+                  width: 100%; */
+            min-width: 100%;
+            min-height: 100%;
+
+            }
+ 
+
+
