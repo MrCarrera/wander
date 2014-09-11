@@ -57,9 +57,15 @@
 	color:#A8A8A8;
 	font-size: .8em;
 }
-.kilometer{
+#settingsPanel .kilometer{
 	float:right;
 	margin-right:20px;
+}
+
+#logOut.ui-btn{
+	color:#d85050;
+	background:white;
+	border-width: 1px 0;
 }
 
 
