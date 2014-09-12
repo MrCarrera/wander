@@ -74,18 +74,19 @@
     padding:0;
 }
 
-#womenSelector .ui-slider{
+
+#settingsPanel .ui-slider-switch {
 	position: absolute !important;
     right: 0 !important;
-    width: 20% !important;
+    width: 60px !important;
+    margin-top: 8px;
+}
+
+#settingsPanel .description {
+	padding: 0!important;
 }
 
 
-#vibrateSelector .ui-slider{
-	position: absolute !important;
-    right: 0 !important;
-    width: 20% !important;
-}
 
 #settingsPanel .ui-slider-label-b {
 	border-radius: 50px !important;

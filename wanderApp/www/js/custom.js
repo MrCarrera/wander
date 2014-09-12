@@ -1,7 +1,3 @@
-
-
-
-
 // -------- Panel function by: Devika
 var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 					'<ul id="icons">'+
