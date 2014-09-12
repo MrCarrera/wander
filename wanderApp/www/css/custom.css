@@ -122,16 +122,22 @@
                 width: 150px;
                 height: 150px;
                 
-            }
-            .profilePicture img {
+                
+}
+            
+.profilePicture img {
                 display: block;
-            /* Stretch 
+                /* Stretch
                   height: 100%;
                   width: 100%; */
-            min-width: 100%;
-            min-height: 100%;
+                min-width: 100%;
+                min-height: 100%;
 
-            }
+}
+
+.profileContainer {
+            
+}
  
 
 

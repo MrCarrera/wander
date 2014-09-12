@@ -48,7 +48,6 @@
         <script type="text/javascript">
             app.initialize();
         </script>
-<!---------------------------------------------------- Initialize app in cordova-->
 
 <!-------------------- Push Content Down - Reveal Status Bar ------------->
 
@@ -73,9 +72,7 @@
     
     <div data-role="content">
         
-        <button class="btn btn-block" onclick="loginButton()">Login with Facebook</button>
-        
-        
+        <button class="btn btn-block" onclick="loginButton()">Login with Facebook</button>      
         
         
     </div>
@@ -285,8 +282,10 @@
 	
     <div data-role="content">
 		
+        <div id="profileContainer" style="text-align: center">
+        <img id="userPic" class="profilePicture"< />
+        </div>
         
-        <img id="userPic" class="profilePicture" />
         <p>Name: <span id="userName"></span></p>
         <p>Gender: <span id="userGender"></span></p>
         
@@ -328,13 +327,13 @@
 			<p>Select a gender preference for finding other users post</p>
 		</div>
 		<div data-role="fieldcontain" id="vibrateSelector">	
-		<label for="flip-3">Vibrate on Notification</label>
+		<label for="flip-3">Vibrate On Notification</label>
 			<select name="flip-3" id="flip-3" data-role="slider"data-mini="true">
 				<option value="off"></option>
 				<option selected="selected" value="on"></option>				
 			</select> 
 		</div>
-		<div class="ui-btn ui-input-btn ui-shadow">
+		<div class="ui-btn ui-input-btn ui-shadow" id="logOut">
   			Log out
   			<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
 		</div>
@@ -399,7 +398,7 @@
                                 document.getElementById("userName").innerHTML = data.first_name;
                                 document.getElementById("userGender").innerHTML = data.gender;
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
-                                document.getElementById("userCover").src = 'http://graph.facebook.com/'+data.id+'/cover_source?type=large';
+                                
                                 
                                 },
                                 
