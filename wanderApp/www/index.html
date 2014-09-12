@@ -282,8 +282,10 @@
 	
     <div data-role="content">
 		
+        <div id="profileContainer" style="text-align: center">
+        <img id="userPic" class="profilePicture"< />
+        </div>
         
-        <img id="userPic" class="profilePicture" />
         <p>Name: <span id="userName"></span></p>
         <p>Gender: <span id="userGender"></span></p>
         
@@ -396,7 +398,7 @@
                                 document.getElementById("userName").innerHTML = data.first_name;
                                 document.getElementById("userGender").innerHTML = data.gender;
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
-                                document.getElementById("userCover").src = 'http://graph.facebook.com/'+data.id+'/cover_source?type=large';
+                                
                                 
                                 },
                                 
