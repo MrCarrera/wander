@@ -63,32 +63,35 @@
 }
 /*Sliders*/
 #menSelector .ui-slider{
-	float:right !important;
+	position: absolute !important;
+    right: 0 !important;
+    width: 20% !important;
 }
 
-#flip-1-label{
-	padding:0px; !important;
-	float:left !important;
-	width:20% !important;
+#flip-1-label, #flip-2-label, #flip-3-label{
+	width:250px !important;
+	margin:0 !important;
+    padding:0;
 }
 
-#womenSelector .ui-slider{
-	float:right !important;
+
+#settingsPanel .ui-slider-switch {
+	position: absolute !important;
+    right: 0 !important;
+    width: 60px !important;
+    margin-top: 8px;
 }
 
-#flip-2-label{
-	padding:0 !important;
-	width:20% !important;
-	float:left !important;
+#settingsPanel .description {
+	padding: 0!important;
 }
 
-#vibrateSelector .ui-slider{
-	float:right !important;
-}
+
 
 #settingsPanel .ui-slider-label-b {
 	border-radius: 50px !important;
 	border:0;
+	background-color:#ecf0f1;
 	
 }
 
@@ -110,6 +113,8 @@
 	border-width: 1px 0!important;
 }
 
+
+/***************Profile Page****************/
 
 .profilePicture {
                 border-radius: 50%;

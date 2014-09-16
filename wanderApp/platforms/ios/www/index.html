@@ -307,32 +307,41 @@
     	
 		<div data-role="fieldcontain" id="searchDistance">			
 		    <label for="slider-1">Search Distance <span class="kilometer">km</span></label>	
-		    <input type="range" name="slider-1" id="slider-1" min="0" max="25" value="10">    
-		   <p>Select a search radius for finding post from other users.</p>
+		    <input type="range" name="slider-1" id="slider-1" min="0" max="500" value="10">    
 		</div> 
 		
-		<div data-role="fieldcontain" id="menSelector">	
-		<label for="flip-1">Men</label>
+		<div class="ui-field-contain description">
+	    	<p>Select a search radius for finding post from other users.</p>
+	    </div>
+	    
+		<div data-role="fieldcontain" id="menSelector" >	
+			<label for="flip-1">Men</label>
 			<select name="flip-1" id="flip-1" data-role="slider"data-mini="true">
 				<option value="off"></option>
 				<option selected="selected" value="on"></option>
 			</select> 
 		</div>
-		<div data-role="fieldcontain" id="womenSelector">	
-		<label for="flip-2">Women</label>
+		
+		<div data-role="fieldcontain" id="womenSelector" >	
+			<label for="flip-2">Women</label>
 			<select name="flip-2" id="flip-2" data-role="slider"data-mini="true">
 				<option value="off"></option>
 				<option selected="selected" value="on"></option>				
-			</select> 
+			</select> 			
+		</div>
+		
+		<div class="ui-field-contain description">
 			<p>Select a gender preference for finding other users post</p>
 		</div>
-		<div data-role="fieldcontain" id="vibrateSelector">	
+		
+		<div data-role="fieldcontain" id="vibrateSelector" >	
 		<label for="flip-3">Vibrate On Notification</label>
 			<select name="flip-3" id="flip-3" data-role="slider"data-mini="true">
 				<option value="off"></option>
 				<option selected="selected" value="on"></option>				
 			</select> 
 		</div>
+		
 		<div class="ui-btn ui-input-btn ui-shadow" id="logOut">
   			Log out
   			<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
