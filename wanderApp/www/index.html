@@ -42,7 +42,7 @@
     </head>
     <body>
     	
-<!----------------------------------------------------- Initialize app in cordova-->
+<!-------------------------Initialize app in cordova------------------>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
@@ -79,12 +79,15 @@
 </div>
 
 <!----------------------------Login Page Ends----------------------------------------->
+<!----------------------------Activity page starts----------------------------------------->
+
 
 <div data-role="page" id="page-activity" class="page-panel">
 
     <div data-role="header" id="header" data-position="fixed">
         <h1>Activity</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
+        <a href="#addActivityPage" class="addActivity" data-iconpos="right">Add new activity</a>
     </div><!-- /header -->
 	
     <div data-role="content" id="activityContent">
@@ -257,6 +260,26 @@
 </div>
 
 <!--------ACTIVITY PAGE FEED ENDS HERE---------->
+<!----------------------------Post Activity page starts----------------------------------------->
+
+
+<!--------POST ACTIVITY PAGE ENDS HERE---------->
+<div data-role="page" id="addActivityPage">
+	
+	<div data-role="header" id="header">
+	        <h1>Post Activity</h1>
+	    <a href="#page-activity" class="header-buttons">Cancel</a>   
+	    <a href="#page-activity" class="header-buttons" data-iconpos="right">Post</a> 
+	    
+	    </div><!-- /header -->
+	  <  
+	    
+	<div data-role="content">
+		Create Activity
+    </div><!-- /content -->
+    
+
+<!----------------------------Message page starts----------------------------------------->
 
 <div data-role="page" id="page-messages" class="page-panel">
 
@@ -272,6 +295,7 @@
 </div>
 
 <!--------MESSAGES PAGE ENDS HERE---------->
+<!----------------------------Profile page starts----------------------------------------->
 
 <div data-role="page" id="page-profile" class="page-panel">
 
@@ -294,7 +318,10 @@
 	
 </div>
 
+
 <!--------PROFILE PAGE ENDS HERE---------->
+
+<!----------------------------Settings page starts----------------------------------------->
 
 <div data-role="page" id="page-settings" class="page-panel">
 
@@ -355,6 +382,8 @@
 </div>
 
 <!--------SETTINGS PAGE ENDS HERE---------->
+
+<!----------------------------Logout button starts----------------------------------------->
 
 <div data-role="page" id="page-logout" class="page-panel">
 
