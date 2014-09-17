@@ -63,17 +63,25 @@
 
 <!----------------------------Pages start here----------------------------------------->
 
-<div data-role="page" id="loginPage">
+<div data-role="page" class="loginPage" id="loginPage">
     
-    <div data-role="header">
-    	<h1>Wander Login</h1>
-    	
-    </div>
+    
     
     <div data-role="content">
         
-        <button class="btn btn-block" onclick="loginButton()">Login with Facebook</button>      
+        <div id="wanderLogoLogin">
+        <img src="img/loginLogo.png" alt="image"></img>
+        </div><br>
         
+        <button class="loginButton" onclick="loginButton()">Login with Facebook</button>
+        
+        <br>
+        <br>
+        
+        <div id="aboutText" style="text-align:center; color:white; text-shadow: none;" >About Wander</div>
+        <div id="aboutWanderIcon">
+        <img src="img/webLink.png" href="www.wander-app.org" alt="image"></img>
+        </div>
         
     </div>
 </div>
@@ -309,10 +317,10 @@
         <div id="profileContainer" style="text-align: center">
         <img id="userPic" class="profilePicture"< />
         </div>
-        
-        <p>Name: <span id="userName"></span></p>
-        <p>Gender: <span id="userGender"></span></p>
-        
+        <div id="profileHeadText">
+        <h1 class="profileText" ><span id="userName"><span id="userGender"></span></span></h1>
+        <h1 class="profileText" ><span id="userGender"></span></h1>
+       </div>
         
     </div><!-- /content -->
 	
@@ -421,8 +429,12 @@
                      }
                      }, {scope: 'email,user_location,user_photos,user_hometown'});
                      
-                     $.mobile.changePage("#page-activity")
-                     
+                     $.mobile.changePage("#page-activity");
+    
+
+    }
+
+function getInfo() {
                      openFB.api({
                                 path: '/me',
                                 success: function(data) {
@@ -437,16 +449,18 @@
                                 },
                                 
                                 error: errorHandler});
-    }
+}
 
 
 function logout() {
     openFB.logout(
                   function() {
+                  
                   alert('Logout successful');
                   },
                   errorHandler);
                   $.mobile.changePage("#loginPage");
+                  tokenStore['fbtoken'] = undefined;
 }
 
 

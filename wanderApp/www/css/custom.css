@@ -157,9 +157,54 @@
 
 }
 
-.profileContainer {
-            
+ #page-profile .ui-panel-wrapper {
+    background: transparent url(../img/profileBG.png) no-repeat center center !important;
+    background-attachment:fixed;
+    background-size: cover;
 }
- 
+
+ #page-profile .ui-panel-wrapper {
+	background: transparent;
+}
+
+.profileText {
+            color: white;
+            text-shadow: none;
+            font-size: 18;
+}
+
+#profileHeadText {
+                margin: 0 auto;
+}
+
+#profileText {
+                margin: 0 auto;
+}
+
+#LoginPage .ui-page, .ui-panel-wrapper {
+    background: transparent url(../img/loginBG.png) repeat center center !important;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+#wanderLogoLogin img {
+    display: block;
+    margin: 0 auto;
+    width: 250px !important;
+    height: 272px !important;
+    
+}
+
+
+
+ #aboutWanderIcon img {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+
+}
+
+
 
 
