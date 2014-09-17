@@ -369,10 +369,9 @@
 			</select> 
 		</div>
 		
-		<div class="ui-btn ui-input-btn ui-shadow" id="logOut">
-  			Log out
-  			<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
-		</div>
+		
+  			<button class="btn btn-block" onclick="logout()">Logout</button>
+		
 		
 		</div>
 	</div>
@@ -405,10 +404,10 @@
 <script>
     
     // Defaults to sessionStorage for storing the Facebook token
-    //openFB.init({appId: '371025573052266'});
+    openFB.init({appId: '371025573052266'});
     
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
-    openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
+    //openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
     
     
     
@@ -416,18 +415,13 @@
         openFB.login(
                      function(response) {
                      if(response.status === 'connected') {
-                     
+                     alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
                      } else {
                      alert('Facebook login failed: ' + response.error);
                      }
                      }, {scope: 'email,user_location,user_photos,user_hometown'});
                      
-                     
                      $.mobile.changePage("#page-activity")
-                     
-                     
-                     
-                     
                      
                      openFB.api({
                                 path: '/me',
@@ -438,19 +432,32 @@
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                 
                                 
+                                
+                                
                                 },
                                 
                                 error: errorHandler});
     }
+
+
+function logout() {
+    openFB.logout(
+                  function() {
+                  alert('Logout successful');
+                  },
+                  errorHandler);
+                  $.mobile.changePage("#loginPage");
+}
+
 
 function errorHandler(error) {
     alert(error.message);
 }
 
 
+
+
 // <!--------FACEBOOK LOGOUT----------> //
-
-
     </script>
 	
 	

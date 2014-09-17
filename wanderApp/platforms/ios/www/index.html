@@ -42,7 +42,7 @@
     </head>
     <body>
     	
-<!----------------------------------------------------- Initialize app in cordova-->
+<!-------------------------Initialize app in cordova------------------>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
@@ -79,12 +79,15 @@
 </div>
 
 <!----------------------------Login Page Ends----------------------------------------->
+<!----------------------------Activity page starts----------------------------------------->
+
 
 <div data-role="page" id="page-activity" class="page-panel">
 
     <div data-role="header" id="header" data-position="fixed">
         <h1>Activity</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
+        <a href="#addActivityPage" class="addActivity" data-iconpos="right">Add new activity</a>
     </div><!-- /header -->
 	
     <div data-role="content" id="activityContent">
@@ -257,6 +260,26 @@
 </div>
 
 <!--------ACTIVITY PAGE FEED ENDS HERE---------->
+<!----------------------------Post Activity page starts----------------------------------------->
+
+
+<!--------POST ACTIVITY PAGE ENDS HERE---------->
+<div data-role="page" id="addActivityPage">
+	
+	<div data-role="header" id="header">
+	        <h1>Post Activity</h1>
+	    <a href="#page-activity" class="header-buttons">Cancel</a>   
+	    <a href="#page-activity" class="header-buttons" data-iconpos="right">Post</a> 
+	    
+	    </div><!-- /header -->
+	  <  
+	    
+	<div data-role="content">
+		Create Activity
+    </div><!-- /content -->
+    
+
+<!----------------------------Message page starts----------------------------------------->
 
 <div data-role="page" id="page-messages" class="page-panel">
 
@@ -272,6 +295,7 @@
 </div>
 
 <!--------MESSAGES PAGE ENDS HERE---------->
+<!----------------------------Profile page starts----------------------------------------->
 
 <div data-role="page" id="page-profile" class="page-panel">
 
@@ -294,7 +318,10 @@
 	
 </div>
 
+
 <!--------PROFILE PAGE ENDS HERE---------->
+
+<!----------------------------Settings page starts----------------------------------------->
 
 <div data-role="page" id="page-settings" class="page-panel">
 
@@ -307,7 +334,7 @@
     	
 		<div data-role="fieldcontain" id="searchDistance">			
 		    <label for="slider-1">Search Distance <span class="kilometer">km</span></label>	
-		    <input type="range" name="slider-1" id="slider-1" min="0" max="500" value="10">    
+		    <input type="range" name="slider-1" id="slider-1" min="0" max="200" value="100">    
 		</div> 
 		
 		<div class="ui-field-contain description">
@@ -342,10 +369,9 @@
 			</select> 
 		</div>
 		
-		<div class="ui-btn ui-input-btn ui-shadow" id="logOut">
-  			Log out
-  			<input type="button" data-corners="false" data-enhanced="true" value="The Button"></input>
-		</div>
+		
+  			<button class="btn btn-block" onclick="logout()">Logout</button>
+		
 		
 		</div>
 	</div>
@@ -355,6 +381,8 @@
 </div>
 
 <!--------SETTINGS PAGE ENDS HERE---------->
+
+<!----------------------------Logout button starts----------------------------------------->
 
 <div data-role="page" id="page-logout" class="page-panel">
 
@@ -376,10 +404,10 @@
 <script>
     
     // Defaults to sessionStorage for storing the Facebook token
-    //openFB.init({appId: '371025573052266'});
+    openFB.init({appId: '371025573052266'});
     
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
-    openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
+    //openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
     
     
     
@@ -387,18 +415,13 @@
         openFB.login(
                      function(response) {
                      if(response.status === 'connected') {
-                     
+                     alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
                      } else {
                      alert('Facebook login failed: ' + response.error);
                      }
                      }, {scope: 'email,user_location,user_photos,user_hometown'});
                      
-                     
                      $.mobile.changePage("#page-activity")
-                     
-                     
-                     
-                     
                      
                      openFB.api({
                                 path: '/me',
@@ -409,19 +432,32 @@
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                 
                                 
+                                
+                                
                                 },
                                 
                                 error: errorHandler});
     }
+
+
+function logout() {
+    openFB.logout(
+                  function() {
+                  alert('Logout successful');
+                  },
+                  errorHandler);
+                  $.mobile.changePage("#loginPage");
+}
+
 
 function errorHandler(error) {
     alert(error.message);
 }
 
 
+
+
 // <!--------FACEBOOK LOGOUT----------> //
-
-
     </script>
 	
 	
