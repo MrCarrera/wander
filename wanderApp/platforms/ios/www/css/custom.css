@@ -14,6 +14,21 @@
 #header a.panel-toggle { text-indent: -999999px; overflow:hidden; width:30px; height:24px; background:url(../icons/tabMenu.png) no-repeat; border:0;margin-left:10px; padding-left:0px; box-shadow:none; top:0.69em; border-radius:0; }
 #header h1{color:white;}
 /***************Activity Feed Page****************/
+#header a.addActivity{
+	text-indent: -999999px;
+	overflow:hidden;
+	width:30px; 
+	height:30px; 
+	background:url(../icons/addPost.png) no-repeat; 
+	border:0;
+	margin-right:10px; 
+	padding-left:0px; 
+	padding-right: 0px;
+	box-shadow:none; 
+	top:0.50em; 
+	border-radius:0;
+}
+
 #activityContent {
 	margin:0;
 	padding:0;
@@ -51,6 +66,18 @@
     bottom: 0;
 }
 
+/***************Post Activity Page****************/
+/*Header buttons*/
+#addActivityPage .header-buttons{
+	border: none;
+	background:#5F9FB5; 
+	box-shadow:none;
+	font-size:.9em;	
+	color:white;
+	padding:0px;
+	top:0.70em; 
+}
+
 /***************Settings Page****************/
 /*Search KM*/
 #settingsPanel p{
@@ -62,31 +89,21 @@
 	margin-right:20px;
 }
 /*Sliders*/
-#menSelector .ui-slider{
-	position: absolute !important;
-    right: 0 !important;
-    width: 20% !important;
-}
-
-#flip-1-label, #flip-2-label, #flip-3-label{
-	width:250px !important;
-	margin:0 !important;
-    padding:0;
-}
-
 
 #settingsPanel .ui-slider-switch {
 	position: absolute !important;
     right: 0 !important;
     width: 60px !important;
     margin-top: 8px;
+    border-radius: 50px;
 }
 
-#settingsPanel .description {
-	padding: 0!important;
-}
+#menSelector, #womenSelector, #vibrateSelector{
+	background-color: white;
+} 
 
 
+/*Sliders rounded style on and off*/
 
 #settingsPanel .ui-slider-label-b {
 	border-radius: 50px !important;
@@ -106,7 +123,12 @@
 	border-radius: 50px !important;
 }
 
-/*Log out*/
+/*Description*/
+#settingsPanel .description {
+	padding: 0!important;
+}
+
+/*Log out button*/
 #logOut.ui-btn{
 	color:#d85050 !important;
 	background:white!important;
