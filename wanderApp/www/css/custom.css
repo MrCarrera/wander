@@ -181,11 +181,12 @@
                 margin: 0 auto;
 }
 
-#LoginPage .ui-page, .ui-panel-wrapper {
-    background: transparent url(../img/loginBG.png) repeat center center !important;
-    background-attachment:fixed;
-    background-size: cover;
+#LoginPage .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper {
+    background: transparent url(../img/loginBG.png) !important;
+    background-repeat:repeat !important;
 }
+
+
 
 #wanderLogoLogin img {
     display: block;
