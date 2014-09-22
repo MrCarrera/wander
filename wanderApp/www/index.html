@@ -342,10 +342,14 @@
         <div id="profileContainer" style="text-align: center">
         <img id="userPic" class="profilePicture"< />
         </div>
+        <br>
         <div id="profileHeadText">
-        <h1 class="profileText" ><span id="userName"><span id="userGender"></span></span></h1>
-        <h1 class="profileText" ><span id="userGender"></span></h1>
-        <h1 class="profileText" ><span id="userAbout"></span></h1>
+        <h1 class="profileText" ><span id="userName"></span>, <span id="userGender"></span></h1>
+        <h1 class="profileText2" ><span id="userCity"></span></h1>
+        <br>
+        <br>
+        <h1 class="profileTextAbout">About</h1>
+        <h1 class="profileTextAbout" ><span id="userAbout"></span></h1>
        </div>
         
     </div><!-- /content -->
@@ -453,7 +457,7 @@
                      } else {
                      alert('Facebook login failed: ' + response.error);
                      }
-                     }, {scope: 'email,user_location,user_photos,user_hometown'});
+                     }, {scope: 'email,user_location,user_photos,user_hometown,user_about_me'});
                      
                      $.mobile.changePage("#page-activity");
     
@@ -467,6 +471,8 @@ function getInfo() {
                                 console.log(JSON.stringify(data));
                                 document.getElementById("userName").innerHTML = data.first_name;
                                 document.getElementById("userGender").innerHTML = data.gender;
+                                document.getElementById("userCity").innerHTML = data.location.name;
+                                document.getElementById("userAbout").innerHTML = data.bio;
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                 
                                 
