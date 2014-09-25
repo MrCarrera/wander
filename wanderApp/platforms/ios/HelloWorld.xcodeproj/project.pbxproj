@@ -27,7 +27,7 @@
 		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
 		30A0434814DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
-		339AF4C719D46B7500E7491C /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AF4C619D46B7500E7491C /* CDVInAppBrowser.m */; };
+		339AF4C919D4748C00E7491C /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AF4C819D4748C00E7491C /* CDVInAppBrowser.m */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
@@ -89,7 +89,7 @@
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* HelloWorld-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Prefix.pch"; sourceTree = "<group>"; };
 		339AF4C519D46B6C00E7491C /* CDVInAppBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowser.h; path = org.apache.cordova.inappbrowser/CDVInAppBrowser.h; sourceTree = "<group>"; };
-		339AF4C619D46B7500E7491C /* CDVInAppBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = "../../../../../../../Downloads/cordova-plugin-inappbrowser-master 2/src/ios/CDVInAppBrowser.m"; sourceTree = "<group>"; };
+		339AF4C819D4748C00E7491C /* CDVInAppBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVInAppBrowser.m; path = ../../../../plugins/org.apache.cordova.inappbrowser/src/ios/CDVInAppBrowser.m; sourceTree = "<group>"; };
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		6EAC18F6136D47C59C1D1231 /* CDVStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVStatusBar.m; path = org.apache.cordova.statusbar/CDVStatusBar.m; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 			children = (
 				6EAC18F6136D47C59C1D1231 /* CDVStatusBar.m */,
 				339AF4C519D46B6C00E7491C /* CDVInAppBrowser.h */,
-				339AF4C619D46B7500E7491C /* CDVInAppBrowser.m */,
+				339AF4C819D4748C00E7491C /* CDVInAppBrowser.m */,
 				D8ABC804B68A4D64AB462290 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
@@ -430,7 +430,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				E087F38A83544CBDACB17358 /* (null) in Sources */,
 				2444E3D3FDBB4A4F81EFE1C4 /* CDVStatusBar.m in Sources */,
-				339AF4C719D46B7500E7491C /* CDVInAppBrowser.m in Sources */,
+				339AF4C919D4748C00E7491C /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

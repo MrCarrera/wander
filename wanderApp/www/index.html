@@ -488,7 +488,14 @@ function errorHandler(error) {
 }
 
 
+var userInfo = {
+    "userName": "profileName",
+    "userGender": "profileGender",
+    "image": "img/userPic.jpg",
+};
 
+//Store the object in local storage
+localStorage.setItem('loggedUser', JSON.stringify(userInfo));
 
 // <!--------FACEBOOK LOGOUT----------> //
     </script>
