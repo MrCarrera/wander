@@ -29,9 +29,9 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
-        <script src="openfb.js"></script>
-        <script src="inappbrowser.js"></script>
-        <script src="js/post.js"></script>
+                <script src="openfb.js"></script>
+                <script src="inappbrowser.js"></script>
+                <script src="js/post.js"></script>
 <!----------------------------------Custom JScript--->
 		<script type="text/javascript" src="js/custom.js"></script>
 
@@ -87,9 +87,9 @@
 <div data-role="page" id="page-activity" class="page-panel">
 
     <div data-role="header" id="header" data-position="fixed">
-        <h1>Activity</h1>
+        <h1>Post Feed</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
-        <a href="#addActivityPage" class="addActivity" data-iconpos="right">Add new activity</a>
+        <a href="#addPostPage" class="addPost" data-iconpos="right">Create a post</a>
     </div><!-- /header -->
 	
     <div data-role="content" id="activityContent">
@@ -98,7 +98,7 @@
 		    <ul id="listScroll">
 		        <li>
 		            <h1>A</h1>
-		            <ul>
+                            <ul>
 		                <li>Aa</li>
 		                <li>Aa</li>
 		                <li>Aa</li>
@@ -265,8 +265,8 @@
 <!----------------------------Post Activity page starts----------------------------------------->
 
 
-<!--------POST ACTIVITY PAGE ENDS HERE---------->
-<div data-role="page" id="addActivityPage" onload="onBodyLoad()">
+<!--------Create a new POST---------->
+<div data-role="page" id="addPostPage" onload="onBodyLoad()">
     
     <script>
         function onBodyLoad() {
@@ -299,23 +299,23 @@
     </div> <!-- /content -->
 </div>    
 
-<!----------------------------Message page starts----------------------------------------->
+<!----------------------------MY POST STARTS HERE----------------------------------------->
 
 <div data-role="page"  id="page-messages" class="page-panel">
 
     <div data-role="header" id="header">
-        <h1>Messages</h1>
+        <h1>My Posts</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
-    <div data-role="content">
-		messages
+    <div data-role="content"
+		my post
     </div><!-- /content -->
 	
 </div>
 
-<!--------MESSAGES PAGE ENDS HERE---------->
-<!----------------------------Profile page starts----------------------------------------->
+<!--------MY POST PAGE ENDS HERe---------->
+<!----------------------------PROFILE PAGE STARTS HERE----------------------------------------->
 
 <div data-role="page" id="page-profile" class="page-panel">
 
