@@ -2,7 +2,7 @@
 var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 					'<ul id="icons">'+
 						'<li><a href="#page-activity"><img src="icons/activityFeed.png" alt=""><span>Post Feed</span></a></li>'+
-						'<li><a href="#page-messages"><img src="icons/messages.png" alt=""><span>My post</span></a></li>'+
+						'<li><a href="#page-messages"><img src="icons/messages.png" alt=""><span>My Posts</span></a></li>'+
 						'<li><a href="#page-profile" onclick="getInfo()" ><img src="icons/profile.png" alt=""><span>Profile</span></a></li>'+
 						'<li><a href="#page-settings"><img src="icons/Settings.png" alt=""><span>Settings</span></a></li>'+
 						'<li><a href="#page-logout"><img src="icons/signOut.png" alt=""><span>Logout</span></a></li>'+

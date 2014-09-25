@@ -23,3 +23,4 @@ $(document).bind('deviceready', function(){
         });
     });
 });
+
