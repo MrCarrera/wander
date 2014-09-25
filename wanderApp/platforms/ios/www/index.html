@@ -50,16 +50,7 @@
             app.initialize();
         </script>
 
-<!-------------------- Push Content Down - Reveal Status Bar ------------->
 
-<script>
-    var updateStatusBar = navigator.userAgent.match(/iphone|ipad|ipod/i) &&
-    parseInt(navigator.appVersion.match(/OS (\d)/)[1], 10) >= 7;
-    if (updateStatusBar) {
-        document.body.style.webkitTransform = 'translate3d(0, 20px, 0)';
-        
-    }
-</script>
 
 
 <!----------------------------Pages start here----------------------------------------->
@@ -98,7 +89,7 @@
     <div data-role="header" id="header" data-position="fixed">
         <h1>Activity</h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
-        <a href="#addActivityPage" class="addActivity" data-iconpos="right">Add new activity</a>
+        <a href="#addActivityPage" onclick="getInfo()" class="addActivity" data-iconpos="right">Add new activity</a>
     </div><!-- /header -->
 	
     <div data-role="content" id="activityContent">
@@ -296,17 +287,13 @@
         
 		<div id="landmark-1" data-landmark-id="1">
             <form>
-                <label for="email">
-                    <b>Email</b>
-                    <input type="email" id="email" name="email">
-                        </label>
                 
                 <label for="userPost">
-                    <b>Post</b>
+                    <b></b>
                     <textarea id="userPost" name="userPost" cols="30" rows="10"></textarea>
                 </label>
                 
-                <input type="submit" value="Save">
+                <input type="submit" value="Post">
                     </form>
         </div>
     </div> <!-- /content -->
@@ -340,16 +327,16 @@
     <div data-role="content">
 		
         <div id="profileContainer" style="text-align: center">
-        <img id="userPic" class="profilePicture"< />
+        <img id="profilePic" class="profilePicture"< />
         </div>
         <br>
         <div id="profileHeadText">
-        <h1 class="profileText" ><span id="userName"></span>, <span id="userGender"></span></h1>
-        <h1 class="profileText2" ><span id="userCity"></span></h1>
+        <h1 class="profileText" ><span id="profileName"></span>, <span id="profileGender"></span></h1>
+        <h1 class="profileText2" ><span id="profileCity"></span></h1>
         <br>
         <br>
         <h1 class="profileTextAbout">About</h1>
-        <h1 class="profileTextAbout" ><span id="userAbout"></span></h1>
+        <h1 class="profileTextAbout" ><span id="profileAbout"></span></h1>
        </div>
         
     </div><!-- /content -->
@@ -469,11 +456,11 @@ function getInfo() {
                                 path: '/me',
                                 success: function(data) {
                                 console.log(JSON.stringify(data));
-                                document.getElementById("userName").innerHTML = data.first_name;
-                                document.getElementById("userGender").innerHTML = data.gender;
-                                document.getElementById("userCity").innerHTML = data.location.name;
-                                document.getElementById("userAbout").innerHTML = data.bio;
-                                document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
+                                document.getElementById("profileName").innerHTML = data.first_name;
+                                document.getElementById("profileGender").innerHTML = data.gender;
+                                document.getElementById("profileCity").innerHTML = data.location.name;
+                                document.getElementById("profileAbout").innerHTML = data.bio;
+                                document.getElementById("profilePic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                 
                                 
                                 
