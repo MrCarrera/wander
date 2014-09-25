@@ -77,19 +77,6 @@
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
-    <key>FacebookAppID</key>
-    <string>371025573052266</string>
-    <key>FacebookDisplayName</key>
-    <string>Wander</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb371025573052266</string>
-        </array>
-      </dict>
-    </array>
     <key>CFBundleShortVersionString</key>
     <string>0.0.1</string>
   </dict>
