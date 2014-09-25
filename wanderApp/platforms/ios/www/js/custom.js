@@ -12,7 +12,7 @@ var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 $(document).one('pagebeforecreate', function(){
     $.mobile.pageContainer.prepend(panel);
     $("#panel").panel().enhanceWithin();
-}); // This is the function to reveal the panel: Roberto
+}); // This is the function to reveal the panel
 
 $(document).on('pageinit', '.page-panel', function(){
    $('#panel a').click(function(){
@@ -24,5 +24,5 @@ $(document).on('pageinit', '.page-panel', function(){
 			   $('#panel').panel('open');
 		   }
 	   }
-   }); // this will reveal the panel when swipping right: Roberto
+   }); // this will reveal the panel when swipping right
 }); 
