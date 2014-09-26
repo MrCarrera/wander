@@ -17,8 +17,10 @@ $(document).bind('deviceready', function(){
                     console.log(data);
                     alert('There Was An Error Adding Your Comment');
                 }
-            });
-            
+                   });
+            //Resets Text Area After Post Is Submitted 
+            $("#userPost").val('');
+                         
             return false;
         });
     });

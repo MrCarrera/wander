@@ -27,6 +27,7 @@
 	box-shadow:none; 
 	top:0.50em; 
 	border-radius:0;
+    
 }
 
 #activityContent {
@@ -80,6 +81,7 @@
 	color:white;
 	padding:0px;
 	top:0.70em; 
+    text-shadow:none;
 }
 
 /***************Settings Page****************/

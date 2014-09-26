@@ -43,6 +43,7 @@ body {
     padding:0px;
     text-transform:none;
     width:100%;
+    text-shadow:none;
 }
 
 /* Portrait layout (default) */
@@ -76,6 +77,7 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+    text-shadow:none;
 }
 
 .event {
@@ -85,6 +87,7 @@ h1 {
     font-size:12px;
     margin:0px 30px;
     padding:2px 0px;
+    text-shadow:none;
 }
 
 .event.listening {
