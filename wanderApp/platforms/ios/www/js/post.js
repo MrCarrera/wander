@@ -2,8 +2,6 @@ $(document).bind('deviceready', function(){
                  $(function(){
                    $('form').submit(function(){
                         
-                      //  var timePost = $('#postTime').val
-                      //  var datePost = $('#postDate').val
                                     
                         var postTime = fullDate.getHours()+':'+fullDate.getMinutes();        
                         var postDate = fullDate.getDate() +' / '+fullDate.getMonth()
