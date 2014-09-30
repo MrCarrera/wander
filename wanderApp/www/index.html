@@ -87,7 +87,7 @@
 <div data-role="page" id="page-activity" class="page-panel">
 
     <div data-role="header" id="header" data-position="fixed">
-        <h1>Post Feed</h1>
+        <h1><b>Post Feed</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
         <a href="#addPostPage" onclick="getInfo()" class="addPost" data-iconpos="right">Create a post</a>
     </div><!-- /header -->
@@ -275,7 +275,7 @@
     </script>
 	
 	<div data-role="header" id="header">
-	        <h1>Post Activity</h1>
+	        <h1><b>Post Activity</b></h1>
 	    <a href="#page-activity" class="header-buttons">Cancel</a>   
 	    <a href="#page-activity" class="header-buttons" data-iconpos="right">Post</a> 
 	    
@@ -304,7 +304,7 @@
 <div data-role="page"  id="page-messages" class="page-panel">
 
     <div data-role="header" id="header">
-        <h1>My Posts</h1>
+        <h1><b>My Posts</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
@@ -320,18 +320,18 @@
 <div data-role="page" id="page-profile" class="page-panel">
 
     <div data-role="header" id="header">
-        <h1>Profile</h1>
+        <h1><b>Profile</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
     <div data-role="content">
 		
         <div id="profileContainer" style="text-align: center">
-        <img id="profilePic" class="profilePicture"< />
+        <img id="userPic" class="profilePicture"< />
         </div>
         <br>
         <div id="profileHeadText">
-        <h1 class="profileText" ><span id="profileName"></span>, <span id="profileGender"></span></h1>
+        <h1 class="profileText" ><span id="userName"></span>, <span id="userGender"></span></h1>
         <h1 class="profileText2" ><span id="profileCity"></span></h1>
         <br>
         <br>
@@ -351,7 +351,7 @@
 <div data-role="page" id="page-settings" class="page-panel">
 
     <div data-role="header" id="header">
-        <h1>Settings</h1>
+        <h1><b>Settings</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
@@ -456,11 +456,11 @@ function getInfo() {
                                 path: '/me',
                                 success: function(data) {
                                 console.log(JSON.stringify(data));
-                                document.getElementById("profileName").innerHTML = data.first_name;
-                                document.getElementById("profileGender").innerHTML = data.gender;
+                                document.getElementById("userName").innerHTML = data.first_name;
+                                document.getElementById("userGender").innerHTML = data.gender;
                                 document.getElementById("profileCity").innerHTML = data.location.name;
                                 document.getElementById("profileAbout").innerHTML = data.bio;
-                                document.getElementById("profilePic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
+                                document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                 
                                 
                                 
@@ -488,14 +488,14 @@ function errorHandler(error) {
 }
 
 
-var userInfo = {
-    "userName": "profileName",
-    "userGender": "profileGender",
-    "image": "img/userPic.jpg",
-};
-
-//Store the object in local storage
-localStorage.setItem('loggedUser', JSON.stringify(userInfo));
+//var userInfo = {
+//    "userName": "profileName",
+//    "userGender": "profileGender",
+//    "image": "img/userPic.jpg",
+//};
+//
+////Store the object in local storage
+//localStorage.setItem('loggedUser', JSON.stringify(userInfo));
 
 // <!--------FACEBOOK LOGOUT----------> //
     </script>

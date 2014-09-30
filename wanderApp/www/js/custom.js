@@ -1,11 +1,11 @@
 // -------- Panel function by: Devika
 var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 					'<ul id="icons">'+
-						'<li><a href="#page-activity"><img src="icons/activityFeed.png" alt=""><span>Post Feed</span></a></li>'+
-						'<li><a href="#page-messages"><img src="icons/messages.png" alt=""><span>My Posts</span></a></li>'+
-						'<li><a href="#page-profile" onclick="getInfo()" ><img src="icons/profile.png" alt=""><span>Profile</span></a></li>'+
-						'<li><a href="#page-settings"><img src="icons/Settings.png" alt=""><span>Settings</span></a></li>'+
-						'<li><a href="#page-logout"><img src="icons/signOut.png" alt=""><span>Logout</span></a></li>'+
+						'<li><a href="#page-activity"><img src="icons/activityFeed.png" alt=""><span style="	text-shadow: none;"><b>Post Feed</b></span></a></li>'+
+						'<li><a href="#page-messages"><img src="icons/messages.png" alt=""><span style="	text-shadow: none;"><b>My Posts</b></span></a></li>'+
+						'<li><a href="#page-profile" onclick="getInfo()" ><img src="icons/profile.png" alt=""><span style="text-shadow: none;"><b>Profile</b></span></a></li>'+
+						'<li><a href="#page-settings"><img src="icons/Settings.png" alt=""><span style="	text-shadow: none;"><b>Settings</b></span></a></li>'+
+						'<li><a href="#page-logout"><img src="icons/signOut.png" alt=""><span style="	text-shadow: none;"><b>Logout</b></span></a></li>'+
 					'</ul>'+
 				'</div>'; // This will create the list in the pannel with the links to the pages and icons : Roberto
 				
