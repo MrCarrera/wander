@@ -2,8 +2,11 @@ $(document).bind('deviceready', function(){
                  $(function(){
                    $('form').submit(function(){
                         
-                        var postDate = new Date();
+                      //  var timePost = $('#postTime').val
+                      //  var datePost = $('#postDate').val
                                     
+                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();        
+                        var postDate = fullDate.getDate() +' / '+fullDate.getMonth()
                         var postUser = $('#userName').text()
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')
@@ -12,7 +15,7 @@ $(document).bind('deviceready', function(){
                                     
         $.ajax({
                 type: 'POST',
-                data: postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate,
+                data: postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime,
                 //PHP URL
                 url: 'http://wander-app.org/userPosts.php',
                 success: function(data){
