@@ -54,12 +54,12 @@ body {
     list-style-type: none;
 }
 
-#listScroll ul > li {
+#Scroll ul > li {
     padding: 25px;
     border-top: 1px solid #AAA;
 }
 
-#listScroll ul {
+#Scroll ul {
     background: rgb(240, 240, 240);
 }
 
@@ -67,6 +67,7 @@ body {
     background: #5F9FB5;
     border:0;
     color: #EEE;
+    opacity: .8;
     padding: 0 10px;
     margin: 0;
 }
