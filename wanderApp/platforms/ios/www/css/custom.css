@@ -37,47 +37,11 @@ body {
     
 }
 
-#activityContent {
-	margin:0;
-	padding:0;
-}
+/***************Post Page Feed****************/
 
-/*iscroll*/
+/*Time*/
 
-#activityContent{
-    overflow: hidden;
-}
 
-#scroll ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-#Scroll ul > li {
-    padding: 25px;
-    border-top: 1px solid #AAA;
-}
-
-#Scroll ul {
-    background: rgb(240, 240, 240);
-}
-
-#scroll h1 {
-    background: #5F9FB5;
-    border:0;
-    color: #EEE;
-    opacity: .8;
-    padding: 0 10px;
-    margin: 0;
-}
-
-#scroll {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-}
 
 /***************Add new Post Page****************/
 /*Header buttons*/
@@ -236,5 +200,25 @@ body {
 }
 
 
+.feedImage {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 60px;
+                height: 60px;
+                border: 2px solid #ffffff;
+                margin-top:18px;
+                margin-left:12px;
+                
+}
+            
+.feedImage img {
+                display: block;
+                /* Stretch
+                  height: 100%;
+                  width: 100%; */
+                min-width: 100%;
+                min-height: 100%;
 
+
+}
 
