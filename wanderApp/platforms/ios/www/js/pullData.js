@@ -19,7 +19,7 @@ $(document).ready(function(){
                                           $.each(data, function(i,item){
                                                  var landmark = '<h1>'+item.Post+'</h1>'
                                                  + '<p>'+item.Name+'<br>'
-                                                 + item.Gender+'</p>' + '<img>'+item.Pic+'</img>'
+                                                 + item.Gender+'</p>' + '<img class='feedImage' src='item.Pic'>''</img>'
                                                  + '<p>'+item.Time+'<br>' + item.theDate+'</p>';
                                                  output.append(landmark);
                                                  });
