@@ -8,7 +8,7 @@
                   
 $(document).ready(function(){
                   $(document).bind('deviceready', function(){
-                                   var output = $('#output');
+                                   var output = $('#activityContent');
                                    //makes a variable that links to an ID. 
                                    $.ajax({
                                           url: 'http://wander-app.org/getPost.php',
@@ -17,12 +17,12 @@ $(document).ready(function(){
                                           timeout: 5000,
                                           success: function(data, status){
                                           $.each(data, function(i,item){
-                                                 var landmark = '<h1>'+item.Post+'</h1>'
+                                              console.log(JSON.stringify(item));
+                                                 $('#myListView').append('<li><a href="#"><p><strong>'+item.Post+'</p></strong>'
                                                  + '<p>'+item.Name+'<br>'
                                                  + item.Gender+'</p>' + '<img>'+item.Pic+'</img>'
-                                                 + '<p>'+item.Time+'<br>' + item.theDate+'</p>';
-                                                 output.append(landmark);
-                                                 });
+                                                 + '<p>'+item.Time+'<br>' + item.theDate+'</p></li>');                                                
+                                                 });                                                
                                           },
                                           error: function(){
                                           output.text('There was an error loading the data.');
