@@ -202,7 +202,7 @@ body {
 
 /*Activity Page Profile Images*/
 
-.feedImage {
+.feedImage  {
                 border-radius: 50%;
                 overflow: hidden;
                 width: 60px;
@@ -212,15 +212,21 @@ body {
                 margin-left:12px;
                 
 }
-            
-.feedImage img {
+
+.feedImage  img {
+                
                 display: block;
+
                 /* Stretch
                   height: 100%;
                   width: 100%; */
                 min-width: 100%;
                 min-height: 100%;
 
+
+}
+
+.feedImage .p {
 
 }
 

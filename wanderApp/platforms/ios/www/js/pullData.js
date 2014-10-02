@@ -20,7 +20,7 @@ $(document).ready(function(){
                                               console.log(JSON.stringify(item));
                                                  $('#myListView').append('<li><a href="#"><p><strong>'+item.Post+'</p></strong>'
                                                  + '<p>'+item.Name+'<br>'
-                                                 + item.Gender+'</p>' + '<img>'+item.Pic+'</img>'
+                                                 + item.Gender+'</p>' + '<img class="feedImage" src='+item.Pic+'></img>'
                                                  + '<p>'+item.Time+'<br>' + item.theDate+'</p></li>');                                                
                                                  });                                                
                                           },
