@@ -18,9 +18,9 @@ $(document).ready(function(){
                                           success: function(data, status){
                                           $.each(data, function(i,item){
                                               console.log(JSON.stringify(item));
-                                                 $('#myListView').append('<li><a href="#"><p><strong>'+item.Post+'</p></strong>'
-                                                 + '<p>'+item.Name+'<br>'
-                                                 + item.Gender+'</p>' + '<img class="feedImage" src='+item.Pic+'></img>'
+                                                 $('#myListView').append('<li><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+'</p></strong>'
+                                                 + '<p>'+item.Post+'<br>'
+                                                 + item.Gender+'</p>'
                                                  + '<p>'+item.Time+'<br>' + item.theDate+'</p></li>');                                                
                                                  });                                                
                                           },

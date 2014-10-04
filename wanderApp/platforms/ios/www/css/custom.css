@@ -202,31 +202,22 @@ body {
 
 /*Activity Page Profile Images*/
 
-.feedImage  {
-                border-radius: 50%;
-                overflow: hidden;
-                width: 60px;
-                height: 60px;
-                border: 2px solid #ffffff;
-                margin-top:18px;
-                margin-left:12px;
-                
+
+.feedImage p {
+                float:left;
 }
 
-.feedImage  img {
-                
-                display: block;
-
-                /* Stretch
-                  height: 100%;
-                  width: 100%; */
-                min-width: 100%;
-                min-height: 100%;
+.feedImage {
+	width: 60px;
+    height: 60px;
 
 
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+  float:left;
+  margin-left:12px;
+  margin-top:12px;
 }
-
-.feedImage .p {
-
-}
-
