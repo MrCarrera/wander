@@ -151,7 +151,7 @@ body {
             text-shadow: none;
             font-size: 31px;
             text-align:left;
-            font-family: "Bariol_Bold";
+
 
 }
 
@@ -160,16 +160,16 @@ body {
             text-shadow: none;
             font-size: 22px;
             text-align:left;
-            font-family: "Bariol_Regular";
+
 
 }
 
 .profileTextAbout {
             color: white;
-            text-shadow: none;
+            text-shadow: none; !important;
             font-size: 21px;
             text-align:left;
-            font-family: "Bariol_Regular";
+
 
 }
 
@@ -186,13 +186,13 @@ body {
 }
 
 .loginButton {
-            font-family: "Bariol_Bold";
+
             font-size: 16px;
             color: white   !important;
-            text-shadow: none;
+            text-shadow: none !important;
             background: #2980b9  !important;
             border: none !important;
-            text-shadow: none;
+
 }
 
 #wanderLogoLogin img {
