@@ -116,3 +116,18 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+@font-face {
+    font-family: "Bariol_Regular";
+    src: url("../fonts/Bariol_Regular.otf");
+        /* Make sure you defined the correct path, which is related to
+            the location of your file `my_css.css` */ 
+    }
+
+@font-face {
+    font-family: "Bariol_Bold";
+    src: url("../fonts/Bariol_Regular.otf");
+        /* Make sure you defined the correct path, which is related to
+            the location of your file `my_css.css` */ 
+    }
+ 
