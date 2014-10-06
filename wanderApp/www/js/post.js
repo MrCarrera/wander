@@ -4,7 +4,7 @@ $(document).bind('deviceready', function(){
                         
                                     
                         var postTime = fullDate.getHours()+':'+fullDate.getMinutes();        
-                        var postDate = fullDate.getDate() +' / '+(fullDate.getMonth() + 1);
+                        var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                         var postUser = $('#userName').text()
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')

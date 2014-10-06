@@ -468,8 +468,21 @@ console.log(fullDate);
 //Thu May 19 2011 17:25:38 GMT+1000 {}
 
 var postDate = fullDate.getDate()
-
-
+// Take numerical month value and make it a month name
+var myMonth = new Array();
+myMonth[0] = "January";
+myMonth[1] = "February";
+myMonth[2] = "March";
+myMonth[3] = "April";
+myMonth[4] = "May";
+myMonth[5] = "June";
+myMonth[6] = "July";
+myMonth[7] = "August";
+myMonth[8] = "September";
+myMonth[9] = "October";
+myMonth[10] = "November";
+myMonth[11] = "December";
+var monthName = myMonth[fullDate.getMonth()];
 
 
 // <!--------FACEBOOK LOGOUT----------> //
