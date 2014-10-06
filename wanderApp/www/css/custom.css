@@ -68,6 +68,14 @@ body {
     height:30px;
 }    
 
+/*Show all the text in the list*/
+
+#page-activity .ui-listview>li p {
+    white-space : normal;
+}
+
+
+
 /***************Post Individual Page ****************/
 /*Header icon*/
 #header a.myBack{
