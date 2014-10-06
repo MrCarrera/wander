@@ -237,4 +237,7 @@ body {
   margin-top:12px;
 }
 
-
+.ui-icon-listIcon:after {
+    background-image: url("../img/arrowButton.png");
+    width:50%px
+    height:30px;
