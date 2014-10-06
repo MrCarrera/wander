@@ -39,9 +39,33 @@ body {
 
 /***************Post Page Feed****************/
 
-/*Time*/
+/*Post Page Profile Images*/
 
 
+.feedImage p {
+                float:left;
+                
+}
+
+.feedImage {
+	width: 60px;
+    height: 60px;
+
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+  float:left;
+  margin-left:12px;
+  margin-top:12px;
+}
+
+.ui-icon-listIcon:after {
+    background-image: url("../img/arrowButton.png");
+    width:40%px;
+    height:30px;
 
 /***************Add new Post Page****************/
 /*Header buttons*/
@@ -214,30 +238,4 @@ body {
 }
 
 
-/*Activity Page Profile Images*/
 
-
-.feedImage p {
-                float:left;
-                
-}
-
-.feedImage {
-	width: 60px;
-    height: 60px;
-
-
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  border-top-left-radius: 30px !important;
-  border-bottom-left-radius: 30px !important;
-  float:left;
-  margin-left:12px;
-  margin-top:12px;
-}
-
-.ui-icon-listIcon:after {
-    background-image: url("../img/arrowButton.png");
-    width:40%px;
-    height:30px;
