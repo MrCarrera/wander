@@ -22,7 +22,10 @@ $(document).ready(function(){
                                                  + '<p>'+item.Post+'<p>'
                                                  
                                                  + '<p class="ui-li-aside">'+item.Time+'</p>'+'<p>'+item.theDate+'</p></a></li>');                                                
-                                                 });                                                
+                                                 });          
+                                                 
+                                                 
+                                                    $( '#myListView' ).listview( "refresh" );
                                           },
                                           error: function(){
                                           output.text('There was an error loading the data.');//Handles error to connect to database
@@ -33,9 +36,12 @@ $(document).ready(function(){
                   
    // Will handle on tap to switch to single post page
    
-   $(document).on('tap', '#myListView li a', function(){    
-    $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false });
+   $(document).on('tap', '#myListView li a', function(){   //calls for the function on tap 
+       
+    $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
 });
+
+
            
  
 
