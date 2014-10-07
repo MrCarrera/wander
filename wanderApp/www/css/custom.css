@@ -37,7 +37,12 @@ body {
     
 }
 
+#activityContent{
+    position:absolute;
+}
+
 /***************Post Page Feed****************/
+
 
 /*Post Page Profile Images*/
 
