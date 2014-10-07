@@ -68,6 +68,33 @@ body {
     width: 20px;
 }    
 
+/*Show all the text in the list*/
+
+#page-activity .ui-listview>li p {
+    white-space : normal;
+}
+
+
+
+/***************Post Individual Page ****************/
+/*Header icon*/
+#header a.myBack{
+	text-indent: -999999px;
+	overflow:hidden;
+	width:30px; 
+	height:30px; 
+	background:url(../icons/backButton.png) no-repeat; 
+	border:0;
+	margin-right:10px; 
+	padding-left:0px; 
+	padding-right: 0px;
+	box-shadow:none; 
+	top:0.50em; 
+	border-radius:0;
+    
+}
+
+
 /***************Add new Post Page****************/
 /*Header buttons*/
 #addPostPage .header-buttons{
