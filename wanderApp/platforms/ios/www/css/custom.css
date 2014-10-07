@@ -64,8 +64,8 @@ body {
 
 .ui-icon-listIcon:after {
     background-image: url("../img/arrowButton.png");
-    width:40px;
-    height:30px;
+    /* width:40px;*/
+    /*height:30px;*/
 }    
 
 /*Show all the text in the list*/
@@ -78,7 +78,7 @@ body {
 /*padding for the text in the list*/
 
 #page-activity .ui-listview>.ui-li-has-thumb>.ui-btn{
-padding-left: 5.50em;
+padding-left:5.50em !important;
 }
 
 
