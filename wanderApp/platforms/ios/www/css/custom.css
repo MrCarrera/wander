@@ -71,9 +71,15 @@ body {
 /*Show all the text in the list*/
 
 #page-activity .ui-listview>li p {
-    white-space : normal;
+    white-space : normal !important;
+    margin: 0 !important;
+        
 }
+/*padding for the text in the list*/
 
+#page-activity .ui-listview>.ui-li-has-thumb>.ui-btn{
+padding-left: 5.50em;
+}
 
 
 /***************Post Individual Page ****************/
