@@ -64,8 +64,8 @@ body {
 
 .ui-icon-listIcon:after {
     background-image: url("../img/arrowButton.png");
-    width:40px;
-    height:30px;
+    height: 34px;
+    width: 20px;
 }    
 
 /***************Add new Post Page****************/
