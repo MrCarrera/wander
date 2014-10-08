@@ -27,6 +27,9 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -40,6 +43,7 @@
         <preference name="StatusBarBackgroundColor" value="#5fa0b6" />
         <preference name="StatusBarStyle" value="lightcontent" />
     </plugins>
+    <plugin name="Notification" value="CDVNotification" />
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>

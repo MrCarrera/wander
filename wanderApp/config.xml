@@ -12,7 +12,10 @@
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="StatusBarBackgroundColor" value="#5fa0b6" />
         <preference name="StatusBarStyle" value="lightcontent" />
+        
     </plugins>
+    <plugin name="Notification" value="CDVNotification" />
+
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
