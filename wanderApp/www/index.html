@@ -298,8 +298,23 @@
         openFB.login(
                      function(response) {
                      if(response.status === 'connected') {
-                     alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
-                     } else {
+                     //alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
+                     
+                     navigator.notification.alert(
+                                 "Login Succesful!",
+                                 callBackFunctionB, // Specify a function to be called
+                                 'Wander',
+                                 "OK"
+                            );
+                     
+                     function callBackFunctionB(){
+                     console.log('ok');
+
+                     
+                     }
+                     }
+                     
+                     else {
                      alert('Facebook login failed: ' + response.error);
                      }
                      }, {scope: 'email,user_location,user_photos,user_hometown,user_about_me'});

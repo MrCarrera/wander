@@ -7,10 +7,10 @@
 
                   
         $(document).on('pageshow', '#page-activity', function(){
-                       
+                       //loads data everytime page is shown.
                        
                                    $("#myListView").empty();
-                       
+                                    //Deletes previous list before re-calling it.
                                        
                                    var output = $('#activityContent');
                                    //makes a variable that links to an ID. 

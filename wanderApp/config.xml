@@ -13,5 +13,9 @@
         <preference name="StatusBarBackgroundColor" value="#5fa0b6" />
         <preference name="StatusBarStyle" value="lightcontent" />
     </plugins>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+
     <access origin="*" />
 </widget>

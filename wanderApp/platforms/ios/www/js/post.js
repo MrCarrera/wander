@@ -18,7 +18,19 @@ $(document).bind('deviceready', function(){
                 url: 'http://wander-app.org/userPosts.php',
                 success: function(data){
                 console.log(data);
-                alert('Posted!');
+               
+               navigator.notification.alert(
+                                            "Posted!",
+                                            callBackFunctionB, // Specify a function to be called
+                                            'Wander',
+                                            "OK"
+                                            );
+               function callBackFunctionB(){
+               console.log('ok');
+               
+               }
+               
+               
                 },
                
                     error: function(){
@@ -29,7 +41,7 @@ $(document).bind('deviceready', function(){
                                     
                 //Resets Text Area After Post Is Submitted
                 $("#userPost").val('');
-                                                    
+                                    
                     return false;
                     
                     });
