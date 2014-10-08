@@ -305,7 +305,7 @@
                      }, {scope: 'email,user_location,user_photos,user_hometown,user_about_me'});
                      
                      $.mobile.changePage("#page-activity");
-    
+                     //Changes page to activity feed (home page) after login.
     }
 
 function getInfo() {
@@ -324,7 +324,10 @@ function getInfo() {
                                 
                                 error: errorHandler});
 }
-
+                    //Gets data from Facebook Graph API using the FB Token and inputs data into ID's.
+                    
+                    
+                    
 
 function logout() {
     openFB.logout(
@@ -338,9 +341,14 @@ function logout() {
 }
 
 
+                //Logs user out of app by re-directing them to the facebook logout php. Removes access token
+
+
 function errorHandler(error) {
     alert(error.message);
 }
+
+
 
 var fullDate = new Date()
 console.log(fullDate);
@@ -362,6 +370,9 @@ myMonth[9] = "October";
 myMonth[10] = "November";
 myMonth[11] = "December";
 var monthName = myMonth[fullDate.getMonth()];
+
+
+
 
 
 // <!--------FACEBOOK LOGOUT----------> //

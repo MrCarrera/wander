@@ -6,8 +6,12 @@
 
 
                   
-$(document).ready(function(){
-                  $(document).bind('deviceready', function(){
+        $(document).on('pageshow', '#page-activity', function(){
+                       //loads data everytime page is shown.
+                       
+                                   $("#myListView").empty();
+                                    //Deletes previous list before re-calling it.
+                                       
                                    var output = $('#activityContent');
                                    //makes a variable that links to an ID. 
                                    $.ajax({
@@ -32,7 +36,7 @@ $(document).ready(function(){
                                           }
                                           });
                                    });
-                  });
+
                   
    // Will handle on tap to switch to single post page
    

@@ -20,7 +20,7 @@ $(document).bind('deviceready', function(){
                 console.log(data);
                 alert('Posted!');
                 },
-                                           
+               
                     error: function(){
                     console.log(data);
                     alert('There Was An Error Adding Your Comment');
@@ -29,7 +29,7 @@ $(document).bind('deviceready', function(){
                                     
                 //Resets Text Area After Post Is Submitted
                 $("#userPost").val('');
-                                    
+                                                    
                     return false;
                     
                     });
