@@ -45,6 +45,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		E087F38A83544CBDACB17358 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E7E3A06219E6A45200723778 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E3A06119E6A45200723778 /* CDVVibration.m */; };
+		32D751F27E7E474F9725E8B7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023D78127884D07BC6113F9 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloWorld/config.xml; sourceTree = "<group>"; };
+		7023D78127884D07BC6113F9 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		2217D98352694DF8A00A1C8D /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,8 @@
 				D8ABC804B68A4D64AB462290 /* CDVStatusBar.h */,
 				33C1C04219E5BCCD00B8BDE3 /* CDVNotification.h */,
 				33C1C04319E5BCCD00B8BDE3 /* CDVNotification.m */,
+				7023D78127884D07BC6113F9 /* CDVLocation.m */,
+				2217D98352694DF8A00A1C8D /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = HelloWorld/Plugins;
@@ -450,6 +455,7 @@
 				E087F38A83544CBDACB17358 /* (null) in Sources */,
 				2444E3D3FDBB4A4F81EFE1C4 /* CDVStatusBar.m in Sources */,
 				339AF4C919D4748C00E7491C /* CDVInAppBrowser.m in Sources */,
+				32D751F27E7E474F9725E8B7 /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

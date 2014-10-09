@@ -30,6 +30,44 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <header-file src="src/ios/CDVStatusBar.h" />
+    <source-file src="src/ios/CDVStatusBar.m" />
+    <plugin name="Notification" value="CDVNotification" />
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <js-module name="Coordinates" src="www/Coordinates.js">
+        <clobbers target="Coordinates" />
+    </js-module>
+    <js-module name="PositionError" src="www/PositionError.js">
+        <clobbers target="PositionError" />
+    </js-module>
+    <js-module name="Position" src="www/Position.js">
+        <clobbers target="Position" />
+    </js-module>
+    <js-module name="geolocation" src="www/geolocation.js">
+        <clobbers target="navigator.geolocation" />
+    </js-module>
+    <config-file parent="/*" target="config.xml">
+        <feature name="StatusBar">
+            <param name="ios-package" onload="true" value="CDVStatusBar" />
+        </feature>
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarStyle" value="lightcontent" />
+        <preference name="StatusBarbackgroundColor" value="#5fa0b6" />
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
+    </config-file>
+    <header-file src="src/ios/CDVLocation.h" />
+    <source-file src="src/ios/CDVLocation.m" />
+    <framework src="CoreLocation.framework" />
+    <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+        <string />
+    </config-file>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -38,14 +76,5 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <plugins>
-        <preference name="StatusBarOverlaysWebView" value="false" />
-        <preference name="StatusBarBackgroundColor" value="#5fa0b6" />
-        <preference name="StatusBarStyle" value="lightcontent" />
-    </plugins>
-    <plugin name="Notification" value="CDVNotification" />
-    <feature name="Notification">
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
     <access origin="*" />
 </widget>

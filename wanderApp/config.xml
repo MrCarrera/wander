@@ -8,17 +8,63 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <plugins>
-        <preference name="StatusBarOverlaysWebView" value="false" />
-        <preference name="StatusBarBackgroundColor" value="#5fa0b6" />
-        <preference name="StatusBarStyle" value="lightcontent" />
+    
+    <platform name="ios">
         
-    </plugins>
-    <plugin name="Notification" value="CDVNotification" />
-
-    <feature name="Notification">
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
+        <config-file target="config.xml" parent="/*">
+            <feature name="StatusBar">
+                <param name="ios-package" value="CDVStatusBar" onload="true" />
+            </feature>
+            <preference name="StatusBarOverlaysWebView" value="false" />
+            <preference name="StatusBarStyle" value="lightcontent" />
+            <preference name="StatusBarbackgroundColor" value="#5fa0b6"/>
+        </config-file>
+        
+        <header-file src="src/ios/CDVStatusBar.h" />
+        <source-file src="src/ios/CDVStatusBar.m" />
+        
+        <plugin name="Notification" value="CDVNotification" />
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
+        
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+        
+        <js-module src="www/Coordinates.js" name="Coordinates">
+            <clobbers target="Coordinates" />
+        </js-module>
+        
+        <js-module src="www/PositionError.js" name="PositionError">
+            <clobbers target="PositionError" />
+        </js-module>
+        
+        <js-module src="www/Position.js" name="Position">
+            <clobbers target="Position" />
+        </js-module>
+        
+        <js-module src="www/geolocation.js" name="geolocation">
+            <clobbers target="navigator.geolocation" />
+        </js-module>
+        
+        <config-file target="config.xml" parent="/*">
+            <feature name="Geolocation">
+                <param name="ios-package" value="CDVLocation"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVLocation.h" />
+        <source-file src="src/ios/CDVLocation.m" />
+        <framework src="CoreLocation.framework" />
+        
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string></string>
+        </config-file>
+        
+    </platform>
+    
+    
 
     <access origin="*" />
 </widget>
