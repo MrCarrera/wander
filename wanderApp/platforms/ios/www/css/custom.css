@@ -118,6 +118,11 @@ padding-left:5.50em !important;
     text-shadow:none;
 }
 
+/*Text from size*/
+#userPost{
+    height: 250px !important;
+}
+
 /***************Settings Page****************/
 /*Search KM*/
 #settingsPanel p{
