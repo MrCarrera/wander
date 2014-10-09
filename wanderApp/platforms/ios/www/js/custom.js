@@ -5,7 +5,7 @@ var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 						'<li><a href="#page-messages"><img src="icons/messages.png" alt=""><span style="	text-shadow: none;"><b>My Posts</b></span></a></li>'+
 						'<li><a href="#page-profile" onclick="getInfo()" ><img src="icons/profile.png" alt=""><span style="text-shadow: none;"><b>Profile</b></span></a></li>'+
 						'<li><a href="#page-settings"><img src="icons/Settings.png" alt=""><span style="	text-shadow: none;"><b>Settings</b></span></a></li>'+
-						'<li><a href="#page-logout"><img src="icons/signOut.png" alt=""><span style="	text-shadow: none;"><b>Logout</b></span></a></li>'+
+						'<li><a id="logOut" href="#" onclick="logout();"><img src="icons/signOut.png" alt=""><span style="	text-shadow: none;"><b>Logout</b></span></a></li>'+
 					'</ul>'+
 				'</div>'; // This will create the list in the pannel with the links to the pages and icons : Roberto
 				

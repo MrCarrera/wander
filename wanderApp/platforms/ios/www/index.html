@@ -132,8 +132,8 @@
 	
 	<div data-role="header" id="header">
 	        <h1><b>Post Activity</b></h1>
-	    <a href="#page-activity" class="header-buttons">Cancel</a>   
-	    <a href="#page-activity" class="header-buttons" data-iconpos="right">Post</a> 
+	    <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>
+	     
 	    
 	</div> <!-- /header -->
     
@@ -267,19 +267,7 @@
 
 <!----------------------------Logout button starts----------------------------------------->
 
-<div data-role="page" id="page-logout" class="page-panel">
 
-    <div data-role="header" id="header">
-        <h1>Logout</h1>
-        <a href="#panel" class="panel-toggle">Open left panel</a>
-    </div><!-- /header -->
-	
-    <div data-role="content">
-		Logout
-    </div><!-- /content -->
-	
-</div>
-	
 <!--------LOGOUT PAGE ENDS HERE---------->
 
 <!--------FACEBOOK LOGIN---------->
@@ -363,7 +351,7 @@ function errorHandler(error) {
     alert(error.message);
 }
 
-
+// <!--------FACEBOOK LOGOUT----------> //
 
 var fullDate = new Date()
 console.log(fullDate);
@@ -390,7 +378,7 @@ var monthName = myMonth[fullDate.getMonth()];
 
 
 
-// <!--------FACEBOOK LOGOUT----------> //
+
     </script>
 
 
