@@ -20,6 +20,11 @@ body {
 #header { background:#5F9FB5; border-bottom-width: 3px; solid:#999;border-bottom-style: solid; border-bottom-color: #ff847c;}
 #header a.panel-toggle { text-indent: -999999px; overflow:hidden; width:30px; height:24px; background:url(../icons/tabMenu.png) no-repeat; border:0;margin-left:10px; padding-left:0px; box-shadow:none; top:0.69em; border-radius:0; }
 #header h1{color:white;}
+
+/***************Eliminates while line all pages****************/
+.ui-header{
+    border-width:0;
+}
 /***************Post Feed Page****************/
 #header a.addPost{
 	text-indent: -999999px;
