@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
 <!----------------------------------JQuery CDN----->
@@ -146,12 +146,17 @@
 
 <div data-role="page" id="individualPost" >
     <div data-role="header" id="header" data-position="fixed">
-        <h1><b>Post</b></h1>
-        <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>     
+        <h1><b>Post Thread</b></h1>
+        <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>
+        <a href="#" class="detailPost" data-iconpos="right">Reply</a>
     </div> <!-- /header -->
-    <div data-role="content" id="postContent">
+    <div data-role="content" class="detailedPostStyle" id="detailedPost">
         
-    </div>
+        <ul data-role="listview" class="activityList" id="detailedList">
+            
+        </ul>
+    </div>  <!-----Ends Content---->
+
 </div>
 <!--------Individual post PAGE finish HERE---------->
 <!----------------------------Post Activity page starts----------------------------------------->

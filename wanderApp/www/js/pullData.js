@@ -43,10 +43,25 @@
    $(document).on('tap', '#myListView li a', function(){   //calls for the function on tap 
        
     $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
+                  
+        
+           $("#detailedList").empty();
+                  //Clear List Before Clone.
+                  
+                     $(this).clone().appendTo('#detailedList');
+                            //Clone selected listview Values.
+                                     
+                       $('#detailedList > li').value(function (index, value) {
+                                                         return value + ' at ' + index;
+                                                         });
+                  
+                  $( '#detailedList' ).listview( "refresh" );
+                                    //Refresh List After Cloning and Appending.
 });
 
 
-           
+
+
  
 
 // Post - userPost

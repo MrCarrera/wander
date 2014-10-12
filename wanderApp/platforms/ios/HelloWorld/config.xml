@@ -33,8 +33,6 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
-    <header-file src="src/ios/CDVStatusBar.h" />
-    <source-file src="src/ios/CDVStatusBar.m" />
     <plugin name="Notification" value="CDVNotification" />
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />

@@ -33,7 +33,7 @@ body {
 	height:30px; 
 	background:url(../icons/addPost.png) no-repeat; 
 	border:0;
-	margin-right:10px; 
+	margin-right:10px;
 	padding-left:0px; 
 	padding-right: 0px;
 	box-shadow:none; 
@@ -43,6 +43,10 @@ body {
 }
 
 #activityContent{
+    position:absolute;
+}
+
+#detailedPost{
     position:absolute;
 }
 
@@ -82,6 +86,7 @@ body {
 #page-activity .ui-listview>li p {
     white-space : normal !important;
     margin: 0 !important;
+    text-align: left;
         
 }
 /*padding for the text in the list*/
@@ -91,7 +96,12 @@ padding-left:5.50em !important;
 }
 
 
+
+
+
 /***************Post Individual Page ****************/
+
+
 /*Header icon*/
 #header a.myBack{
 	text-indent: -999999px;
@@ -108,6 +118,90 @@ padding-left:5.50em !important;
 	border-radius:0;
     
 }
+
+#header a.detailPost{
+    
+    /*    overflow:hidden;*/
+    /*    width:30px;*/
+    /*    height:30px;*/
+    color:white;
+    background-color:#5F9FB5;
+    border:0;
+    margin-right:10px;
+    padding-left:0px;
+    padding-right: 0px;
+    margin-bottom:10px;
+    box-shadow:none;
+    top:0.50em;
+    border-radius:0;
+    text-shadow:none;
+/*    font-size:14px;*/
+}
+
+.detailedPostStyle {
+    padding: 5px; !important;
+}
+
+
+
+#individualPost .ui-content p {
+    
+    white-space : normal !important;
+    margin: 0 !important;
+    text-align: left;
+    font-size: 12px;
+    
+    
+    
+    
+}
+
+#individualPost .ui-content .ui-icon-listIcon:after  {
+    
+    background-image: url("../img/downArrow.png");
+    background-size: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    margin-left:50%;
+    margin-right:50%;
+    margin-top:30px;
+    padding-bottom:50px;
+    
+    
+    
+    
+}
+
+#individualPost .ui-content .feedImage {
+    
+    width: 60px;
+    height: 60px;
+    
+    
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    float:left;
+    /*    margin-left:12px !important;*/
+    margin-top:12px !important;
+    padding-right:10px;
+}
+
+#individualPost .ui-content .feedImage p {
+    
+    
+    float:left;
+    /*    margin-left:12px !important;*/
+    margin-top:12px !important;
+    
+}
+
+
+
+
+
 
 
 /***************Add new Post Page****************/

@@ -65,7 +65,7 @@ module.exports.metadata =
     "org.apache.cordova.statusbar": "0.1.8",
     "org.apache.cordova.dialogs": "0.2.11-dev",
     "org.apache.cordova.vibration": "0.3.12-dev",
-    "org.apache.cordova.geolocation": "0.3.11-dev"
+    "org.apache.cordova.geolocation": "0.3.10"
 }
 // BOTTOM OF METADATA
 });
