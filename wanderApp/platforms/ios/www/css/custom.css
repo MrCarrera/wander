@@ -43,7 +43,10 @@ body {
 }
 
 #activityContent{
-    position:absolute;
+/*    position:absolute;*/
+    overflow: auto;
+    overflow-x: hidden;
+    
 }
 
 #detailedPost{
@@ -87,6 +90,7 @@ body {
     white-space : normal !important;
     margin: 0 !important;
     text-align: left;
+    
         
 }
 /*padding for the text in the list*/
