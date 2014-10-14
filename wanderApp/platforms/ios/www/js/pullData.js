@@ -60,20 +60,6 @@
                                     //Refresh List After Cloning and Appending.
 });
         
-      /*     $("#detailedList").empty();
-                  //Clear List Before Clone.
-                  
-                     $(this).clone().appendTo('#detailedList');
-                            //Clone selected listview Values.
-                                     
-                       $('#detailedList > li').value(function (index, value) {
-                                                         return value + ' at ' + index;
-                                                         });
-                  
-                  $( '#detailedList' ).listview( "refresh" );
-                                    //Refresh List After Cloning and Appending.
-});*/
-
 
 
 

@@ -43,15 +43,12 @@ body {
 }
 
 #activityContent{
-/*    position:absolute;*/
+
     overflow: auto;
     overflow-x: hidden;
     
 }
 
-#detailedPost{
-    position:absolute;
-}
 
 /***************Post Page Feed****************/
 
@@ -103,7 +100,7 @@ padding-left:5.50em !important;
 
 
 
-/***************Post Individual Page ****************/
+/***************Post thread ****************/
 
 
 /*Header icon*/
@@ -123,11 +120,10 @@ padding-left:5.50em !important;
     
 }
 
+/*Styles the cancel button*/
 #header a.detailPost{
     
-    /*    overflow:hidden;*/
-    /*    width:30px;*/
-    /*    height:30px;*/
+   
     color:white;
     background-color:#5F9FB5;
     border:0;
@@ -139,68 +135,98 @@ padding-left:5.50em !important;
     top:0.50em;
     border-radius:0;
     text-shadow:none;
-/*    font-size:14px;*/
-}
 
-.detailedPostStyle {
-    padding: 5px; !important;
 }
 
 
-
-#individualPost .ui-content p {
-    
-    white-space : normal !important;
-    margin: 0 !important;
-    text-align: left;
-    font-size: 12px;
-    
-    
-    
-    
-}
-
+/*Styles the arrow*/
 #individualPost .ui-content .ui-icon-listIcon:after  {
     
     background-image: url("../img/downArrow.png");
     background-size: 100%;
     background-color: transparent;
     box-shadow: none;
-    margin-left:50%;
-    margin-right:50%;
-    margin-top:30px;
-    padding-bottom:50px;
-    
-    
-    
-    
+    position:absolute;
+    top:95%;
+    margin-right:45%;           
 }
 
+/*Styles the pic to become rounded*/
 #individualPost .ui-content .feedImage {
     
-    width: 60px;
-    height: 60px;
+        width: 85px;
+        height: 85px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        padding:0;
+
     
     
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    border-top-left-radius: 30px !important;
-    border-bottom-left-radius: 30px !important;
-    float:left;
-    /*    margin-left:12px !important;*/
-    margin-top:12px !important;
-    padding-right:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+   
 }
 
-#individualPost .ui-content .feedImage p {
-    
-    
-    float:left;
-    /*    margin-left:12px !important;*/
-    margin-top:12px !important;
+/*Styles div myPost*/
+
+#individualPost .ui-content{
+    padding: 0px !important;
+}
+
+#myPost .ui-btn {
+    font-size: 1em !important;
+    margin: 0 !important;
+    padding: 1em !important;
+    display: block !important;
+    position: relative !important;
+    text-align: center!important;
+    text-overflow: ellipsis!important;
+    overflow: hidden!important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
     
 }
+#myPost .ui-btn-icon-right{
+    padding: 0 !important;
+}
+#myPost{
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+
+#myPost{
+    margin-top: -8px;
+}
+
+/*Styles the p under myPost*/
+
+#myPost p:first-of-type{
+     margin:auto;
+     padding:1px;
+     text-align: center !important;
+     font-size: .8em !important;
+     font-weight: normal !important;
+}
+
+#myPost  p{
+    white-space: normal;
+    font-size: .8em;
+    padding: 1px;
+    margin: 1px 10px 1px 10px;
+    font-weight: normal;
+    text-align: justify;
+}
+
 
 
 
@@ -336,7 +362,7 @@ padding-left:5.50em !important;
 
 .profileTextAbout {
             color: white;
-            text-shadow: none; !important;
+            text-shadow: none !important;
             font-size: 21px;
             text-align:left;
 
