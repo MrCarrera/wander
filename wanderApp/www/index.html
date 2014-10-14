@@ -34,6 +34,9 @@
                 <script src="inappbrowser.js"></script>
                 <script src="js/post.js"></script>
                 <script src="js/pullData.js"></script>
+                <script src="js/timeago.js"></script>
+                
+
 <!----------------------------------Custom JScript--->
 		<script type="text/javascript" src="js/custom.js"></script>
 
@@ -42,6 +45,15 @@
         
         
         <title>Wander</title>
+        
+     <script type="text/javascript" charset="utf-8">
+         
+         jQuery(document).ready(function() {
+                                
+                                $('body').timeago();
+                                
+                                });
+    </script>
 <!----------------------------------Geolocation GEOLOCATION----->        
      <script type="text/javascript" charset="utf-8">
 
@@ -193,6 +205,7 @@
                 <input type="submit" value="Post">
             </form>
         </div>
+        <div id="userId"></div>
         </div> <!-- /content -->
 </div>    
 
@@ -209,7 +222,8 @@
     <div data-role="content">
         <p id="geolocation">Finding geolocation...Test</p>
            
-               
+           
+      
     </div><!-- /content -->
 	
 </div>
@@ -415,6 +429,7 @@ myMonth[9] = "October";
 myMonth[10] = "November";
 myMonth[11] = "December";
 var monthName = myMonth[fullDate.getMonth()];
+
 
 
 

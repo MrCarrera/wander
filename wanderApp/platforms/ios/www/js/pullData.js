@@ -25,11 +25,12 @@
                                                  $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href=""><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                  + '<p>'+item.Post+'<p>'
                                                  
-                                                 + '<p class="ui-li-aside">'+item.Time+'</p>'+'<p>'+item.theDate+'</p></a></li>');                                                
+                                                 + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
                                                  });          
                                                  
                                                  
                                                     $( '#myListView' ).listview( "refresh" );
+                                                    $('.timeago').timeago();
                                           },
                                           error: function(){
                                           output.text('There was an error loading the data.');//Handles error to connect to database

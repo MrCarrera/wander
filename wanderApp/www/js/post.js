@@ -3,12 +3,16 @@ $(document).bind('deviceready', function(){
                    $('form').submit(function(){
                         
                                     
-                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();        
+//                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
+                        var postTime = fullDate.toISOString()
                         var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                         var postUser = $('#userName').text()
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')
                         var postData = $(this).serialize()
+//                        var postID = $('#userID').id = randomString(8);
+                       
+            
                                 
                                     
         $.ajax({
