@@ -44,9 +44,23 @@
    $(document).on('tap', '#myListView li a', function(){   //calls for the function on tap 
        
     $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
+              
+       
+       $("#myPost").empty();
+                  //Clear List Before Clone.
                   
+                     $(this).clone().appendTo('#myPost');
+                            //Clone selected listview Values.
+                                     
+                       $('#myPost').value(function (index, value) {
+                                                         return value + ' at ' + index;
+                                                         });
+                  
+                  $( '#myPost' ).listview( "refresh" );
+                                    //Refresh List After Cloning and Appending.
+});
         
-           $("#detailedList").empty();
+      /*     $("#detailedList").empty();
                   //Clear List Before Clone.
                   
                      $(this).clone().appendTo('#detailedList');
@@ -58,7 +72,7 @@
                   
                   $( '#detailedList' ).listview( "refresh" );
                                     //Refresh List After Cloning and Appending.
-});
+});*/
 
 
 
