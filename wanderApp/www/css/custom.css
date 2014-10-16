@@ -218,13 +218,24 @@ padding-left:5.50em !important;
      font-weight: normal !important;
 }
 
+/*Styles post text under myPost*/
+
 #myPost  p{
     white-space: normal;
     font-size: .8em;
     padding: 1px;
-    margin: 1px 10px 1px 10px;
+    margin: 1px 10px 8px 10px;
     font-weight: normal;
     text-align: justify;
+}
+
+/*Styles the time under myPost*/
+
+#myPost p:nth-child(5){
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: .7em;
 }
 
 
