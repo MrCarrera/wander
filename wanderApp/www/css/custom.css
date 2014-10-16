@@ -98,7 +98,7 @@ padding-left:5.50em !important;
 
 
 /*Makes the list with white background*/
-li .ui-btn{
+#myListView li .ui-btn{
     background-color: white !important;
 }
 
