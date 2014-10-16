@@ -97,6 +97,11 @@ padding-left:5.50em !important;
 }
 
 
+/*Makes the list with white background*/
+li .ui-btn{
+    background-color: white !important;
+}
+
 
 
 
@@ -175,6 +180,7 @@ padding-left:5.50em !important;
 
 #individualPost .ui-content{
     padding: 0px !important;
+    min-height: inherit !important;
 }
 
 #myPost .ui-btn {
@@ -201,7 +207,9 @@ padding-left:5.50em !important;
     width: 100%;
     height: auto;
     position: fixed;
+    z-index: 2;
 }
+
 
 
 #myPost{
