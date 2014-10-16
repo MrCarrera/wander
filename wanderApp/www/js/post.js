@@ -2,6 +2,17 @@ $(document).bind('deviceready', function(){
                  $(function(){
                    $('form').submit(function(){
                         
+                                    //Generate a random 10 letter ID for each post using Alphabetical Chars.
+                                    function randString(x){
+                                    var s = "";
+                                    while(s.length<x&&x>0){
+                                    var r = Math.random();
+                                    s+= (r<0.1?Math.floor(r*100):String.fromCharCode(Math.floor(r*26) + (r>0.5?97:65)));
+                                    }
+                                    return s;
+                                    }
+                                    //Place random ID within hidden div for extraction.
+                                    document.getElementById("userID").value = randString(10);
                                     
 //                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
                         var postTime = fullDate.toISOString()
@@ -10,14 +21,13 @@ $(document).bind('deviceready', function(){
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')
                         var postData = $(this).serialize()
-//                        var postID = $('#userID').id = randomString(8);
-                       
+                        var postID = $('#userID').val()
             
                                 
                                     
         $.ajax({
                 type: 'POST',
-                data: postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime,
+                data: postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID,
                 //PHP URL
                 url: 'http://wander-app.org/userPosts.php',
                 success: function(data){

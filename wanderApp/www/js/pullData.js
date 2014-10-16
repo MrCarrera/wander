@@ -11,7 +11,7 @@
                        
                                    $("#myListView").empty();
                                     //Deletes previous list before re-calling it.
-                                       
+                       
                                    var output = $('#activityContent');
                                    //makes a variable that links to an ID. 
                                    $.ajax({
@@ -31,7 +31,8 @@
                                                  
                                                     $( '#myListView' ).listview( "refresh" );
                                                     $('.timeago').timeago();
-                                          },
+                                                    
+                                                                                              },
                                           error: function(){
                                           output.text('There was an error loading the data.');//Handles error to connect to database
                                           }
