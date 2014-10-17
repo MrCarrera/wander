@@ -39,6 +39,9 @@
 
 <!----------------------------------Custom JScript--->
 		<script type="text/javascript" src="js/custom.js"></script>
+                
+<!---------------Limit character input area jquery plugin----->
+                <script src="http://jquery-limit.googlecode.com/files/jquery.limit-1.2.source.js"></script> 
 
 <!----------------------------------Custom CSS----->
         <link rel="stylesheet" href="css/custom.css" />
@@ -276,6 +279,10 @@
                     <b></b>
                     <textarea data-corners="false" placeholder="Compose new post here (max. 180 characters)" id="userPost" name="userPost" cols="30" rows="10"></textarea>
                 </label>
+                You have <span id="charsLeft"></span> chars left.
+                <script type="text/javascript">
+                $('#userPost').limit('150','#charsLeft');
+                </script>
                 
                 <input type="submit" value="Post">
             </form>
