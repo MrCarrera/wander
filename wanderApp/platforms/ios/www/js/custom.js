@@ -26,3 +26,9 @@ $(document).on('pageinit', '.page-panel', function(){
 	   }
    }); // this will reveal the panel when swipping right
 }); 
+
+
+$(document).ready(function() {
+var newtop = $('#mypost').height() ;
+$('#detailedList').css("top",newtop); 
+        });
