@@ -22,7 +22,7 @@
                                           success: function(data, status){ //Calls the server
                                           $.each(data, function(i,item){
                                               console.log(JSON.stringify(item)); //Inject data to the cells
-                                                 $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href=""><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                                                 $('#myListView').append('<li id="wanderPost" name='+item.randomPostID+' class="ui-nodisc-icon" data-icon="listIcon" ><a href=""><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                  + '<p>'+item.Post+'<p>'
                                                  
                                                  + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
