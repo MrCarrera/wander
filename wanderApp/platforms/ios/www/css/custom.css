@@ -98,7 +98,7 @@ padding-left:5.50em !important;
 
 
 /*Makes the list with white background*/
-#myListView a .ui-page-theme-a .ui-btn{
+#myListView li .ui-btn{
     background-color: white !important;
 }
 
@@ -175,6 +175,8 @@ padding-left:5.50em !important;
     border-bottom-left-radius: 50px !important;
    
 }
+
+
 
 /*Styles div myPost*/
 

@@ -35,6 +35,7 @@
                 <script src="js/post.js"></script>
                 <script src="js/pullData.js"></script>
                 <script src="js/timeago.js"></script>
+                <script src="js/postReply.js"></script>
                 
 
 <!----------------------------------Custom JScript--->
@@ -160,7 +161,7 @@
     <div data-role="header" id="header" data-position="fixed">
         <h1><b>Post Thread</b></h1>
         <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>
-        <a href="#" class="detailPost" data-iconpos="right">Reply</a>
+        <a href="#replyPage" class="detailPost" onclick="getInfo()" data-iconpos="right">Reply</a>
     </div> <!-- /header -->
     <div data-role="content" class="detailedPostStyle" id="detailedPost">
         
@@ -250,7 +251,7 @@
 	<div data-role="content">
         
 	<div id="landmark-1" data-landmark-id="1">
-            <form action="" >
+            <form action="" id="postForm" name="postForm" >
                 
                 <label for="userPost">
                     <b></b>
@@ -262,7 +263,44 @@
         </div>
         <div id='userID'></div>
         </div> <!-- /content -->
+</div>
+
+
+<!--------REPLY TO INDIVIDUAL POST PAGE---------->
+<div data-role="page" id="replyPage" onload="onBodyLoad()">
+    
+    <script>
+        function onBodyLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+    </script>
+    
+    <div data-role="header" id="header">
+        <h1><b>Reply To Post</b></h1>
+        <a href="#individualPost" data-iconpos="left" class="myBack">Back</a>
+        
+        
+    </div> <!-- /header -->
+    
+    
+    
+    <div data-role="content">
+        
+        <div id="landmark-2" data-landmark-id="2">
+            <form action="" id="replyForm" name="replyForm">
+                
+                <label for="replyPost">
+                    <b></b>
+                    <textarea data-corners="false" placeholder="Reply To Post (max. 180 characters)" id="replyPost" name="replyPost" cols="30" rows="10"></textarea>
+                </label>
+                
+                <input id="replyButton" type="submit" value="Reply">
+            </form>
+        </div>
+        
+    </div> <!-- /content -->
 </div>    
+
 
 <!----------------------------MY POST STARTS HERE----------------------------------------->
 

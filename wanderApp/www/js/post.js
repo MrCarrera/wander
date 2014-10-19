@@ -1,6 +1,8 @@
 $(document).bind('deviceready', function(){
                  $(function(){
-                   $('form').submit(function(){
+                   $('form#postForm').submit(function(){
+                                    
+        
                         
                                     //Generate a random 10 letter ID for each post using Alphabetical Chars.
                                     function randString(x){
@@ -22,12 +24,12 @@ $(document).bind('deviceready', function(){
                         var postPic = $('#userPic').attr('src')
                         var postData = $(this).serialize()
                         var postID = $('#userID').val()
+                        var postData = $('#userPost').val();
             
-                                
                                     
         $.ajax({
                 type: 'POST',
-                data: postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID,
+                data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID,
                 //PHP URL
                 url: 'http://wander-app.org/userPosts.php',
                 success: function(data){
@@ -55,10 +57,12 @@ $(document).bind('deviceready', function(){
                                     
                 //Resets Text Area After Post Is Submitted
                 $("#userPost").val('');
-                                    
+            
                     return false;
                     
-                    });
-                   });
-                 });
+        });
+    });
+});
+
+
 
