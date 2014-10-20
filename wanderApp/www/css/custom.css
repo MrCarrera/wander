@@ -200,56 +200,65 @@ padding-left:5.50em !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
+    background-image: url("../img/replyCoverImg.png"); 
+    border: none !important;
     
 }
 #myPost .ui-btn-icon-right{
     padding: 0 !important;
     height: 183px !important;
 }
+
+/*Controls the size of the div: myPost*/
 #myPost{
     width: 100%;
     height: 190px;
     position: fixed;
     z-index: 2;
+         
 }
-
-
 
 
 
 /*Styles the p under myPost*/
 
 #myPost p:first-of-type{
+    
      margin:auto;
      padding:1px;
      text-align: center !important;
      font-size: .8em !important;
      font-weight: normal !important;
+     color:white;
 }
 
 /*Styles post text under myPost*/
 
 #myPost  p{
+    
     white-space: normal;
     font-size: .8em;
     padding: 1px;
     margin: 1px 10px 8px 10px;
     font-weight: normal;
     text-align: justify;
+    color:white;
 }
 
 /*Styles the time under myPost*/
 
 #myPost p:nth-child(5){
+    
     position: absolute;
     top: 10px;
     right: 5px;
     font-size: .7em;
+    color:white;
 }
 
 /*Add a fixed top margin to the response list */
 #individualPost .ui-listview>li{
-    top:200px !important;
+    top:199px !important;
 }
 
 
