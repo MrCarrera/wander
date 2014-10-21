@@ -280,7 +280,7 @@ padding-left:5.50em !important;
 }
 
 /*Text from size*/
-#userPost{
+#userPost, #replyPost{
     height: 250px !important;
 }
 

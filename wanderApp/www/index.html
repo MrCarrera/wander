@@ -278,12 +278,12 @@
                 
                 <label for="userPost">
                     <b></b>
-                    <textarea data-corners="false" placeholder="Compose new post here (max. 180 characters)" id="userPost" name="userPost" cols="30" rows="10"></textarea>
+                    <textarea data-corners="false" placeholder="Compose new post here (max. 150 characters)" id="userPost" name="userPost" cols="30" rows="10"></textarea>
                 </label>
                 You have <span id="charsLeft"></span> chars left.
                 <script type="text/javascript">
                 $('#userPost').limit('150','#charsLeft');
-                </script>
+                </script> <!--counting character script-->
                 
                 <input type="submit" value="Post">
             </form>
@@ -318,8 +318,12 @@
                 
                 <label for="replyPost">
                     <b></b>
-                    <textarea data-corners="false" placeholder="Reply To Post (max. 180 characters)" id="replyPost" name="replyPost" cols="30" rows="10"></textarea>
+                    <textarea data-corners="false" placeholder="Reply To Post (max. 100 characters)" id="replyPost" name="replyPost" cols="30" rows="10"></textarea>
                 </label>
+                You have <span id="charsLeftReply"></span> chars left.
+                <script type="text/javascript">
+                $('#replyPost').limit('100','#charsLeftReply');
+                </script> <!--counting character script-->
                 
                 <input id="replyButton" type="submit" value="Reply">
             </form>
