@@ -13,15 +13,15 @@ $(document).bind('deviceready', function(){
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')
                         var postReply = $('#replyPost').val()
-                        var postID = $('#wanderPost').attr('name'); // get data-id of original post.
+                        var postID = $('#replyid').val() // get data-id of original post.
             
                                 
                                     
         $.ajax({
                 type: 'POST',
-                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&randomPostID='+postID,
+                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&replyid='+postID,
                 //PHP URL
-                url: 'http://wander-app.org/replyPosts2.php',
+                url: 'http://wander-app.org/replyPosts.php',
                 success: function(data){
                 console.log(data);
                

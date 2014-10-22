@@ -15,14 +15,14 @@
                                    var output = $('#activityContent');
                                    //makes a variable that links to an ID. 
                                    $.ajax({
-                                          url: 'http://wander-app.org/getPost.php',
+                                          url: 'http://wander-app.org/getPost22.php',
                                           dataType: 'jsonp',
                                           jsonp: 'jsoncallback',
                                           timeout: 5000,
                                           success: function(data, status){ //Calls the server
                                           $.each(data, function(i,item){
                                               console.log(JSON.stringify(item)); //Inject data to the cells
-                                                 $('#myListView').append('<li id="wanderPost" name='+item.randomPostID+' class="ui-nodisc-icon" data-icon="listIcon" ><a href=""><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                                                 $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                  + '<p>'+item.Post+'<p>'
                                                  
                                                  + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
@@ -46,22 +46,36 @@
        
     $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
               
+                  
+                  
        
        $("#myPost").empty();
                   //Clear List Before Clone.
+                
+                
+                  document.getElementById("replyid").value = $(this).attr('data-key');
+                  //place the id from the data-key attribute to the replyid div
                   
                      $(this).clone().appendTo('#myPost');
                             //Clone selected listview Values.
-                                     
+                  
+                  
+                      
+                  
+                  
+                  
+                  
                        $('#myPost').value(function (index, value) {
                                                          return value + ' at ' + index;
                                                          });
                   
+                  
+                  
                   $( '#myPost' ).listview( "refresh" );
                                     //Refresh List After Cloning and Appending.
+                  
 });
         
-
 
 
  
