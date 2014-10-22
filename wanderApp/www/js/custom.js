@@ -27,8 +27,10 @@ $(document).on('pageinit', '.page-panel', function(){
    }); // this will reveal the panel when swipping right
 }); 
 
-
-$(document).ready(function() {
-var newtop = $('#mypost').height() ;
-$('#detailedList').css("top",newtop); 
-        });
+$(document).on("pagecreate", "#page-settings", function () {
+    $("#flip-1, #flip-2").on("change", function () {
+        if ($(this).val() == "off") {
+            $("select").not($(this)).val("on").slider("refresh");
+        }
+    });
+});
