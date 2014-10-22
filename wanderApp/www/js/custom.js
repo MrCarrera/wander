@@ -27,10 +27,10 @@ $(document).on('pageinit', '.page-panel', function(){
    }); // this will reveal the panel when swipping right
 }); 
 
-$(document).on("pagecreate", "#page-settings", function () {
-    $("#flip-1, #flip-2").on("change", function () {
-        if ($(this).val() == "off") {
-            $("select").not($(this)).val("on").slider("refresh");
+$(document).on("pagecreate", "#page-settings", function () { 
+    $("#flip-1, #flip-2").on("change", function () { //call for a function for flip 1 and 2
+        if ($(this).val() == "off") {   // set the sondition
+            $("#flip-1, #flip-2").not($(this)).val("on").slider("refresh"); //execute the code when both have value off
         }
     });
 });
