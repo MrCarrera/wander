@@ -11,21 +11,32 @@
                        
                                    $("#replyList").empty();
                                     //Deletes previous list before re-calling it.
-                       
-                                   var output = $('#replies');
+                                    var replyIdCheck = $('#replyid').val()
+                                    //Gets dynamic id value to identify post.
+                                    var output = $('#replies');
                                    //makes a variable that links to an ID. 
-                                   $.ajax({
-                                          url: 'http://wander-app.org/getReply.php',
-                                          dataType: 'jsonp',
-                                          jsonp: 'jsoncallback',
-                                          timeout: 5000,
-                                          success: function(data, status){ //Calls the server
-                                          $.each(data, function(i,item){
-                                              console.log(JSON.stringify(item)); //Inject data to the cells
+                       
+                       
+                    $.ajax({
+                        url: 'http://wander-app.org/getReply.php',
+                        dataType: 'jsonp',
+                        jsonp: 'jsoncallback',
+                        timeout: 5000,
+                        success: function(data, status){ //Calls the server
+                                          
+                            $.each(data, function(i,item){
+                                                 
+                                if(item.mainPostId == replyIdCheck){
+                                //Filters relpies that are linked to the main post using dynamic id.
+                                              
+                                        
+                                        console.log(JSON.stringify(item)); //Inject data to the cells
                                                  $('#replyList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-kode='+item.mainPostId+'><img class="feedImage" src='+item.replyPic+'></img><p><strong>'+item.replyName+", "+item.replyGender+'</p></strong>'
                                                  + '<p>'+item.mainReplyPost+'<p>'
                                                  
                                                  + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.theTime+'></time></p></a></li>');
+                                                 
+                                                 }
                                                  });          
                                                  
                                                  
