@@ -27,10 +27,32 @@ $(document).on('pageinit', '.page-panel', function(){
    }); // this will reveal the panel when swipping right
 }); 
 
-$(document).on("pagecreate", "#page-settings", function () { 
-    $("#flip-1, #flip-2").on("change", function () { //call for a function for flip 1 and 2
-        if ($(this).val() == "off") {   // set the sondition
-            $("#flip-1, #flip-2").not($(this)).val("on").slider("refresh"); //execute the code when both have value off
+/* $(document).on("pagecreate", "#page-settings", function(){
+    $("#flip-1").on("change", function(){
+        if ($(this).val() == "off"){
+            $("#flip-2").val("on").slider( "refresh" );
         }
+        
+        ShowList();
+    });
+    $("#flip-2").on("change", function(){
+            if ($(this).val() == "off"){
+            $("#flip-1").val("on").slider( "refresh" );
+        }
+        
+        ShowList();
     });
 });
+
+function ShowList(){
+    var m = $("#flip-1").val() == "on";
+    var f = $("#flip-2").val() == "on";
+    $('#myListView li').show();
+    if (m && !f) {
+        $("#myListView li:contains('female')").hide();
+        
+    } else if (!m && f) {
+        
+        $("#myListView li:contains('male')").hide();
+    }
+}*/

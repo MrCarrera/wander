@@ -20,19 +20,25 @@
                                           jsonp: 'jsoncallback',
                                           timeout: 5000,
                                           success: function(data, status){ //Calls the server
+                                              
                                           $.each(data, function(i,item){
+                                              
+                                              if (item.Gender=='male'&& $("#flip-1").val()=="on"){
+                                                                                                                    
                                               console.log(JSON.stringify(item)); //Inject data to the cells
                                                  $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                  + '<p>'+item.Post+'<p>'
                                                  
-                                                 + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
-                                                 });          
+                                                 + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');                                          
+                                              }
+                                          
+                                              });          
                                                  
                                                  
                                                     $( '#myListView' ).listview( "refresh" );
                                                     $('.timeago').timeago();
                                                     
-                                                                                              },
+                                                                                              },                                                                                                   
                                           error: function(){
                                           output.text('There was an error loading the data.');//Handles error to connect to database
                                           }
