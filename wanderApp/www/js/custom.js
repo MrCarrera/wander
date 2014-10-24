@@ -27,7 +27,7 @@ $(document).on('pageinit', '.page-panel', function(){
    }); // this will reveal the panel when swipping right
 }); 
 
-/* $(document).on("pagecreate", "#page-settings", function(){
+$(document).on("pagecreate", "#page-settings", function(){
     $("#flip-1").on("change", function(){
         if ($(this).val() == "off"){
             $("#flip-2").val("on").slider( "refresh" );
@@ -44,6 +44,7 @@ $(document).on('pageinit', '.page-panel', function(){
     });
 });
 
+/*
 function ShowList(){
     var m = $("#flip-1").val() == "on";
     var f = $("#flip-2").val() == "on";
