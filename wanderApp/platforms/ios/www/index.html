@@ -38,7 +38,8 @@
                 <script src="js/postReply.js"></script>
                 <script src="js/pullReplies.js"></script>
                 
-
+<!---------------------------------GEOLOCATION JS--->
+                <script type="text/javascript" src="js/geolocation.js"></script>
 <!----------------------------------Custom JScript--->
 		<script type="text/javascript" src="js/custom.js"></script>
                 
@@ -51,25 +52,7 @@
         
         <title>Wander</title>
         
-         <script type="text/javascript" charset="utf-8">
-
-    // Call onDeviceReady when Cordova is loaded.
-    //
-    // At this point, the document has loaded but cordova-2.5.0.js has not.
-    // When Cordova is loaded and talking with the native device,
-    // it will call the event `deviceready`.
-    //
-    function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-
-    // Cordova is loaded and it is now safe to make calls Cordova methods
-    //
-    function onDeviceReady() {
-        // Now safe to use the Cordova API
-    }
-
-    </script>
+ 
         
      <script type="text/javascript" charset="utf-8">
          
@@ -79,41 +62,7 @@
                                 
                                 });
     </script>
-<!----------------------------------Geolocation GEOLOCATION----->        
-     <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-
-    // onSuccess Geolocation
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          + position.timestamp                    + '<br />';
-    }
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
-    </script>
   </head>
     
     <body>
@@ -191,7 +140,7 @@
         
         
            
-            <div id="myPost" name="">
+            <div id="myPost">
                 
             </div> <!-- Div for data inject from the clone -->
             
@@ -305,7 +254,7 @@
     </div><!-- /header -->
 	
     <div data-role="content">
-        <p id="geolocation">Finding geolocation...Test</p>
+        <p id="geolocation">Finding geolocation...</p>
            
            
       
