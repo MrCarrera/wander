@@ -31,10 +31,10 @@
                                               
                                         
                                         console.log(JSON.stringify(item)); //Inject data to the cells
-                                                 $('#replyList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-kode='+item.mainPostId+'><img class="feedImage" src='+item.replyPic+'></img><p><strong>'+item.replyName+", "+item.replyGender+'</p></strong>'
+                                                 $('#replyList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><data-kode='+item.mainPostId+'><img class="feedImage" src='+item.replyPic+'></img><p><strong>'+item.replyName+", "+item.replyGender+'</p></strong>'
                                                  + '<p>'+item.mainReplyPost+'<p>'
                                                  
-                                                 + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.theTime+'></time></p></a></li>');
+                                                 + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.theTime+'></time></p></li>');
                                                  
                                                  }
                                                  });          
