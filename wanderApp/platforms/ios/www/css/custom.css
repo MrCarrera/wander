@@ -221,9 +221,9 @@ padding-left:5.50em !important;
 }
 
 /*Makes the text in myPost legible*/
-/*#myPost .ui-page-theme-a .ui-btn{
+#myPost .ui-page-theme-a .ui-btn{
     text-shadow: 0 0px 0 #f3f3f3 !important;
-}*/
+}
 
 
 /*Styles the p under myPost*/
@@ -249,6 +249,7 @@ padding-left:5.50em !important;
     font-weight: normal;
     text-align: justify;
     color:white;
+    text-shadow: 0 0px 0 #f3f3f3 !important;
 }
 
 /*Styles the time under myPost*/
