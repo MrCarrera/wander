@@ -61,7 +61,7 @@ body {
                 
 }
 
-.feedImage {
+#myListView .feedImage{
     width: 60px;
     height: 60px;
 
@@ -264,9 +264,49 @@ padding-left:5.50em !important;
 }
 
 
+/*********Reply list goes here************/
 
 
+/*Makes the pic rounded and fits size*/
+#individualPost #replies .feedImage{
+    width: 60px;
+    height: 60px;
 
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border-top-left-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+  float:left;
+  margin: 5px 5px 5px 15px;
+}
+
+/*Styles content within the list*/
+
+#individualPost #replies .ui-listview>li p {
+    white-space : normal !important;
+    text-align: left;
+    
+        
+}
+
+#individualPost #replies .ui-listview>.ui-li-static{
+    padding:.2em .4em !important;
+}
+
+#individualPost #replies .ui-listview .ui-li-aside{
+    top: .6em !important;
+}
+
+/*Makes the list with white background*/
+#individualPost #replies li .ui-btn{
+    background-color: white !important;
+}
+
+#replies p:nth-child(3){
+    margin-right: 10px !important;
+}
 
 /***************Add new Post Page****************/
 /*Header buttons*/
