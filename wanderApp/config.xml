@@ -21,17 +21,10 @@
         </config-file>
         
         
-        
         <plugin name="Notification" value="CDVNotification" />
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
-        
-    </platform>
-    
-    <!-- ios -->
-    <platform name="ios">
-        
         <js-module src="www/Coordinates.js" name="Coordinates">
             <clobbers target="Coordinates" />
         </js-module>
@@ -60,9 +53,9 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string></string>
         </config-file>
+
         
     </platform>
-    
     
 
     <access origin="*" />
