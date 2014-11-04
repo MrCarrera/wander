@@ -10,7 +10,7 @@
 
     // Wait for device API libraries to load
     //
-    //document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
@@ -23,6 +23,11 @@
     function onSuccess(position) {
         document.getElementById('userLat').value = position.coords.latitude;
         document.getElementById('userLong').value = position.coords.longitude;
+        
+        document.getElementById('extraUserLat').value = position.coords.latitude;
+        document.getElementById('extraUserLong').value = position.coords.longitude;
+        document.getElementById('extraUserTest').innerHTML = position.coords.longitude;
+
         
     }
 
