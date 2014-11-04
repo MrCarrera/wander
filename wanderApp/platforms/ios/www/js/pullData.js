@@ -9,13 +9,21 @@
 $(document).on('pageshow', '#page-activity', function(){
                //loads data everytime page is shown.
                
+               
+               // function pullTheData () {
+               
                $("#myListView").empty();
                //Deletes previous list before re-calling it.
                
+               
                var output = $('#activityContent');
+               
+               
                //makes a variable that links to an ID.
                $.ajax({
-                      url: 'http://wander-app.org/getPost22.php',
+                      type: 'GET',
+                      data: 'val='+$('#extraUserLat').val()+'&val2='+$('#extraUserLong').val(),
+                      url: 'http://wander-app.org/getPost2222.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 5000,
@@ -26,14 +34,14 @@ $(document).on('pageshow', '#page-activity', function(){
                              if (item.Gender=='male'&& $("#flip-1").val()=="on"){
                              
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-gLat='+item.postGeoLat+' data-gLong='+item.postGeoLong+' data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                      + '<p>'+item.Post+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
                              }
                              else if (item.Gender=='female'&& $("#flip-2").val()=="on"){
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-gLat='+item.postGeoLat+' data-gLong='+item.postGeoLong+' data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                      + '<p>'+item.Post+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
@@ -50,7 +58,9 @@ $(document).on('pageshow', '#page-activity', function(){
                       error: function(){
                       output.text('There was an error loading the data.');//Handles error to connect to database
                       }
+                      
                       });
+               
                });
 
 
