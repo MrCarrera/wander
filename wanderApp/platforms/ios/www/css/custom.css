@@ -102,8 +102,21 @@ padding-left:5.50em !important;
     background-color: white !important;
 }
 
+/*Styles the search input*/
 
+#page-activity .ui-input-search{
+    margin: 0px !important;
+    border-radius: 25px !important;
+}
 
+#page-activity .ui-focus{
+    box-shadow: 0 0 6px #ff847c !important;
+    border-color:#ff847c !important;
+}
+
+#page-activity .ui-body-inherit{
+    border-color: #5fa0b6;
+}
 
 /***************Post thread ****************/
 
