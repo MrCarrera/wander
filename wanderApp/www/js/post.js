@@ -27,11 +27,12 @@ $(document).bind('deviceready', function(){
                                              var postData = $('#userPost').val()
                                              var postLat = $('#userLat').val()
                                              var postLong = $('#userLong').val()
+                                             var postProfileID = $('#profileID').val()
                                              
                                              
                 $.ajax({
                      type: 'POST',
-                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong,
+                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID,
                          //PHP URL
                           url: 'http://wander-app.org/userPosts.php',
                           success: function(data){

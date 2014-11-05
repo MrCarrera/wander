@@ -290,7 +290,7 @@
         <h1 class="profileTextAbout"><b>About</b></h1>
         <h1 class="profileTextAbout" ><span id="profileAbout"></span></h1>
       </div>
-        
+       <div id='profileID'></div>
     </div><!-- /content -->
 	
 </div>
@@ -414,6 +414,7 @@ function getInfo() {
                                 document.getElementById("userGender").innerHTML = data.gender;
                                 document.getElementById("profileCity").innerHTML = data.location.name;
                                 document.getElementById("profileAbout").innerHTML = data.bio;
+                                document.getElementById("profileID").value = data.id;
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
                                
                                 
