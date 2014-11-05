@@ -25,6 +25,16 @@ body {
 .ui-header{
     border-width:0;
 }
+
+/***************Log in page****************/
+/*Styles the about wander text*/
+#aboutText{
+    text-align:center; 
+    color:white; 
+    text-shadow: none;
+}
+
+
 /***************Post Feed Page****************/
 #header a.addPost{
 	text-indent: -999999px;
