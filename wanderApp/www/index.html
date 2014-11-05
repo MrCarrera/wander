@@ -37,6 +37,7 @@
                 <script src="js/timeago.js"></script>
                 <script src="js/postReply.js"></script>
                 <script src="js/pullReplies.js"></script>
+                <script src="js/pullMyPosts.js"></script>
                 
                 
 <!---------------------------------GEOLOCATION JS--->
@@ -150,7 +151,7 @@
         
        
             <div id="replies">   
-
+            <div id="myPostsReplyId"></div>
                 <ul data-role="listview" id="replyList">
                                         
                                         
@@ -256,11 +257,26 @@
     </div><!-- /header -->
 	
     <div data-role="content">
-        <p id="geolocation">Finding geolocation...</p>
+        
+        
+        
+        <div id="myPosts">
+        
+        
+            
+            <ul data-role="listview" id="myPostsList">
+                
+                
+                
+            </ul>
+            
+        </div>
         <div id='extraUserLong'></div>
         <div id='extraUserLat'></div>
-        <div id='extraUserTest'>a</div>
-           
+        
+        
+        
+
       
     </div><!-- /content -->
 	
@@ -290,7 +306,8 @@
         <h1 class="profileTextAbout"><b>About</b></h1>
         <h1 class="profileTextAbout" ><span id="profileAbout"></span></h1>
       </div>
-       <div id='profileID'></div>
+       <div id='profileID'></div> <!-- Store users unique profile ID. -->
+       
     </div><!-- /content -->
 	
 </div>
@@ -400,6 +417,8 @@
                      alert('Facebook login failed: ' + response.error);
                      }
                      }, {scope: 'email,user_location,user_photos,user_hometown,user_about_me'});
+                     
+                     getInfo();
                      
                      $.mobile.changePage("#page-activity");
                      //Changes page to activity feed (home page) after login.

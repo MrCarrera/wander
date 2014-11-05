@@ -6,7 +6,7 @@
 
 
 
-$(document).on('pageshow', '#page-activity', function(){
+$(document).on('pagebeforeshow', '#page-activity', function(){
                //loads data everytime page is shown.
                
                

@@ -26,7 +26,7 @@
         
         document.getElementById('extraUserLat').value = position.coords.latitude;
         document.getElementById('extraUserLong').value = position.coords.longitude;
-        document.getElementById('extraUserTest').innerHTML = position.coords.longitude;
+        //document.getElementById('extraUserTest').innerHTML = position.coords.longitude;
 
         
     }
