@@ -58,39 +58,39 @@ $(document).on('pagebeforeshow', '#page-messages', function(){
 
 // Will handle on tap to switch to single post page
 
-//$(document).on('tap', '#myPostsList li a', function(){   //calls for the function on tap
-//               
-//               $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
-//               
-//               
-//               
-//               
-//               $("#myPost").empty();
-//               //Clear List Before Clone.
-//               
-//               
-//               document.getElementById("replyid").value = $(this).attr('data-key');
-//               //place the id from the data-key attribute to the replyid div
-//               
-//               $(this).clone().appendTo('#myPost');
-//               //Clone selected listview Values.
-//               
-//               
-//               
-//               
-//               
-//               
-//               
-//               $('#myPost').value(function (index, value) {
-//                                  return value + ' at ' + index;
-//                                  });
-//               
-//               
-//               
-//               $( '#myPost' ).listview( "refresh" );
-//               //Refresh List After Cloning and Appending.
-//               
-//               });
+$(document).on('tap', '#myPostsList li a', function(){   //calls for the function on tap
+               
+               $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
+               
+               
+               
+               
+               $("#myPost").empty();
+               //Clear List Before Clone.
+               
+               
+               document.getElementById("replyid").value = $(this).attr('data-key');
+               //place the id from the data-key attribute to the replyid div
+               
+               $(this).clone().appendTo('#myPost');
+               //Clone selected listview Values.
+               
+               
+               
+               
+               
+               
+               
+               $('#myPost').value(function (index, value) {
+                                  return value + ' at ' + index;
+                                  });
+               
+               
+               
+               $( '#myPost' ).listview( "refresh" );
+               //Refresh List After Cloning and Appending.
+               
+               });
 
 
 
