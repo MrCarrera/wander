@@ -25,6 +25,16 @@ body {
 .ui-header{
     border-width:0;
 }
+
+/***************Log in page****************/
+/*Styles the about wander text*/
+#aboutText{
+    text-align:center; 
+    color:white; 
+    text-shadow: none;
+}
+
+
 /***************Post Feed Page****************/
 #header a.addPost{
 	text-indent: -999999px;
@@ -49,8 +59,6 @@ body {
     
 }
 
-
-/***************Post Page Feed****************/
 
 
 /*Post Page Profile Images*/
@@ -279,6 +287,32 @@ padding-left:5.50em !important;
 /*Add a fixed top margin to the response list */
 #individualPost .ui-listview>li{
     top:199px !important;
+}
+
+
+/*********My Post page************/
+
+/*makes pic rounded*/
+
+#page-messages .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child {
+    width: 60px !important;
+    height: 60px !important;
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 50px !important;
+  float:left !important;
+  margin: 17px 5px 5px 15px !important;
+    
+}
+
+/*styles the  text witin the list*/
+
+#page-messages .ui-listview>li p {
+    white-space : normal !important;
+    text-align: left;
+    
+        
 }
 
 
