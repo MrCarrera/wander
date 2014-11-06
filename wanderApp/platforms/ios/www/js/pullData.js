@@ -22,8 +22,8 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                //makes a variable that links to an ID.
                $.ajax({
                       type: 'GET',
-                      data: 'val='+$('#extraUserLat').val()+'&val2='+$('#extraUserLong').val(),
-                      url: 'http://wander-app.org/getPost2222.php',
+                      data: 'val='+$('#extraUserLat').val()+'&val2='+$('#extraUserLong').val()+'&val3='+$("#slider-1").val(),
+                      url: 'http://wander-app.org/getMainPosts.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 5000,
