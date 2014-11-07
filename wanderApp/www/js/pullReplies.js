@@ -6,7 +6,7 @@
 
 
                   
-        $(document).on('pagebeforeshow', '#individualPost', function(){
+        $(document).on('pageshow', '#individualPost', function(){
                        //loads data everytime page is shown.
                        
                                    $("#replyList").empty();

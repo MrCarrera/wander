@@ -96,9 +96,9 @@ $(document).on('tap', '#myPostsList li a', function(){   //calls for the functio
 
 
 
-// Post - userPost
-// Name - userName
-// Gender - userGender
-// Pic - userPic
-// Time - postTime
-// theDate - postDate
+//// Post - userPost
+//// Name - userName
+//// Gender - userGender
+//// Pic - userPic
+//// Time - postTime
+//// theDate - postDate
