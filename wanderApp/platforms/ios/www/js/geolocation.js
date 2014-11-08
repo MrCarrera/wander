@@ -18,6 +18,7 @@
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
+
     // onSuccess Geolocation
     //
     function onSuccess(position) {

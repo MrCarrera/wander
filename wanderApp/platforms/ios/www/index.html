@@ -406,6 +406,11 @@
                                  "OK"
                             );
                      
+                     $.mobile.changePage("#page-activity");
+                     //Changes page to activity feed (home page) after login.
+                     
+                     getInfo();
+                     
                      function callBackFunctionB(){
                      console.log('ok');
 
@@ -418,10 +423,9 @@
                      }
                      }, {scope: 'email,public_profile,user_location,user_photos,user_hometown,user_about_me'});
                      
-                     getInfo();
                      
-                     $.mobile.changePage("#page-activity");
-                     //Changes page to activity feed (home page) after login.
+                     
+                     
     }
 
 function getInfo() {
