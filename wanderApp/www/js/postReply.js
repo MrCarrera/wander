@@ -18,6 +18,8 @@ $(document).bind('deviceready', function(){
                                 
                                     
         $.ajax({
+                beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                complete: function() { $.mobile.loading('hide'); },//hide spinner
                 type: 'POST',
                 data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&replyid='+postID,
                 //PHP URL
