@@ -38,6 +38,6 @@
         alert('There Was An Error Getting Your Location. Please Check That You Have WiFi and Location Services Enabled. '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
         
-        onDeviceReady();
+        
     }
 
