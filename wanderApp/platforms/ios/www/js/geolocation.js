@@ -15,7 +15,10 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 15000, enableHighAccuracy: false });
+        
+        var options = {maximumAge: 0, timeout: 15000, enableHighAccuracy:true};
+        
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
     }
 
 
@@ -38,6 +41,6 @@
         alert('There Was An Error Getting Your Location. Please Check That You Have WiFi and Location Services Enabled. '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
         
-        onDeviceReady();
+        
     }
 

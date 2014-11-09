@@ -25,6 +25,7 @@
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
+        
         <js-module src="www/Coordinates.js" name="Coordinates">
             <clobbers target="Coordinates" />
         </js-module>
@@ -44,6 +45,7 @@
         <config-file target="config.xml" parent="/*">
             <feature name="Geolocation">
                 <param name="ios-package" value="CDVLocation"/>
+                <feature name="http://api.phonegap.com/1.0/geolocation" />
             </feature>
         </config-file>
         <header-file src="src/ios/CDVLocation.h" />
