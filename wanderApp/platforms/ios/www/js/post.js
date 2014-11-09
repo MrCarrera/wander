@@ -31,6 +31,8 @@ $(document).bind('deviceready', function(){
                                              
                                              
                 $.ajax({
+                    beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                    complete: function() { $.mobile.loading('hide'); },//hide spinner
                      type: 'POST',
                      data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID,
                          //PHP URL

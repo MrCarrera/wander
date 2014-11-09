@@ -6,6 +6,7 @@
 
 
 
+
 $(document).on('pagebeforeshow', '#page-messages', function(){
                //loads data everytime page is shown.
                
@@ -21,7 +22,8 @@ $(document).on('pagebeforeshow', '#page-messages', function(){
                
                //makes a variable that links to an ID.
                $.ajax({
-                      
+                      beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                      complete: function() { $.mobile.loading('hide'); },
                       url: 'http://wander-app.org/getMyPosts.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
@@ -36,7 +38,8 @@ $(document).on('pagebeforeshow', '#page-messages', function(){
                              $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+'><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
                                                      + '<p>'+item.myPost+'<p>'
                                                      
-                                                     + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.myTime+'></time></p></a></li>');
+                                                     + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.myTime+'></time></p></a></li>'
+                                                     );
                              
                                     }
                              
@@ -91,6 +94,11 @@ $(document).on('tap', '#myPostsList li a', function(){   //calls for the functio
                //Refresh List After Cloning and Appending.
                
                });
+
+
+
+
+
 
 
 

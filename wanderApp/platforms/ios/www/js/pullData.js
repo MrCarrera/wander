@@ -21,6 +21,8 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                
                //makes a variable that links to an ID.
                $.ajax({
+                      beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                      complete: function() { $.mobile.loading('hide'); },//hide spinner
                       type: 'GET',
                       data: 'val='+$('#extraUserLat').val()+'&val2='+$('#extraUserLong').val()+'&val3='+$("#slider-1").val(),
                       url: 'http://wander-app.org/getMainPosts.php',

@@ -18,6 +18,8 @@
                        
                        
                     $.ajax({
+                        beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                        complete: function() { $.mobile.loading('hide'); },//hide spinner
                         url: 'http://wander-app.org/getReply.php',
                         dataType: 'jsonp',
                         jsonp: 'jsoncallback',
