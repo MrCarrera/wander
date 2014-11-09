@@ -15,7 +15,10 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 15000, enableHighAccuracy: false });
+        
+        var options = {maximumAge: 0, timeout: 15000, enableHighAccuracy:true};
+        
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
     }
 
 
