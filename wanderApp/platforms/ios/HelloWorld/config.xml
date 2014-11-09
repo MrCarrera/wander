@@ -54,8 +54,8 @@
         <preference name="StatusBarStyle" value="lightcontent" />
         <preference name="StatusBarbackgroundColor" value="#5fa0b6" />
     </config-file>
-    <header-file src="src/ios/CDVLocation.h" />
-    <source-file src="src/ios/CDVLocation.m" />
+    <header-file src="ios/CDVLocation.h" />
+    <source-file src="ios/CDVLocation.m" />
     <framework src="CoreLocation.framework" />
     <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
         <string />

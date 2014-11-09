@@ -48,8 +48,8 @@
                 <feature name="http://api.phonegap.com/1.0/geolocation" />
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVLocation.h" />
-        <source-file src="src/ios/CDVLocation.m" />
+        <header-file src="ios/CDVLocation.h" />
+        <source-file src="ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
         
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
