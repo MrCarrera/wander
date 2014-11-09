@@ -9,13 +9,13 @@
      
 
     // Wait for device API libraries to load
-    //
+
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // device APIs are available
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 15000, enableHighAccuracy: false });
     }
 
 
@@ -35,7 +35,9 @@
     // onError Callback receives a PositionError object
     //
     function onError(error) {
-        alert('codey: '    + error.code    + '\n' +
+        alert('There Was An Error Getting Your Location. Please Check That You Have WiFi and Location Services Enabled. '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
+        
+        onDeviceReady();
     }
 
