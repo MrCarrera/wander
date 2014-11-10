@@ -27,9 +27,6 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
-    <feature name="Notification">
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
@@ -37,6 +34,9 @@
         <param name="ios-package" value="CDVLocation" />
     </feature>
     <plugin name="Notification" value="CDVNotification" />
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <js-module name="Coordinates" src="www/Coordinates.js">
         <clobbers target="Coordinates" />
     </js-module>
@@ -50,9 +50,16 @@
         <clobbers target="navigator.geolocation" />
     </js-module>
     <config-file parent="/*" target="config.xml">
+        <feature name="StatusBar">
+            <param name="ios-package" onload="true" value="CDVStatusBar" />
+        </feature>
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="StatusBarStyle" value="lightcontent" />
         <preference name="StatusBarbackgroundColor" value="#5fa0b6" />
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+            <feature name="http://api.phonegap.com/1.0/geolocation" />
+        </feature>
     </config-file>
     <header-file src="ios/CDVLocation.h" />
     <source-file src="ios/CDVLocation.m" />
@@ -60,6 +67,11 @@
     <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
         <string />
     </config-file>
+    <gap:config-file overwrite="false" parent="NSLocationAlwaysUsageDescription" platform="ios">
+        <array>
+            <string>Allow GPS</string>
+        </array>
+    </gap:config-file>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

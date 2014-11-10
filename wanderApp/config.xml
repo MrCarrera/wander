@@ -55,6 +55,12 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string></string>
         </config-file>
+        
+        <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
+            <array>
+                <string>Allow GPS</string>
+            </array>
+        </gap:config-file>
 
         
     </platform>
