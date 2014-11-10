@@ -52,7 +52,7 @@
         <source-file src="ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
         
-        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string></string>
         </config-file>
         

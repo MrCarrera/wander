@@ -64,7 +64,7 @@
     <header-file src="ios/CDVLocation.h" />
     <source-file src="ios/CDVLocation.m" />
     <framework src="CoreLocation.framework" />
-    <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+    <config-file parent="NSLocationAlwaysUsageDescription" target="*-Info.plist">
         <string />
     </config-file>
     <gap:config-file overwrite="false" parent="NSLocationAlwaysUsageDescription" platform="ios">
