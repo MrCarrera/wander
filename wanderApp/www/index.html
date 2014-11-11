@@ -67,6 +67,8 @@
                                 
                                 });
     </script>
+     
+     
 
   </head>
     
@@ -136,7 +138,7 @@
 <!--------POST FEED PAGE FEED ENDS HERE---------->
 <!--------Individual post PAGE ENDS HERE---------->
 
-<div data-role="page" id="individualPost" >
+<div data-role="page" id="individualPost" >    
     <div data-role="header" id="header" data-position="fixed">
         <h1><b>Post Thread</b></h1>
         <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>
@@ -145,11 +147,12 @@
     <div data-role="content" class="detailedPostStyle" id="detailedPost">
         
         
-           
+        
+        
             <div id="myPost">
                 
             </div> <!-- Div for data inject from the clone -->
-            
+                      
             <div id="replyid"></div>
         
        
@@ -163,7 +166,9 @@
            
            </div>    
     </div>  <!-----Ends Content---->
-
+    
+    
+    
 </div>
 <!--------Individual post PAGE finish HERE---------->
 <!----------------------------Post Activity page starts----------------------------------------->
@@ -194,14 +199,14 @@
                 
                 <label for="userPost">
                     <b></b>
-                    <textarea data-corners="false" placeholder="Compose New Post Here (Max. 150 characters)" id="userPost" name="userPost" cols="30" rows="10" style="box-shadow: none" ></textarea>
+                    <textarea data-corners="false" placeholder="Compose New Post Here (Max. 150 characters)" id="userPost" name="userPost" cols="30" rows="10" style="-webkit-box-shadow: none" ></textarea>
                 </label>
                 You have <span id="charsLeft"></span> chars left.
                 <script type="text/javascript">
                 $('#userPost').limit('150','#charsLeft');
                 </script> <!--counting character script-->
                 
-                <input type="submit" value="Post">
+                <input type="submit" value="Post" class="userInputButton" id="mainPostButton">
             </form>
         </div>
         <div id='userID'></div>
@@ -241,7 +246,7 @@
                 $('#replyPost').limit('100','#charsLeftReply');
                 </script> <!--counting character script-->
                 
-                <input id="replyButton" type="submit" value="Reply">
+                <input id="replyButton" class="userInputButton" type="submit" value="Reply">
             </form>
         </div>
         
@@ -313,6 +318,7 @@
 
 
 <!--------PROFILE PAGE ENDS HERE---------->
+
 
 <!----------------------------Settings page starts here----------------------------------------->
 

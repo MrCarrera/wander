@@ -14,6 +14,9 @@ $(document).bind('deviceready', function(){
                         var postPic = $('#userPic').attr('src')
                         var postReply = $('#replyPost').val()
                         var postID = $('#replyid').val() // get data-id of original post.
+                        var postCity = $('#profileCity').text()
+                        var postAbout = $('#profileAbout').text()
+                        var postProfileID = $('#profileID').val()
             
                                 
                                     
@@ -21,7 +24,7 @@ $(document).bind('deviceready', function(){
                 beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
                 complete: function() { $.mobile.loading('hide'); },//hide spinner
                 type: 'POST',
-                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&replyid='+postID,
+                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&replyid='+postID+'&profileCity='+postCity+'&profileAbout='+postAbout+'&profileID='+postProfileID,
                 //PHP URL
                 url: 'http://wander-app.org/replyPosts.php',
                 success: function(data){

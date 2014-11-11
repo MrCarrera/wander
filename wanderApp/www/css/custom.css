@@ -184,6 +184,7 @@ padding-left:5.50em !important;
         height: 85px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 10px;
         float: none;
         padding:0;
 
@@ -222,7 +223,7 @@ padding-left:5.50em !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
-    background-image: url("../img/replyCoverImg.png"); 
+    background-image: url("../img/6Rp2.png");
     border: none !important;
     
 }
@@ -267,7 +268,7 @@ padding-left:5.50em !important;
     font-size: .8em;
     padding: 1px;
     margin: 1px 10px 8px 10px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: justify;
     color:white;
     text-shadow: 0 0px 0 #f3f3f3 !important;
@@ -493,9 +494,11 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 }
 
  #page-profile .ui-panel-wrapper {
-    background: transparent url(../img/profileBG.png) no-repeat center center !important;
+    background: transparent url(../img/6Bk3.png) no-repeat center center !important;
     background-attachment:fixed;
-    background-size: cover;
+    background-size: cover !important;
+    width:100% !important;
+    height:100% !important;
 }
 
  #page-profile .ui-panel-wrapper {
@@ -536,7 +539,7 @@ ul.touch li.ui-li-has-alt a.ui-btn {
 
 
 #LoginPage .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper {
-    background: transparent url(../img/loginBG.png) !important;
+    background: transparent url(../img/6Bk2.png) !important;
     background-repeat: no-repeat !important;
     background-size : cover !important;
 }
@@ -548,14 +551,17 @@ ul.touch li.ui-li-has-alt a.ui-btn {
             text-shadow: none !important;
             background: #2980b9  !important;
             border: none !important;
+            
 
 }
 
 #wanderLogoLogin img {
     display: block;
+    padding-top: 40px;
+    padding-bottom:45px;
     margin: 0 auto;
-    width: 250px !important;
-    height: 272px !important;
+    width: 190px !important;
+    height: 207px !important;
     
 }
 
@@ -568,6 +574,16 @@ ul.touch li.ui-li-has-alt a.ui-btn {
     height: 30px;
 
     
+}
+
+
+.userInputButton {
+    
+    font-size: 16px;
+    color: #ff847c !important;
+    text-shadow: none !important;
+    background: white !important;
+    border: none !important;
 }
 
 
