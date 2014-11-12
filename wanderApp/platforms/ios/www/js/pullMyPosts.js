@@ -125,8 +125,8 @@ $(function() {
             var new_left;
             if (left < -35) {
                 new_left = '-100px'
-            } else if (left > 35) {
-                new_left = '100px'
+            //} else if (left > 35) {
+              //  new_left = '100px'
             } else {
                 new_left = '0px'
             }
