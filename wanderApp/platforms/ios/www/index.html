@@ -39,7 +39,7 @@
                 <script src="js/postReply.js"></script>
                 <script src="js/pullReplies.js"></script>
                 <script src="js/pullMyPosts.js"></script>
-                <script src="js/swipeDelete.js"></script>
+                
                 
                 
                 
@@ -53,7 +53,7 @@
 
 <!----------------------------------Custom CSS----->
         <link rel="stylesheet" href="css/custom.css" />
-        
+        <link rel="stylesheet" href="css/swipe.css" />
         
         <title>Wander</title>
         
@@ -78,7 +78,7 @@
         <script type="text/javascript">
             app.initialize();
         </script>
-
+        
 
 
 
@@ -265,7 +265,7 @@
         
         <div id="myPosts">     
             
-            <ul data-role="listview" id="myPostsList">
+            <ul data-role="listview" id="myPostsList" class="swipe-delete">
                           
             </ul>
             
@@ -307,6 +307,9 @@
       </div>
        <div id='profileID'></div> <!-- Store users unique profile ID. -->
        
+       
+       
+    
     </div><!-- /content -->
 	
 </div>
@@ -438,7 +441,7 @@ function getInfo() {
                                 document.getElementById("profileAbout").innerHTML = data.bio;
                                 document.getElementById("profileID").value = data.id;
                                 document.getElementById("userPic").src = 'http://graph.facebook.com/'+data.id+'/picture?type=large';
-                               
+                                     
                                 
                                 },
                                 

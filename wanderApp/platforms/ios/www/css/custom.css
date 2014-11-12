@@ -318,36 +318,35 @@ padding-left:5.50em !important;
 /* Delete */
 /* Left transition */
 
-#myPostsList li.left {
-  -webkit-transition: -webkit-transform 250ms ease;
-  -webkit-transform: translateX(-100%);
-  -moz-transition: -moz-transform 250ms ease;
-  -moz-transform: translateX(-100%);
-  -o-transition: -o-transform 250ms ease;
-  -o-transform: translateX(-100%);
-  transition: transform 250ms ease;
-  transform: translateX(-100%);
-}
+.swipe-delete .behind {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+  .swipe-delete .behind a.ui-btn {
+        width: 68px;
+        margin: 0px;
+        float: right;
+        border: none;
+    }
+    .swipe-delete .behind a.delete-btn, .swipe-delete .behind a.delete-btn:active, .swipe-delete .behind a.delete-btn:visited, .swipe-delete .behind a.delete-btn:focus, .swipe-delete .behind a.delete-btn:hover {
+        color: white;
+        background-color: red;
+        text-shadow: none;
+    }
+    .swipe-delete .behind a.ui-btn.pull-left {
+        float: left;
+    }
+
+
 
 
 /* Border bottom for the previous list item during the transition*/
 
 
-/* Hide the delete button on touch devices */
-ul.touch li.ui-li-has-alt a.delete {
-    display: none;
-		}
-ul.touch li.ui-li-has-alt a.ui-btn {
-    margin-right:0;
-		}
-
-/* Custom styling for the popup */
-
-#confirm p {
-    text-align: center;
-    font-size: inherit;
-    margin-bottom: .75em;
-}
 
 
 /*********Reply list goes here************/
