@@ -103,9 +103,9 @@ $(function() {
     function disable_scroll() {
         $(document).on('touchmove', prevent_default);
     }
-    function enable_scroll() {
+   /* function enable_scroll() {
         $(document).unbind('touchmove', prevent_default)
-    }
+    }*/
     var x;
     $(document)
         .on('touchstart', '.swipe-delete li > a', function(e) {
