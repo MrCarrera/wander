@@ -28,13 +28,15 @@ $(document).bind('deviceready', function(){
                                              var postLat = $('#userLat').val()
                                              var postLong = $('#userLong').val()
                                              var postProfileID = $('#profileID').val()
+                                             var postCity = $('#profileCity').text()
+                                             var postAbout = $('#profileAbout').text()
                                              
                                              
                 $.ajax({
                     beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
                     complete: function() { $.mobile.loading('hide'); },//hide spinner
                      type: 'POST',
-                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID,
+                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID+'&profileCity='+postCity+'&profileAbout='+postAbout,
                          //PHP URL
                           url: 'http://wander-app.org/userPosts.php',
                           success: function(data){
