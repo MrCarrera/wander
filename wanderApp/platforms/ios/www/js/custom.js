@@ -18,13 +18,13 @@ $(document).on('pageinit', '.page-panel', function(){
    $('#panel a').click(function(){
 	   if($('.ui-page-active').attr('id')==$(this).attr('href').replace('#', '')) $('#panel').panel('close');
    }); // This will reveal the pannel when toucking the icon panel
-   $(document).on('swiperight', '.page-panel', function(e){
+   /*$(document).on('swiperight', '.page-panel', function(e){
 	   if($.mobile.activePage.jqmData('panel')!=='open'){
 		   if(e.type==='swiperight') {
 			   $('#panel').panel('open');
 		   }
 	   }
-   }); // this will reveal the panel when swipping right
+   }); // this will reveal the panel when swipping right */
 }); 
 
 $(document).on("pagecreate", "#page-settings", function(){

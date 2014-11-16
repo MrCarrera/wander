@@ -177,7 +177,7 @@
 <!--------Create a new POST---------->
 <div data-role="page" id="addPostPage" onload="onBodyLoad()">
     
-    <script>
+    <script type="text/javascript">
         function onBodyLoad() {
             document.addEventListener("deviceready",onDeviceReady,false);
         }
@@ -209,7 +209,9 @@
                 <input type="submit" value="Post" class="userInputButton" id="mainPostButton">
             </form>
         </div>
-        <div id='userID'></div>
+            <div id='userID'>
+                
+            </div>
         </div> <!-- /content -->
 </div>
 

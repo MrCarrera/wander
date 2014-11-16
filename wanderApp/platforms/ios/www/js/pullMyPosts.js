@@ -101,11 +101,11 @@ $(function() {
         e.preventDefault();
     }
     function disable_scroll() {
-        $(document).on('touchmove', prevent_default);
+        $(document).on('touchmove','.swipe-delete', prevent_default);
     }
-   /* function enable_scroll() {
-        $(document).unbind('touchmove', prevent_default)
-    }*/
+    function enable_scroll() {
+        $(document).unbind('touchmove', '.swipe-delete', prevent_default)
+    }
     var x;
     $(document)
         .on('touchstart', '.swipe-delete li > a', function(e) {
