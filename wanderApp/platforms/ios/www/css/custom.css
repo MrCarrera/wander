@@ -343,8 +343,23 @@ padding-left:5.50em !important;
     }
 
 
+/* Style the popup */
 
+#popupHeader {
+    background-color: #ff847c !important;
+}
 
+#popupHeader h1{
+    color: whitesmoke;
+}
+
+#myPopupDialog .ui-title {
+    font-size: 1em;
+}
+
+#myPopupDialog .ui-content p{
+    font-size: .9em;
+}
 /* Border bottom for the previous list item during the transition*/
 
 
