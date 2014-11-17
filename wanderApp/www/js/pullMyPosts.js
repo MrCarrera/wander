@@ -35,7 +35,7 @@ $(document).on('pagebeforeshow', '#page-messages', function(){
                              if(item.myUserProfileID == $('#profileID').val()){
                              
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><div class="behind"><a href="#" class="ui-btn delete-btn">Delete</a></div><a href="" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+'><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
+                             $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" >'+'<div class="behind"><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn delete-btn">Delete</a></div>'+'<a href="" class="toMyPost" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+'><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
                                                      + '<p>'+item.myPost+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.myTime+'></time></p></a></li>'
@@ -61,7 +61,7 @@ $(document).on('pagebeforeshow', '#page-messages', function(){
 
 // Will handle on tap to switch to single post page
 
-$(document).on('tap', '#myPostsList li a', function(){   //calls for the function on tap
+$(document).on('tap', '#myPostsList li a.toMyPost', function(){   //calls for the function on tap
                
                $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
                
@@ -100,46 +100,46 @@ $(function() {
     function prevent_default(e) {
         e.preventDefault();
     }
-    function disable_scroll() {
-        $(document).on('touchmove','.swipe-delete', prevent_default);
+   function disable_scroll() {
+        $(document).on('touchmove','#myPostsList', prevent_default);
     }
     function enable_scroll() {
-        $(document).unbind('touchmove', '.swipe-delete', prevent_default)
+        $(document).unbind('touchmove', '#myPostsList', prevent_default);
     }
     var x;
     $(document)
         .on('touchstart', '.swipe-delete li > a', function(e) {
-            console.log(e.originalEvent.pageX)
-            $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') // close em all
-            $(e.currentTarget).addClass('open')
+            console.log(e.originalEvent.pageX);
+            $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') ;// close em all
+            $(e.currentTarget).addClass('open');
             x = e.originalEvent.targetTouches[0].pageX // anchor point
         })
         .on('touchmove', '.swipe-delete li > a', function(e) {
-            var change = e.originalEvent.targetTouches[0].pageX - x
-            change = Math.min(Math.max(-100, change), 100) // restrict to -100px left, 0px right
-            e.currentTarget.style.left = change + 'px'
+            var change = e.originalEvent.targetTouches[0].pageX - x;
+            change = Math.min(Math.max(-100, change), 100); // restrict to -100px left, 0px right
+            e.currentTarget.style.left = change + 'px';
             if (change < -10) disable_scroll() // disable scroll once we hit 10px horizontal slide
         })
         .on('touchend', '.swipe-delete li > a', function(e) {
-            var left = parseInt(e.currentTarget.style.left)
+            var left = parseInt(e.currentTarget.style.left);
             var new_left;
             if (left < -35) {
-                new_left = '-100px'
-            //} else if (left > 35) {
-              //  new_left = '100px'
-            } else {
-                new_left = '0px'
+                new_left = '-100px';
+            } /*else if (left > 35) {
+                new_left = '100px'
+            } */ else {
+                new_left = '0px';
             }
-             e.currentTarget.style.left = new_left
-            //$(e.currentTarget).animate({left: new_left}, 200)
-            //enable_scroll()
+             //e.currentTarget.style.left = new_left
+            $(e.currentTarget).animate({left: new_left}, 200);
+            enable_scroll();
         });
     $('li .delete-btn').on('touchend', function(e) {
-        e.preventDefault()
+        e.preventDefault();
         $(this).parents('li').slideUp('fast', function() {
-            $(this).remove()
-        })
-    })
+            $(this).remove();
+        });
+    });
 }); 
 
 

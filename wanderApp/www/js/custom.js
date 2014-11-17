@@ -44,16 +44,4 @@ $(document).on("pagecreate", "#page-settings", function(){
     });
 });
 
-/*
-function ShowList(){
-    var m = $("#flip-1").val() == "on";
-    var f = $("#flip-2").val() == "on";
-    $('#myListView li').show();
-    if (m && !f) {
-        $("#myListView li:contains('female')").hide();
-        
-    } else if (!m && f) {
-        
-        $("#myListView li:contains('male')").hide();
-    }
-}*/
+

@@ -136,7 +136,7 @@
 </div>
 
 <!--------POST FEED PAGE FEED ENDS HERE---------->
-<!--------Individual post PAGE ENDS HERE---------->
+<!--------Individual post PAGE STARTS HERE---------->
 
 <div data-role="page" id="individualPost" >    
     <div data-role="header" id="header" data-position="fixed">
@@ -164,7 +164,9 @@
                     
                 </ul>
            
-           </div>    
+           </div>  
+            
+          
     </div>  <!-----Ends Content---->
     
     
@@ -260,7 +262,7 @@
 
 <div data-role="page"  id="page-messages" class="page-panel">
 
-    <div data-role="header" id="header">
+    <div data-role="header" id="header" data-position="fixed">
         <h1><b>My Posts</b></h1>
        
         <a href="#panel" class="panel-toggle">Open left panel</a>
@@ -277,14 +279,31 @@
             </ul>
             
         </div>
-        <div id='extraUserLong'></div>
-        <div id='extraUserLat'></div>
         
-      
         
+        
+        <div id='extraUserLong'>          
+        </div>
+        
+        <div id='extraUserLat'>         
+        </div> 
 
-      
+      <div data-role="popup" id="myPopupDialog">
+            <div data-role="header">
+                <h1>Delete post?</h1>
+            </div>   
+                <div data-role="content" class="ui-content">
+                    <h3 class="ui-title">Are you sure you want to delete this post?</h3>
+                    <p>This action cannot be undone.</p>
+                    <a href="#page-messages"  data-role="button" data-rel="back">Cancel</a>
+                    <a href="#page-messages" data-role="button" data-rel="back" data-transition="flow">Delete</a>
+                </div>
+            
+        </div> <!---------Popup to delete post------------>
+        
     </div><!-- /content -->
+    
+     
 	
 </div>
 
