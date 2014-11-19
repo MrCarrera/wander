@@ -101,10 +101,10 @@ $(function() {
         e.preventDefault();
     }
    function disable_scroll() {
-        $(document).on('touchmove','#myPostsList', prevent_default);
+        $(document).on('touchmove','#myPostsList .ui-content', prevent_default);
     }
     function enable_scroll() {
-        $(document).unbind('touchmove', '#myPostsList', prevent_default);
+        $(document).unbind('touchmove',' #myPostsList .ui-content', prevent_default);
     }
     var x;
     $(document)
@@ -131,15 +131,10 @@ $(function() {
                 new_left = '0px';
             }
              //e.currentTarget.style.left = new_left
-            $(e.currentTarget).animate({left: new_left}, 200);
+            $(e.currentTarget).animate({left: new_left}, 200)
             enable_scroll();
         });
-    $('li .delete-btn').on('touchend', function(e) {
-        e.preventDefault();
-        $(this).parents('li').slideUp('fast', function() {
-            $(this).remove();
-        });
-    });
+    
 }); 
 
 
