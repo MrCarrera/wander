@@ -613,8 +613,7 @@ padding-left:5.50em !important;
     width: 150px;
     height: 150px;
     border: 2px solid #ffffff;
-    margin-left:100%;
-    margin-right:100%;
+    
 
     
     
@@ -623,6 +622,8 @@ padding-left:5.50em !important;
 
 .otherProfilePicture img {
     display: block;
+    margin-left:100%;
+    margin-right:100%;
     
     
    
@@ -631,14 +632,27 @@ padding-left:5.50em !important;
 }
 
 #individualProfile .ui-panel-wrapper {
-    background: transparent url(../img/6Bk3.png) no-repeat center center !important;
+    background: transparent url(../img/6Bk7.png) no-repeat center center !important;
     background-attachment:fixed;
     background-size: cover !important;
     width:100% !important;
     height:100% !important;
+    
+    
+}
+
+#individualProfile p {
+    
     color:white;
     text-align:left;
     text-shadow:none;
     
 }
 
+#individualProfile h1 {
+    
+    color:white;
+    text-align:left;
+    text-shadow:none;
+    
+}

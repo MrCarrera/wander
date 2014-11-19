@@ -35,7 +35,7 @@ $(document).on('pageshow', '#individualProfile', function(){
                              $('#otherProfileContainer').append('<div class="ui-nodisc-icon" data-icon="listIcon" ><data-kkkode='+item.otherUserProfileID+'><img class="otherProfilePicture" href="#" src='+item.otherUserProfilePic+'></img><p><strong>'+item.otherUserProfileName+", "+item.otherUserProfileGender+'</p></strong>'
                                                     + '<p>'+item.otherUserProfileCity+'<p>'
                                                                 
-                                                    + '<h1>'+"About"+'</h1>'
+                                                    + '<h1><strong>'+"About"+'</strong></h1>'
                                                                 
                                                     + '<p>'+item.otherUserProfileAbout+'<p>'
                                                     
