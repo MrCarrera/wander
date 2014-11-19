@@ -5,9 +5,14 @@ $(document).bind('deviceready', function(){
                  $(function(){
                    $('form#replyForm').submit(function(){
                         
-                 
+                        
+                                              
+                                              var fullDateReply = new Date()
+                                              console.log(fullDate);
+                                              //Thu May 19 2011 17:25:38 GMT+1000 {}
+                        
 //                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
-                        var postTime = fullDate.toISOString()
+                        var postTime = fullDateReply.toISOString()
                         var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                         var postUser = $('#userName').text()
                         var postGender = $('#userGender').text()

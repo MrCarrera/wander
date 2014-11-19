@@ -4,6 +4,10 @@ $(document).bind('deviceready', function(){
                                              
                                              
                                              
+                                             var fullDate = new Date()
+                                             console.log(fullDate);
+                                             //Thu May 19 2011 17:25:38 GMT+1000 {}
+                                             
                                              //Generate a random 10 letter ID for each post using Alphabetical Chars.
                                              function randString(x){
                                              var s = "";

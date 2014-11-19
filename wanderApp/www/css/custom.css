@@ -602,3 +602,43 @@ padding-left:5.50em !important;
 
 
 
+
+    
+/***************Other User Profile Page****************/
+
+.otherProfilePicture {
+    
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ffffff;
+    margin-left:100%;
+    margin-right:100%;
+
+    
+    
+}
+
+
+.otherProfilePicture img {
+    display: block;
+    
+    
+   
+    
+    
+}
+
+#individualProfile .ui-panel-wrapper {
+    background: transparent url(../img/6Bk3.png) no-repeat center center !important;
+    background-attachment:fixed;
+    background-size: cover !important;
+    width:100% !important;
+    height:100% !important;
+    color:white;
+    text-align:left;
+    text-shadow:none;
+    
+}
+
