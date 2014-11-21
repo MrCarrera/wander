@@ -6,7 +6,7 @@
 
 
 
-$(document).on('pagebeforeshow', '#page-activity', function(){
+$(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                //loads data everytime page is shown.
                
                
@@ -72,8 +72,7 @@ $(document).on('tap', '#myListView li a', function(){   //calls for the function
                
                $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
                
-               
-               
+           
                
                $("#myPost").empty();
                //Clear List Before Clone.
@@ -93,11 +92,7 @@ $(document).on('tap', '#myListView li a', function(){   //calls for the function
                $(this).clone().appendTo('#myPost');
                //Clone selected listview Values.
                
-               
-               
-               
-               
-               
+          
                
                $('#myPost').value(function (index, value) {
                                   return value + ' at ' + index;
