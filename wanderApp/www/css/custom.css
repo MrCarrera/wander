@@ -242,6 +242,17 @@ padding-left:5.50em !important;
          
 }
 
+/*Controls the size of the achor within the div*/
+
+#myPost #linkToProfile a{
+    width: 100%;
+    height: 160px;
+    position: fixed;
+    display: block;
+    top:50px;
+    z-index: 3;
+}
+
 /*Makes the text in myPost legible*/
 #myPost .ui-page-theme-a .ui-btn{
     text-shadow: 0 0px 0 #f3f3f3 !important;
@@ -320,8 +331,7 @@ padding-left:5.50em !important;
 /* Left transition */
 
 .swipe-delete .behind {
-        width: 100px;
-        height: 100%; !important;
+        width: 100px;        
         position: absolute;
         top: 0;
         right: 0;
@@ -329,7 +339,7 @@ padding-left:5.50em !important;
 
   .swipe-delete .behind a.ui-btn {
         width: 68px;
-        height 100%;
+        height: 100%;
         margin: 0px;
         float: right;
         border: none;
@@ -337,7 +347,7 @@ padding-left:5.50em !important;
     .swipe-delete .behind a.delete-btn, .swipe-delete .behind a.delete-btn:active, .swipe-delete .behind a.delete-btn:visited, .swipe-delete .behind a.delete-btn:focus, .swipe-delete .behind a.delete-btn:hover {
         color: white;
         background-color: #ff847c;
-        height 100%;
+        height: 100%;
         text-shadow: none;
     }
     .swipe-delete .behind a.ui-btn.pull-left {

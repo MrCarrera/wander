@@ -87,9 +87,9 @@ $(document).on('tap', '#myListView li a', function(){   //calls for the function
                
                
                
-               $(this).attr("href", "#individualProfile");
+              // $(this).attr("href", "#individualProfile");
                
-               $(this).clone().appendTo('#myPost');
+               $(this).clone().appendTo('#myPost').append('<div id="linkToProfile"><a href="#individualProfile"></a></div>');
                //Clone selected listview Values.
                
           
