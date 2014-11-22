@@ -4,7 +4,12 @@
  * and open the template in the editor.
  */
 
-
+jQuery(document).ready(function() {
+    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
+    $(document).on('click', '.toThisPost', function(){
+       $("#postThreadBack").attr("href", "#page-activity");
+    });
+});
 
 $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                //loads data everytime page is shown.
@@ -36,14 +41,14 @@ $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                              if (item.Gender=='male'&& $("#flip-1").val()=="on"){
                              
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+' data-profileUserID='+item.mainUserProfileID+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" class="toThisPost" data-key='+item.randomPostId+' data-profileUserID='+item.mainUserProfileID+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                      + '<p>'+item.Post+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');
                              }
                              else if (item.Gender=='female'&& $("#flip-2").val()=="on"){
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" data-key='+item.randomPostId+' data-profileUserID='+item.mainUserProfileID+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
+                             $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" class="toThisPost" data-key='+item.randomPostId+' data-profileUserID='+item.mainUserProfileID+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
                                                      + '<p>'+item.Post+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.Time+'></time></p></a></li>');

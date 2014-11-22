@@ -13,8 +13,7 @@ $(function() {
   var x;
   $(document)
   .on('touchstart', '.swipe-delete li > a', function(e) {
-      console.log(e.originalEvent.pageX);
-      
+      console.log(e.originalEvent.pageX);      
       ///// GET ID OF SELECTED POST AND STORE IN A DIV FOR AJAX /////
       document.getElementById("myPostIDStorage").value = $(this).attr('data-key');
       
@@ -56,17 +55,13 @@ $(function() {
 /////////////////////////// FUNCTION TO DELETE SELECTED POST FROM DATABASE ///////////
 
                   function deleteThisPost() {
-
-                                        //alert($('#myPostIDStorage').val())
                                         $.ajax({
                                                type: 'GET',
                                                data: 'myPostIDValue='+$('#myPostIDStorage').val(),
                                                url: 'http://wander-app.org/deletePosts.php',
                                                timeout: 5000,
                                                success: function(data){
-                                                   
-                                               
-                                               alert('Post Deleted!');
+                                                   $('#'+ $('#myPostIDStorage').val()).remove();
                                                },
                                                
                                                error: function(){

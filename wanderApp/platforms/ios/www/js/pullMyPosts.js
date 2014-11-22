@@ -2,9 +2,17 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
-
-
+ */     
+jQuery(document).ready(function() {
+    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
+    $(document).on('click', '.toThisPost', function(){
+       $("#postThreadBack").attr("href", "#page-activity");
+    });
+    // CHANGES POST THREAD BACK BUTTON HREF TO #page-messages TO RETURN TO MY POSTS
+    $(document).on('click', "a.toMyPost", function(){
+       $("#postThreadBack").attr("href", "#page-messages");
+    });
+});
 
 
 $(document).on('pageshow', '#page-messages', function(){
@@ -35,7 +43,7 @@ $(document).on('pageshow', '#page-messages', function(){
                              if(item.myUserProfileID == $('#profileID').val()){
                              
                              console.log(JSON.stringify(item)); //Inject data to the cells
-                             $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" >'+'<div class="behind"><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn delete-btn">Delete</a></div>'+'<a href="" class="toMyPost" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+'><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
+                             $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" id="' + item.myrandomPostId +'" >'+'<div class="behind"><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn delete-btn">Delete</a></div>'+'<a href="" class="toMyPost" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+' onClick=""><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
                                                      + '<p>'+item.myPost+'<p>'
                                                      
                                                      + '<p class="ui-li-aside" ><time class="timeago" datetime='+item.myTime+'></time></p></a></li>'

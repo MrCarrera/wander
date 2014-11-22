@@ -44,4 +44,3 @@ $(document).on("pagecreate", "#page-settings", function(){
     });
 });
 
-

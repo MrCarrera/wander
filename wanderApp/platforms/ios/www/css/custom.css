@@ -331,8 +331,7 @@ padding-left:5.50em !important;
 /* Left transition */
 
 .swipe-delete .behind {
-        width: 100px;
-        
+        width: 100px;        
         position: absolute;
         top: 0;
         right: 0;

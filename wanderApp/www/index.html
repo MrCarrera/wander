@@ -62,28 +62,19 @@
  
         
      <script type="text/javascript" charset="utf-8">
-         
          jQuery(document).ready(function() {
-                                
-                                $('body').timeago();
-                                
-                                });
+            $('body').timeago();
+          });
         
         function onDeviceReady() {
             document.addEventListener("resume", onResume, false);
         }
      
         // Handle the resume event
-        //
         function onResume() {
-            
             onDeviceReady();
-            
             pullTheData();
         }
-
-                                
-                                
     </script>
      
      
@@ -159,7 +150,7 @@
 <div data-role="page" id="individualPost" >    
     <div data-role="header" id="header" data-position="fixed">
         <h1><b>Post Thread</b></h1>
-        <a href="#page-activity" data-iconpos="left" class="myBack">Back</a>
+        <a href="#page-messages" data-iconpos="left" class="myBack" id="postThreadBack">Back</a>
         <a href="#replyPage" class="detailPost" onclick="getInfo()" data-iconpos="right">Reply</a>
     </div> <!-- /header -->
     <div data-role="content" class="detailedPostStyle" id="detailedPost">
@@ -486,17 +477,17 @@
                                  'Wander',
                                  "OK"
                             );
-                     
-                     $.mobile.changePage("#page-activity");
-                     //Changes page to activity feed (home page) after login.
-                     
-                     getInfo();
-                     
-                     function callBackFunctionB(){
-                     console.log('ok');
+                        
+                        $.mobile.changePage("#page-activity");
+                        //Changes page to activity feed (home page) after login.
 
+                        getInfo();
                      
-                     }
+                        function callBackFunctionB(){
+                        console.log('ok');
+
+
+                        }
                      }
                      
                      else {
