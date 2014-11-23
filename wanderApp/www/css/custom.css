@@ -242,6 +242,10 @@ padding-left:5.50em !important;
          
 }
 
+#myPostsList li .ui-btn{
+    background-color: white;
+}
+
 /*Controls the size of the achor within the div*/
 
 #myPost #linkToProfile a{
@@ -315,6 +319,7 @@ padding-left:5.50em !important;
   border-radius: 50px !important;
   float:left !important;
   margin: 17px 5px 5px 15px !important;
+  margin-top:12px !important;
     
 }
 
@@ -327,11 +332,17 @@ padding-left:5.50em !important;
         
 }
 
+#page-messages {
+    
+    background:grey;
+}
+
 /* Delete */
 /* Left transition */
 
 .swipe-delete .behind {
-        width: 100px;        
+        width: 100px;
+        height: 100%;
         position: absolute;
         top: 0;
         right: 0;
@@ -346,7 +357,7 @@ padding-left:5.50em !important;
     }
     .swipe-delete .behind a.delete-btn, .swipe-delete .behind a.delete-btn:active, .swipe-delete .behind a.delete-btn:visited, .swipe-delete .behind a.delete-btn:focus, .swipe-delete .behind a.delete-btn:hover {
         color: white;
-        background-color: #ff847c;
+        background-color: #ff847c !important;
         height: 100%;
         text-shadow: none;
     }
