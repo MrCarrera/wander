@@ -347,6 +347,8 @@ padding-left:5.50em !important;
         top: 0;
         right: 0;
     }
+    
+     
 
   .swipe-delete .behind a.ui-btn {
         width: 68px;
@@ -357,6 +359,8 @@ padding-left:5.50em !important;
     }
     .swipe-delete .behind a.delete-btn, .swipe-delete .behind a.delete-btn:active, .swipe-delete .behind a.delete-btn:visited, .swipe-delete .behind a.delete-btn:focus, .swipe-delete .behind a.delete-btn:hover {
         color: white;
+        padding-top: 25px;
+        text-align: center;
         background-color: #ff847c !important;
         height: 100%;
         text-shadow: none;
