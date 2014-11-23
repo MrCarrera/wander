@@ -634,8 +634,8 @@ padding-left:5.50em !important;
 
 .otherProfilePicture img {
     display: block;
-    margin-left:100%;
-    margin-right:100%;
+    /*margin-left:23%;*/
+    /*margin-right:100%;*/
     
     
    
@@ -658,13 +658,13 @@ padding-left:5.50em !important;
     color:white;
     text-align:left;
     text-shadow:none;
-    
+    font-size: 22px;
 }
 
 #individualProfile h1 {
     
     color:white;
-    text-align:left;
+    /*text-align:left;*/
     text-shadow:none;
     
 }

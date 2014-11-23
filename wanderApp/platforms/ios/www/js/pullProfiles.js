@@ -32,12 +32,12 @@ $(document).on('pageshow', '#individualProfile', function(){
                              
                             
                              console.log(JSON.stringify(item)); //Inject data to the profile page.
-                             $('#otherProfileContainer').append('<div class="ui-nodisc-icon" data-icon="listIcon" ><data-kkkode='+item.otherUserProfileID+'><img class="otherProfilePicture" href="#" src='+item.otherUserProfilePic+'></img><p><strong>'+item.otherUserProfileName+", "+item.otherUserProfileGender+'</p></strong>'
-                                                    + '<p>'+item.otherUserProfileCity+'<p>'
+                             $('#otherProfileContainer').append('<div class="ui-nodisc-icon" data-icon="listIcon" style="text-align: center" ><data-kkkode='+item.otherUserProfileID+'><img class="otherProfilePicture" href="#" src='+item.otherUserProfilePic+'></img><p><strong>'+item.otherUserProfileName+", "+item.otherUserProfileGender+'</strong><br>'+item.otherUserProfileCity+'</p>'
+                                                    
                                                                 
-                                                    + '<h1><strong>'+"About"+'</strong></h1>'
+                                                    + '<p><strong>'+"About"+'</strong><br>'+item.otherUserProfileAbout+'</p>'
                                                                 
-                                                    + '<p>'+item.otherUserProfileAbout+'<p>'
+                                                
                                                     
                                                     + '<p class="ui-li-aside" ></p></div>');
                              
