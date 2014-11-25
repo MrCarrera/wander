@@ -76,12 +76,9 @@ $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
 $(document).on('tap', '#myListView li a', function(){   //calls for the function on tap
                
                $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
-               
-           
-               
+              
                $("#myPost").empty();
                //Clear List Before Clone.
-               
                
                document.getElementById("replyid").value = $(this).attr('data-key');
                //place the id from the data-key attribute to the replyid div
@@ -89,27 +86,19 @@ $(document).on('tap', '#myListView li a', function(){   //calls for the function
                document.getElementById("otherProfileID").value = $(this).attr('data-profileUserID');
                
                //alert($(this).attr('data-profileUserID'));
-               
-               
-               
+              
               // $(this).attr("href", "#individualProfile");
                
                $(this).clone().appendTo('#myPost').append('<div id="linkToProfile"><a href="#individualProfile"></a></div>');
                //Clone selected listview Values.
-               
-          
-               
+              
                $('#myPost').value(function (index, value) {
                                   return value + ' at ' + index;
                                   });
                
-               
-               
                $( '#myPost' ).listview( "refresh" );
                //Refresh List After Cloning and Appending.
-               
-               
-               
+                
                });
 
 

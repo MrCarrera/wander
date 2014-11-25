@@ -85,18 +85,10 @@ $(document).on('tap', '#myPostsList li a.toMyPost', function(){   //calls for th
                
                $(this).clone().appendTo('#myPost');
                //Clone selected listview Values.
-               
-               
-               
-               
-               
-               
-               
+             
                $('#myPost').value(function (index, value) {
                                   return value + ' at ' + index;
                                   });
-               
-               
                
                $( '#myPost' ).listview( "refresh" );
                //Refresh List After Cloning and Appending.

@@ -2,9 +2,7 @@ $(document).bind('deviceready', function(){
                  $(function(){
                    $('form#postForm').submit(function(){
                                              
-                                             
-                                             
-                                             var fullDate = new Date()
+                                              var fullDate = new Date()
                                              console.log(fullDate);
                                              //Thu May 19 2011 17:25:38 GMT+1000 {}
                                              
@@ -21,19 +19,19 @@ $(document).bind('deviceready', function(){
                                              document.getElementById("userID").value = randString(10);
                                              
                                              //                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
-                                             var postTime = fullDate.toISOString()
+                                             var postTime = fullDate.toISOString();
                                              var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
-                                             var postUser = $('#userName').text()
-                                             var postGender = $('#userGender').text()
-                                             var postPic = $('#userPic').attr('src')
-                                             var postData = $(this).serialize()
-                                             var postID = $('#userID').val()
-                                             var postData = $('#userPost').val()
-                                             var postLat = $('#userLat').val()
-                                             var postLong = $('#userLong').val()
-                                             var postProfileID = $('#profileID').val()
-                                             var postCity = $('#profileCity').text()
-                                             var postAbout = $('#profileAbout').text()
+                                             var postUser = $('#userName').text();
+                                             var postGender = $('#userGender').text();
+                                             var postPic = $('#userPic').attr('src');
+                                             var postData = $(this).serialize();
+                                             var postID = $('#userID').val();
+                                             var postData = $('#userPost').val();
+                                             var postLat = $('#userLat').val();
+                                             var postLong = $('#userLong').val();
+                                             var postProfileID = $('#profileID').val();
+                                             var postCity = $('#profileCity').text();
+                                             var postAbout = $('#profileAbout').text();
                                              
                                              
                 $.ajax({

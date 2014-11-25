@@ -34,7 +34,6 @@ body {
     text-shadow: none;
 }
 
-
 /***************Post Feed Page****************/
 #header a.addPost{
 	text-indent: -999999px;
@@ -59,10 +58,7 @@ body {
     
 }
 
-
-
 /*Post Page Profile Images*/
-
 
 .feedImage p {
                 float:left;
@@ -127,7 +123,6 @@ padding-left:5.50em !important;
 }
 
 /***************Post thread ****************/
-
 
 /*Header icon*/
 #header a.myBack{
@@ -198,8 +193,6 @@ padding-left:5.50em !important;
    
 }
 
-
-
 /*Styles div myPost*/
 
 #individualPost .ui-content{
@@ -238,8 +231,7 @@ padding-left:5.50em !important;
     height: 190px;
     position: fixed;
     z-index: 2;
-    
-         
+       
 }
 
 #myPostsList li .ui-btn{
@@ -389,11 +381,7 @@ padding-left:5.50em !important;
 }
 /* Border bottom for the previous list item during the transition*/
 
-
-
-
 /*********Reply list goes here************/
-
 
 /*Makes the pic rounded and fits size*/
 #individualPost #replies .feedImage{
@@ -607,16 +595,13 @@ padding-left:5.50em !important;
 }
 
 
-
  #aboutWanderIcon img {
     display: block;
     margin: 0 auto;
     width: 30px;
     height: 30px;
-
     
 }
-
 
 .userInputButton {
     
@@ -626,9 +611,6 @@ padding-left:5.50em !important;
     background: white !important;
     border: none !important;
 }
-
-
-
 
     
 /***************Other User Profile Page****************/
@@ -640,9 +622,7 @@ padding-left:5.50em !important;
     width: 150px;
     height: 150px;
     border: 2px solid #ffffff;
-    
-
-    
+      
     
 }
 
@@ -651,10 +631,7 @@ padding-left:5.50em !important;
     display: block;
     /*margin-left:23%;*/
     /*margin-right:100%;*/
-    
-    
-   
-    
+      
     
 }
 
