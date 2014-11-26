@@ -181,7 +181,7 @@
         years: "years"
       },
       prefixes: {
-        lt: "less than a",
+        lt: "a",
         about: "about",
         over: "over",
         almost: "almost",

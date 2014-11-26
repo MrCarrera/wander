@@ -216,7 +216,7 @@
                     <b></b>
                     <textarea data-corners="false" placeholder="Compose New Post Here (Max. 150 characters)" id="userPost" name="userPost" cols="30" rows="10" style="-webkit-box-shadow: none" ></textarea>
                 </label>
-                You have <span id="charsLeft"></span> chars left.
+                You have <span id="charsLeft"></span> Chars Left.
                 <script type="text/javascript">
                 $('#userPost').limit('150','#charsLeft');
                 </script> <!--counting character script-->
@@ -258,7 +258,7 @@
                     <b></b>
                     <textarea data-corners="false" placeholder="Reply To Post (max. 100 characters)" id="replyPost" name="replyPost" cols="30" rows="10"></textarea>
                 </label>
-                You have <span id="charsLeftReply"></span> chars left.
+                You have <span id="charsLeftReply"></span> Chars Left.
                 <script type="text/javascript">
                 $('#replyPost').limit('100','#charsLeftReply');
                 </script> <!--counting character script-->
@@ -325,7 +325,7 @@
 
 <div data-role="page" id="page-profile" class="page-panel">
 
-    <div data-role="header" id="header">
+    <div data-role="header" id="header" data-position="fixed">
         <h1><b>Profile</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
@@ -391,7 +391,7 @@
 
 <div data-role="page" id="page-settings" class="page-panel">
 
-    <div data-role="header" id="header">
+    <div data-role="header" id="header" data-position="fixed">
         <h1><b>Settings</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
