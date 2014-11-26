@@ -1,4 +1,4 @@
-// -------- Panel function by: Devika
+// -------- Panel function
 var panel='<div data-role="panel" id="panel" data-position-fixed="true">'+
 					'<ul id="icons">'+
 						'<li><a href="#page-activity"><img src="icons/activityFeed.png" alt=""><span style="	text-shadow: none;"><b>Post Feed</b></span></a></li>'+
@@ -24,7 +24,7 @@ $(document).on('pageinit', '.page-panel', function(){
 			   $('#panel').panel('open');
 		   }
 	   }
-   }); // this will reveal the panel when swipping right */
+   }); // this will reveal the panel when swipping right, but its disabled since there are swipes within settings and ul list that triggers it */
 }); 
 
 $(document).on("pagecreate", "#page-settings", function(){

@@ -20,9 +20,7 @@ $(function() {
       $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') ;// close em all
       $(e.currentTarget).addClass('open');
       x = e.originalEvent.targetTouches[0].pageX // anchor point
-      
-      
-      
+
       
       })
   .on('touchmove', '.swipe-delete li > a', function(e) {
@@ -60,7 +58,7 @@ $(function() {
                                                data: 'myPostIDValue='+$('#myPostIDStorage').val(),
                                                url: 'http://wander-app.org/deletePosts.php',
                                                timeout: 5000,
-                                               success: function(data){
+                                               success: function(data){ //ON SUCESS CALL FUNCTION TO REMOVE ITEM
                                                    $('#'+ $('#myPostIDStorage').val()).remove();
                                                },
                                                
