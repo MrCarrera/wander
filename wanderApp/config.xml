@@ -9,6 +9,8 @@
     </author>
     <content src="index.html" />
     
+    <preference name="EnableViewportScale" value="yes" /> 
+    
     <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
         <array>
             <string>Allow GPS</string>
@@ -18,6 +20,8 @@
     
     
     <platform name="ios">
+        
+        <preference name="EnableViewportScale" value="yes" />
         
         <config-file target="config.xml" parent="/*">
             <feature name="StatusBar">

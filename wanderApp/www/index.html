@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
 <!----------------------------------JQuery CDN----->
@@ -59,6 +59,8 @@
         <title>Wander</title>
      
      <script type="text/javascript" charset="utf-8">
+         
+         //timeago function is activiated onready to handle time in feed and posts.
          jQuery(document).ready(function() {
             $('body').timeago();
           });
@@ -274,10 +276,11 @@
         
         <div id='extraUserLat'>         
         </div> 
-
+    
+    <!---------Popup to delete post------------>
       <div data-role="popup" id="myPopupDialog">
             <div data-role="header" id="popupHeader">
-                <h1>Delete post?</h1>
+                <h1>Delete Post?</h1>
             </div>   
                 <div data-role="content" class="ui-content">
                     <h3 class="ui-title">Are you sure you want to delete this post?</h3>
@@ -286,7 +289,8 @@
             <a id="deletePostButton" onclick="deleteThisPost()" href="#page-messages" data-rel="back" data-role="button" data-transition="flow">Delete</a>
                 </div>
             
-        </div> <!---------Popup to delete post------------>
+        </div>
+    <!--------- / Popup to delete post------------>
         
     </div><!-- /content -->
     
@@ -294,7 +298,7 @@
 	
 </div>
 
-<!--------MY POST PAGE ENDS HERe---------->
+<!--------MY POST PAGE ENDS HERE---------->
 
 <!----------------------------PROFILE PAGE STARTS HERE----------------------------------------->
 
@@ -415,10 +419,10 @@
 
 <script>
     
-    // Defaults to sessionStorage for storing the Facebook token
+    // Default storage is sessionStorage.
     //openFB.init({appId: '371025573052266'});
     
-    //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
+    // Store Facebook token in local storage instead.
     openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
     
     
@@ -427,19 +431,19 @@
         openFB.login(
                      function(response) {
                      if(response.status === 'connected') {
-                     //alert('Facebook login succeeded, got access token: ' + response.authResponse.token);
                      
+                     // Alert to confirm succesful login to user.
                      navigator.notification.alert(
                                  "Login Succesful!",
-                                 callBackFunctionB, // Specify a function to be called
+                                 callBackFunctionB,
                                  'Wander',
                                  "OK"
                             );
                         
                         $.mobile.changePage("#page-activity");
-                        //Changes page to activity feed (home page) after login.
+                        //Changes page to activity feed (home page) after login success.
 
-                        getInfo();
+                        getInfo(); //Calls the getInfo function to pull users Facebook profile.
                      
                         function callBackFunctionB(){
                         console.log('ok');
@@ -456,6 +460,10 @@
                    
     }
 
+
+// Function to get users Profile data and input it into the Wander profile page.
+
+//Gets data from Facebook Graph API using the FB Token and inputs data into ID's.
 function getInfo() {
                      openFB.api({
                                 path: '/me',
@@ -472,14 +480,15 @@ function getInfo() {
                                 
                                 error: errorHandler});
 }
-                    //Gets data from Facebook Graph API using the FB Token and inputs data into ID's.
-                    
+
+
+//Logs user out of app by re-directing them to the facebook logout php. Removes access token
  
 function logout() {
     openFB.logout(
                   function() {
                   
-                  alert('Logout successful');
+                  alert('Logout Successful');
                   },
                   errorHandler);
                   $.mobile.changePage("#loginPage");
@@ -487,14 +496,18 @@ function logout() {
 }
 
 
-                //Logs user out of app by re-directing them to the facebook logout php. Removes access token
+
 
 
 function errorHandler(error) {
     alert(error.message);
 }
 
-// <!--------FACEBOOK LOGOUT----------> //
+// <!-------- FACEBOOK FUNCTIONS END ----------> //
+
+
+
+//Get the current Date for use with timeago plugin and for storing post-time in the database.
 
 var fullDate = new Date()
 console.log(fullDate);

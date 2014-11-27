@@ -68,6 +68,7 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
+    <preference name="EnableViewportScale" value="yes" />
     <gap:config-file overwrite="false" parent="NSLocationAlwaysUsageDescription" platform="ios">
         <array>
             <string>Allow GPS</string>
