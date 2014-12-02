@@ -1,7 +1,7 @@
 $(document).bind('deviceready', function(){
                  $(function(){
                    $('form#postForm').submit(function(){
-                                             
+                    // When submit button is pressed it takes the content in the text box
                                               var fullDate = new Date()
                                              console.log(fullDate);
                                              //Thu May 19 2011 17:25:38 GMT+1000 {}
@@ -55,7 +55,8 @@ $(document).bind('deviceready', function(){
                                       console.log('ok');
                                                     
                                    }
-                                                    
+                       
+                                   $.mobile.changePage("#page-activity"); 
                                                     
                                   },
                                                     
@@ -73,5 +74,16 @@ $(document).bind('deviceready', function(){
                         });
                    });
                  });
+
+
+// Function to clear post text area if user leaves page without submitting text.
+function clearTextArea() {
+    
+    $("#userPost").val('');
+    
+    
+}
+
+
 
 

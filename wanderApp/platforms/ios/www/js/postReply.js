@@ -46,6 +46,7 @@ $(document).bind('deviceready', function(){
                
                }
                
+               $.mobile.changePage("#individualPost");
                
                },
                
@@ -66,7 +67,13 @@ $(document).bind('deviceready', function(){
 
 
 
-
+// Function to clear reply text area if user leaves without submitting text.
+function clearReplyTextArea() {
+    
+    $("#replyPost").val('');
+    
+    
+}
 
 
 
