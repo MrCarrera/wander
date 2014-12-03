@@ -316,7 +316,7 @@ padding-left:5.50em !important;
 	border-radius:0;
 }
 
-/*makes pic rounded*/
+
 
 #page-messages .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child {
     width: 60px !important;
@@ -394,6 +394,25 @@ padding-left:5.50em !important;
 #myPopupDialog .ui-content p{
     font-size: .9em;
 }
+
+/**Styles the info popup**/
+#infoToDelete .swipeImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+#infoToDelete p{
+    text-align: center;
+}
+
+#infoToDelete .ui-header .ui-title {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
 /* Border bottom for the previous list item during the transition*/
 
 /*********Reply list goes here************/

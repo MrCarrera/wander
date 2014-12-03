@@ -255,7 +255,7 @@
     <div data-role="header" id="header" data-position="fixed">
         <h1><b>My Posts</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
-        <a href="#" onclick="" class="info" data-iconpos="right">Info to delete</a>
+        <a href="#infoToDelete" data-rel="popup" class="info" data-position-to="window" data-transition="pop" data-iconpos="right">Info to delete</a>
     </div><!-- /header -->
 	
     <div data-role="content">
@@ -274,6 +274,20 @@
         <div id='extraUserLat'>         
         </div> 
     
+        <!---------Popup INFO to delete post------------>
+      <div data-role="popup" id="infoToDelete">
+            <div data-role="header" id="popupHeader">
+                <h1>Delete post</h1>
+            </div>   
+                <div data-role="content" class="ui-content">
+                    <p>To delete post swift left</p>
+                    <img class="swipeImg" src="icons/swipeToDelete.png" alt="swipe icon">
+                    <a href="#page-messages"  data-role="button" data-rel="ok">OK</a>           
+                </div>
+            
+        </div>
+    <!--------- / Popup INFO delete post------------>
+           
     <!---------Popup to delete post------------>
       <div data-role="popup" id="myPopupDialog">
             <div data-role="header" id="popupHeader">
