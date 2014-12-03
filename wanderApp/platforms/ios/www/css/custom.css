@@ -48,7 +48,7 @@ body {
 	box-shadow:none; 
 	top:0.50em; 
 	border-radius:0;
-    
+  
 }
 
 #activityContent{
@@ -201,8 +201,7 @@ padding-left:5.50em !important;
 }
 
 #myPost .ui-btn {
-    font-size: 1em !important;
-    
+    font-size: 1em !important; 
     margin: 0 !important;
     padding: 1em !important;
     display: block !important;
@@ -300,6 +299,23 @@ padding-left:5.50em !important;
 
 /*********My Post page************/
 
+/*Icon for info style*/
+#header a.info{
+    text-indent: -999999px;
+	overflow:hidden;
+	width:30px; 
+	height:30px; 
+        color:white;
+	background:url(../icons/info.png) no-repeat; 
+	border:0;
+	margin-right:10px;
+	padding-left:0px; 
+	padding-right: 0px;
+	box-shadow:none; 
+	top:0.50em; 
+	border-radius:0;
+}
+
 /*makes pic rounded*/
 
 #page-messages .ui-listview .ui-li-has-thumb>.ui-btn>img:first-child {
@@ -339,8 +355,7 @@ padding-left:5.50em !important;
         top: 0;
         right: 0;
     }
-    
-     
+   
 
   .swipe-delete .behind a.ui-btn {
         width: 68px;
