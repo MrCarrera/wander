@@ -23,7 +23,7 @@ $(document).on('pageshow', '#individualProfile', function(){
                       data: 'profileIDVal='+$('#otherProfileID').val(),
                       // Give profile id of the selected user profile to server to filter results.
                       //PHP uses id value to only return a profile with a matching id
-                      url: 'http://wander-app.org/getProfile2.php',
+                      url: 'http://wander-app.org/getUserProfiles.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 5000,

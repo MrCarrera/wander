@@ -11,9 +11,9 @@ $(document).bind('deviceready', function(){
                                               console.log(fullDate);
                                               //Thu May 19 2011 17:25:38 GMT+1000 {}
                         
-//                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
+
                         var postTime = fullDateReply.toISOString()
-                        var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
+                        //var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                         var postUser = $('#userName').text()
                         var postGender = $('#userGender').text()
                         var postPic = $('#userPic').attr('src')
@@ -29,7 +29,7 @@ $(document).bind('deviceready', function(){
                 beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
                 complete: function() { $.mobile.loading('hide'); },//hide spinner
                 type: 'POST',
-                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&replyid='+postID+'&profileCity='+postCity+'&profileAbout='+postAbout+'&profileID='+postProfileID,
+                data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postTime='+postTime+'&replyid='+postID+'&profileCity='+postCity+'&profileAbout='+postAbout+'&profileID='+postProfileID,
                 //PHP URL
                 url: 'http://wander-app.org/replyPosts.php',
                 success: function(data){

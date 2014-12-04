@@ -38,7 +38,7 @@ $(document).bind('deviceready', function(){
                     beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
                     complete: function() { $.mobile.loading('hide'); },//hide spinner
                      type: 'POST',
-                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postDate='+postDate+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID+'&profileCity='+postCity+'&profileAbout='+postAbout,
+                     data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID+'&profileCity='+postCity+'&profileAbout='+postAbout,
                          //PHP URL
                           url: 'http://wander-app.org/userPosts.php',
                           success: function(data){
