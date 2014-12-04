@@ -2,7 +2,11 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */     
+ */
+
+
+// Makes back button return you to either the main feed page or the my posts page depending on where you came from
+
 jQuery(document).ready(function() {
     // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
     $(document).on('click', '.toThisPost', function(){
@@ -14,12 +18,11 @@ jQuery(document).ready(function() {
     });
 });
 
+// Populates My Posts page with the users posts
 
 $(document).on('pageshow', '#page-messages', function(){
                //loads data everytime page is shown.
                
-               
-               // function pullTheData () {
                
                $("#myPostsList").empty();
                //Deletes previous list before re-calling it.
@@ -42,7 +45,7 @@ $(document).on('pageshow', '#page-messages', function(){
                              
                              if(item.myUserProfileID == $('#profileID').val()){
                              
-                             console.log(JSON.stringify(item)); //Inject data to the cells
+                             console.log(JSON.stringify(item)); //Append data to list
                              $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" id="' + item.myrandomPostId +'" >'+'<div class="behind"><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn delete-btn">Delete</a></div>'+'<a href="" class="toMyPost" data-myProfile='+item.myUserProfileID+' data-key='+item.myrandomPostId+' onClick=""><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
                                                      + '<p>'+item.myPost+'<p>'
                                                      
@@ -55,7 +58,7 @@ $(document).on('pageshow', '#page-messages', function(){
                              
                       
                             $('#myPostsList').listview( "refresh" );
-                            $('.timeago').timeago();
+                            $('.timeago').timeago(); //  Adds timeago feature to post to shown time past.
                       
                       },
                       error: function(){
@@ -67,17 +70,18 @@ $(document).on('pageshow', '#page-messages', function(){
                });
 
 
-// Will handle on tap to switch to single post page
+// Handles 'on tap' to switch to single post page
 
 $(document).on('tap', '#myPostsList li a.toMyPost', function(){   //calls for the function on tap
                
-               $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false }); // disply the new #individualPost page after taping
+               $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false });
+               // Disply the new #individualPost page after tapping
                
                
                
                
                $("#myPost").empty();
-               //Clear List Before Clone.
+               //Clear the page of old data Before Clone.
                
                
                document.getElementById("replyid").value = $(this).attr('data-key');
@@ -96,16 +100,3 @@ $(document).on('tap', '#myPostsList li a.toMyPost', function(){   //calls for th
                });
 
 
-
-
-
-
-
-
-
-//// Post - userPost
-//// Name - userName
-//// Gender - userGender
-//// Pic - userPic
-//// Time - postTime
-//// theDate - postDate

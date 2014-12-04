@@ -72,7 +72,7 @@
         // Handle the resume event
         function onResume() {
             onDeviceReady();
-            pullTheData();
+            //pullTheData();
         }
     </script>
  
@@ -184,7 +184,7 @@
     </script>
 	
 	<div data-role="header" id="header">
-	        <h1><b>Post Activity</b></h1>
+	        <h1><b>Create A Post</b></h1>
 	    <a href="#page-activity" data-iconpos="left" onclick="clearTextArea()" class="myBack">Back</a>
 	</div> <!-- /header -->
  	    
@@ -274,15 +274,15 @@
         <div id='extraUserLat'>         
         </div> 
     
-        <!---------Popup INFO to delete post------------>
+    <!---------Popup INFO to delete post------------>
       <div data-role="popup" id="infoToDelete">
             <div data-role="header" id="popupHeader">
-                <h1>Delete post</h1>
+                <h1>Delete Post</h1>
             </div>   
                 <div data-role="content" class="ui-content">
-                    <p>To delete post swift left</p>
+                    <p>Swipe Left To Delete A Post</p>
                     <img class="swipeImg" src="icons/swipeToDelete.png" alt="swipe icon">
-                    <a href="#page-messages"  data-role="button" data-rel="ok">OK</a>           
+                    <a href="#page-messages"  data-role="button" data-rel="ok">Ok</a>
                 </div>
             
         </div>
@@ -316,7 +316,7 @@
 <div data-role="page" id="page-profile" class="page-panel">
 
     <div data-role="header" id="header" data-position="fixed">
-        <h1><b>Profile</b></h1>
+        <h1><b>My Profile</b></h1>
         <a href="#panel" class="panel-toggle">Open left panel</a>
     </div><!-- /header -->
 	
@@ -340,9 +340,9 @@
 	
 </div>
 
-<!--------PROFILE PAGE ENDS HERE---------->
+<!-------- PROFILE PAGE ENDS HERE---------->
 
-<!--------OTHER USERS PROFILE PAGE ---------->
+<!-------- OTHER USERS PROFILE PAGE ---------->
 
 <div data-role="page" id="individualProfile" >
     <div data-role="header" id="header" data-position="fixed">
@@ -367,7 +367,7 @@
 
 <!--------OTHER USERS PROFILE PAGE ENDS HERE---------->
 
-<!----------------------------Settings page starts here----------------------------------------->
+<!----------------------------SETTINGS PAGE STARTS HERE----------------------------------------->
 
 <div data-role="page" id="page-settings" class="page-panel">
 
@@ -379,7 +379,7 @@
     <div data-role="content" id="settingsPanel">
     	
 		<div data-role="fieldcontain" id="searchDistance">			
-		    <label for="slider-1">Search Distance <span class="kilometer">km</span></label>	
+		    <label for="slider-1">Search Distance <span class="kilometer">Km</span></label>
 		    <input type="range" name="slider-1" id="slider-1" min="0" max="200" value="100">    
 		</div> 
 		
@@ -407,38 +407,30 @@
 			<p>Select a gender preference for finding other users post</p>
 		</div>
 		
-		<div data-role="fieldcontain" id="vibrateSelector" >	
-		<label for="flip-3">Vibrate On Notification</label>
-			<select name="flip-3" id="flip-3" data-role="slider"data-mini="true">
-				<option value="off"></option>
-				<option selected="selected" value="on"></option>				
-			</select> 
-		</div>
-                <div>
-		
-  			<button id="logOut" class="btn btn-block" onclick="logout()">Logout</button>
-		
-                </div>
-		
+
     </div><!-- /content -->
 	
 </div>
 
 <!--------SETTINGS PAGE ENDS HERE---------->
 
-<!--------FACEBOOK LOGIN---------->
+
 
 <script>
+    
+////////FACEBOOK FUNCTIONS START HERE////////////////////////////////////////
     
     // Default storage is sessionStorage.
     //openFB.init({appId: '371025573052266'});
     
-    // Store Facebook token in local storage instead.
+    // Store Facebook token in localStorage instead of sessionStorage
     openFB.init({appId: '371025573052266', tokenStore: window.localStorage});
+    //Give facebook the app id generated in the facebook developer site.
     
-    
+/////// FACEBOOK LOGIN ///////////////////////////////////////////////////////
     
     function loginButton() {
+        //Use OpenFB js library to connect to facebook
         openFB.login(
                      function(response) {
                      if(response.status === 'connected') {
@@ -454,7 +446,8 @@
                         $.mobile.changePage("#page-activity");
                         //Changes page to activity feed (home page) after login success.
 
-                        getInfo(); //Calls the getInfo function to pull users Facebook profile.
+                        getInfo();
+                     //Calls the getInfo function to pull users Facebook profile when login is successful
                      
                         function callBackFunctionB(){
                         console.log('ok');
@@ -467,9 +460,10 @@
                      alert('Facebook login failed: ' + response.error);
                      }
                      }, {scope: 'email,public_profile,user_location,user_photos,user_hometown,user_about_me'});
-                     
+                     //Ask for facebook permissions with 'Scope'
                    
     }
+
 
 
 // Function to get users Profile data and input it into the Wander profile page.
@@ -503,7 +497,9 @@ function logout() {
                   },
                   errorHandler);
                   $.mobile.changePage("#loginPage");
+                  //Change page back to login page
                   tokenStore['fbtoken'] = undefined;
+                  // Remove facebook access token
 }
 
 

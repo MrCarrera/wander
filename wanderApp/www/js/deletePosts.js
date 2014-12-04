@@ -1,4 +1,5 @@
 
+/////////////////////Function To Swipe List Item ///////////////////////////////////////////
 
 $(function() {
   function prevent_default(e) {
@@ -54,11 +55,13 @@ $(function() {
 
                   function deleteThisPost() {
                                         $.ajax({
+                                               //Send ID of swiped list item to PHP
                                                type: 'GET',
                                                data: 'myPostIDValue='+$('#myPostIDStorage').val(),
                                                url: 'http://wander-app.org/deletePosts.php',
                                                timeout: 5000,
-                                               success: function(data){ //ON SUCESS CALL FUNCTION TO REMOVE ITEM
+                                               success: function(data){
+                                               //ON SUCESS CALL FUNCTION TO REMOVE ITEM
                                                    $('#'+ $('#myPostIDStorage').val()).remove();
                                                },
                                                

@@ -4,12 +4,16 @@
  * and open the template in the editor.
  */
 
+// Makes back button return user to page they came from.
+
 jQuery(document).ready(function() {
     // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
     $(document).on('click', '.toThisPost', function(){
        $("#postThreadBack").attr("href", "#page-activity");
     });
 });
+
+// Calls server to populate main page with users posts.
 
 $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                //loads data everytime page is shown.

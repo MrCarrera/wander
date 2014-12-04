@@ -25,13 +25,12 @@
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+        //Store lat and long for use in ajax posts
         document.getElementById('userLat').value = position.coords.latitude;
         document.getElementById('userLong').value = position.coords.longitude;
-        
+        //Store second lat and long for ajax pulls
         document.getElementById('extraUserLat').value = position.coords.latitude;
         document.getElementById('extraUserLong').value = position.coords.longitude;
-        //document.getElementById('extraUserTest').innerHTML = position.coords.longitude;
-
         
     }
 

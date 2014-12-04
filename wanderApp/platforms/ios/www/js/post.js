@@ -18,7 +18,7 @@ $(document).bind('deviceready', function(){
                                              //Place random ID within hidden div for extraction.
                                              document.getElementById("userID").value = randString(10);
                                              
-                                             //                        var postTime = fullDate.getHours()+':'+fullDate.getMinutes();
+                                             
                                              var postTime = fullDate.toISOString();
                                              var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                                              var postUser = $('#userName').text();
@@ -43,10 +43,10 @@ $(document).bind('deviceready', function(){
                           url: 'http://wander-app.org/userPosts.php',
                           success: function(data){
                           console.log(data);
-                                                    
+                           // Post Alert
                             navigator.notification.alert(
                                     "Posted!",
-                                    callBackFunctionB, // Specify a function to be called
+                                    callBackFunctionB,
                                     'Wander',
                                     "OK"
                                 );

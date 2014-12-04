@@ -56,11 +56,3 @@
         
 
 
- 
-
-// Post - userPost
-// Name - userName
-// Gender - userGender
-// Pic - userPic
-// Time - postTime
-// theDate - postDate
