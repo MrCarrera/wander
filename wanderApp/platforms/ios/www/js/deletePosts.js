@@ -15,7 +15,7 @@ $(function() {
   $(document)
   .on('touchstart', '.swipe-delete li > a', function(e) {
       console.log(e.originalEvent.pageX);      
-      ///// GET ID OF SELECTED POST AND STORE IN A DIV FOR AJAX /////
+      ///// GET ID OF SELECTED POST AND STORE IN A DIV FOR AJAX DELETE /////
       document.getElementById("myPostIDStorage").value = $(this).attr('data-key');
       
       $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') ;// close em all
@@ -27,7 +27,7 @@ $(function() {
   .on('touchmove', '.swipe-delete li > a', function(e) {
       
       var change = e.originalEvent.targetTouches[0].pageX - x;
-      change = Math.min(Math.max(-100, change), 100); // restrict to -100px left, 0px right
+      change = Math.min(Math.max(-100, change), 0); // restrict to -100px left, 0px right
       e.currentTarget.style.left = change + 'px';
       if (change < -10) disable_scroll() // disable scroll once we hit 10px horizontal slide
       })

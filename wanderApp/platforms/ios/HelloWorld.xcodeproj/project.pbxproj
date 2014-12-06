@@ -579,7 +579,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
 					"-ObjC",
 				);
-				PRODUCT_NAME = HelloWorld;
+				PRODUCT_NAME = Wander;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
