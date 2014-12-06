@@ -190,14 +190,18 @@ padding-left:5.50em !important;
     border-radius: 50px;
     border-top-left-radius: 50px !important;
     border-bottom-left-radius: 50px !important;
+    overflow: hidden;
+    border: 2px solid #ffffff;
    
 }
 
 /*Styles div myPost*/
 
 #individualPost .ui-content{
+    
     padding: 0px !important;
     min-height: inherit !important;
+    
 }
 
 #myPost .ui-btn {
@@ -275,7 +279,7 @@ padding-left:5.50em !important;
     padding: 1px;
     margin: 1px 10px 8px 10px;
     font-weight: bold;
-    text-align: justify;
+    text-align: center;
     color:white;
     text-shadow: 0 0px 0 #f3f3f3 !important;
 }
@@ -297,7 +301,7 @@ padding-left:5.50em !important;
 }
 
 
-/*********My Post page************/
+/********* My Posts Page ************/
 
 /*Icon for info style*/
 #header a.info{
@@ -415,7 +419,7 @@ padding-left:5.50em !important;
 
 /* Border bottom for the previous list item during the transition*/
 
-/*********Reply list goes here************/
+/********* Reply list (Individual Post) ************/
 
 /*Makes the pic rounded and fits size*/
 #individualPost #replies .feedImage{
@@ -430,6 +434,8 @@ padding-left:5.50em !important;
   border-bottom-left-radius: 30px !important;
   float:left;
   margin: 5px 5px 5px 15px;
+   
+
 }
 
 /*Styles content within the list*/
@@ -458,7 +464,7 @@ padding-left:5.50em !important;
     margin-right: 10px !important;
 }
 
-/***************Add new Post Page****************/
+/*************** Add new Post Page ****************/
 /*Header buttons*/
 #addPostPage .header-buttons{
 	border: none;
@@ -476,7 +482,7 @@ padding-left:5.50em !important;
     height: 250px !important;
 }
 
-/***************Settings Page****************/
+/*************** Settings Page ****************/
 /*Search KM*/
 #settingsPanel p{
 	color:#A8A8A8;
@@ -534,7 +540,7 @@ padding-left:5.50em !important;
 }
 
 
-/***************Profile Page****************/
+/*************** Profile Page ****************/
 
 .profilePicture {
                 border-radius: 50%;
@@ -600,6 +606,8 @@ padding-left:5.50em !important;
 }
 
 
+/*************** LOGIN PAGE ****************/
+
 
 #LoginPage .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper {
     background: transparent url(../img/6Bk2.png) !important;
@@ -647,7 +655,7 @@ padding-left:5.50em !important;
 }
 
     
-/***************Other User Profile Page****************/
+/*************** Other User Profile Page ****************/
 
 .otherProfilePicture {
     

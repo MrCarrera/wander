@@ -9,12 +9,12 @@
         $(document).on('pageshow', '#individualPost', function(){
                        //loads data everytime page is shown.
                        
-                                   $("#replyList").empty();
+                                    $("#replyList").empty();
                                     //Deletes previous list before re-calling it.
                                     var replyIdCheck = $('#replyid').val()
-                                    //Gets dynamic id value to identify post.
+                                    //Gets dynamic userID value to identify post.
                                     var output = $('#replies');
-                                   //makes a variable that links to an ID. 
+                                    //makes a variable that links to an ID.
                        
                        
                     $.ajax({
@@ -29,8 +29,8 @@
                             $.each(data, function(i,item){
                                                  
                                 if(item.mainPostId == replyIdCheck){
-                                //Filters relpies that are linked to the main post using dynamic id.
-                                              
+                                //Filters relpies that are linked to the main post using dynamic string.
+                                //Only gets replies with matching userID from database
                                         
                                         console.log(JSON.stringify(item)); //Inject data to the cells
                                                  $('#replyList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><data-kode='+item.mainPostId+' data-replyProfileID='+item.replyUserProfileID+'><img class="feedImage" href="#page-IndividualProfile" src='+item.replyPic+'></img><p><strong>'+item.replyName+", "+item.replyGender+'</p></strong>'
@@ -41,9 +41,13 @@
                                                  }
                                                  });          
                                                  
-                                                 
-                                                    $( '#replyList' ).listview( "refresh" );
-                                                    $('.timeago').timeago();
+                                    $('#linkToProfile a').attr("href", "#individualProfile");
+                                    //Updates href of appended linkToProfile div to link to users profile.
+                                    //Prevents bug where pages skip.
+                           
+                                        $( '#replyList' ).listview( "refresh" );
+                           
+                                        $('.timeago').timeago();
                                                     
                                                                                               },
                                           error: function(){

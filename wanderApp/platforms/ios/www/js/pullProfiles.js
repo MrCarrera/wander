@@ -6,7 +6,7 @@
 
 // Function to get other users profiles from database ///////////////////////////////////////////////////
 
-$(document).on('pageshow', '#individualProfile', function(){
+$(document).on('pagebeforeshow', '#individualProfile', function(){
                //loads data everytime page is shown.
                
                $("#otherProfileContainer").empty();
@@ -21,8 +21,8 @@ $(document).on('pageshow', '#individualProfile', function(){
                       complete: function() { $.mobile.loading('hide'); }, //hide spinner
                       type: 'GET',
                       data: 'profileIDVal='+$('#otherProfileID').val(),
-                      // Give profile id of the selected user profile to server to filter results.
-                      //PHP uses id value to only return a profile with a matching id
+                      //Give profileID data of the selected user profile to server to filter results.
+                      //PHP uses id value to only return a profile with a matching profileID
                       url: 'http://wander-app.org/getUserProfiles.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
@@ -44,6 +44,7 @@ $(document).on('pageshow', '#individualProfile', function(){
                              
                              });
                     
+                      
                       },
                       error: function(){
                       output.text('There was an error loading the data.');
