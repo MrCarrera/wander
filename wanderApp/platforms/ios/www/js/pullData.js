@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 
 // Calls server to populate main page with users posts.
 
-$(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
+$(document).on('pagebeforeshow', '#page-activity', function(){
                //loads data everytime page is shown.
                
                
@@ -30,16 +30,18 @@ $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                
                
                $.ajax({
-                      beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
-                      complete: function() { $.mobile.loading('hide'); },//hide spinner
+                      
                       type: 'GET',
                       data: 'val='+$('#extraUserLat').val()+'&val2='+$('#extraUserLong').val()+'&val3='+$("#slider-1").val(),
                       //Send users current lat & long as well as the slider search value to the php file.
                       //Lat, long and slider value filter the database results to show nearby posts.
+                      beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
+                      complete: function() { $.mobile.loading('hide'); },//hide spinner
+
                       url: 'http://wander-app.org/getMainPostsKM.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
-                      timeout: 5000,
+                      timeout: 10000,
                       success: function(data, status){ //Calls the server
                       
                       $.each(data, function(i,item){
@@ -72,10 +74,27 @@ $(document).on('pagebeforeshow', '#page-activity', function(pullTheData){
                       $('.timeago').timeago();
                       //Timeago plugin used to show time since post - converts time stamp to text values.
                       },
-                      error: function(){
-                      output.text('There was an error loading the data.');
-                      //Handles error to connect to database
+                      
+                      //OnError - Retry the ajax if it fails
+                      error : function(xhr, textStatus, errorThrown ) {
+                      if (textStatus == 'timeout') {
+                      this.tryCount++;
+                      if (this.tryCount <= this.retryLimit) {
+                      //try again
+                      $.ajax(this);
+                      return;
                       }
+                      return;
+                      }
+                      if (xhr.status == 500) {
+                      //handle error
+                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      } else {
+                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      //handle error
+                      }
+                      }
+
                       
                       });
                

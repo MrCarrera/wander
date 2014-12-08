@@ -32,6 +32,7 @@ $(document).bind('deviceready', function(){
                 data: '&replyPost='+postReply+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postTime='+postTime+'&replyid='+postID+'&profileCity='+postCity+'&profileAbout='+postAbout+'&profileID='+postProfileID,
                 //PHP URL
                 url: 'http://wander-app.org/replyPosts.php',
+                timeout: 10000,
                 success: function(data){
                 console.log(data);
                

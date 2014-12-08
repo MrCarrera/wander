@@ -16,7 +16,7 @@ $(function() {
   .on('touchstart', '.swipe-delete li > a', function(e) {
       console.log(e.originalEvent.pageX);      
       ///// GET ID OF SELECTED POST AND STORE IN A DIV FOR AJAX DELETE /////
-      document.getElementById("myPostIDStorage").value = $(this).attr('data-key');
+      document.getElementById("myPostIDStorage").value = $(this).attr('data-myPokey');
       
       $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') ;// close em all
       $(e.currentTarget).addClass('open');

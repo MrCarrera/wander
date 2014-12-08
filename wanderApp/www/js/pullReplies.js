@@ -23,7 +23,7 @@
                         url: 'http://wander-app.org/getReply.php',
                         dataType: 'jsonp',
                         jsonp: 'jsoncallback',
-                        timeout: 5000,
+                        timeout: 10000,
                         success: function(data, status){ //Calls the server
                                           
                             $.each(data, function(i,item){
@@ -50,11 +50,27 @@
                                         $('.timeago').timeago();
                                                     
                                                                                               },
-                                          error: function(){
-                                          output.text('There was an error loading the data.');//Handles error to connect to database
-                                          }
-                                          });
-                                   });
+                           //OnError - Retry the ajax if it fails
+                           error : function(xhr, textStatus, errorThrown ) {
+                           if (textStatus == 'timeout') {
+                           this.tryCount++;
+                           if (this.tryCount <= this.retryLimit) {
+                           //try again
+                           $.ajax(this);
+                           return;
+                           }
+                           return;
+                           }
+                           if (xhr.status == 500) {
+                           //handle error
+                           output.text('There Was An Error Loading The Data. Please Restart The App.');
+                           } else {
+                           output.text('There Was An Error Loading The Data. Please Restart The App.');
+                           //handle error
+                           }
+                           }
+                 });
+           });
 
 
         

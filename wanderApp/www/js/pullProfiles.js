@@ -26,7 +26,7 @@ $(document).on('pagebeforeshow', '#individualProfile', function(){
                       url: 'http://wander-app.org/getUserProfiles.php',
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
-                      timeout: 5000,
+                      timeout: 10000,
                       success: function(data, status){ 
                       
                       $.each(data, function(i,item){

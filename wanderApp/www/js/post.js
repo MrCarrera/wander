@@ -40,9 +40,10 @@ $(document).bind('deviceready', function(){
                      type: 'POST',
                      data: '&userPost='+postData+'&userName='+postUser+'&userGender='+postGender+'&userPic='+postPic+'&postTime='+postTime+'&userID='+postID+'&userLat='+postLat+'&userLong='+postLong+'&profileID='+postProfileID+'&profileCity='+postCity+'&profileAbout='+postAbout,
                          //PHP URL
-                          url: 'http://wander-app.org/userPosts.php',
-                          success: function(data){
-                          console.log(data);
+                       url: 'http://wander-app.org/userPosts.php',
+                       timeout: 10000,
+                       success: function(data){
+                       console.log(data);
                            // Post Alert
                             navigator.notification.alert(
                                     "Posted!",
