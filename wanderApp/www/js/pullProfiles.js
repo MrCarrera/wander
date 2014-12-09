@@ -27,6 +27,8 @@ $(document).on('pagebeforeshow', '#individualProfile', function(){
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 10000,
+                      tryCount : 0,
+                      retryLimit : 3,
                       success: function(data, status){ 
                       
                       $.each(data, function(i,item){

@@ -42,6 +42,8 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 10000,
+                      tryCount : 0,
+                      retryLimit : 3,
                       success: function(data, status){ //Calls the server
                       
                       $.each(data, function(i,item){
@@ -88,9 +90,9 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                       }
                       if (xhr.status == 500) {
                       //handle error
-                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      output.text('There Was An Error Connecting to the Database. Please Restart The App.');
                       } else {
-                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      output.text('There Was An Error Connecting to the Database. Please Restart The App.');
                       //handle error
                       }
                       }
