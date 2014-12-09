@@ -5,20 +5,7 @@
  */
 
 
-// Makes back button return you to either the main feed page or the my posts page depending on where you came from
-
-jQuery(document).ready(function() {
-    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
-    $(document).on('click', '.toThisPost', function(){
-       $("#postThreadBack").attr("href", "#page-activity");
-    });
-    // CHANGES POST THREAD BACK BUTTON HREF TO #page-messages TO RETURN TO MY POSTS
-    $(document).on('click', "a.toMyPost", function(){
-       $("#postThreadBack").attr("href", "#page-messages");
-    });
-});
-
-// Populates My Posts page with the users posts
+// Call database for posts the user has previously created 
 
 $(document).on('pageshow', '#page-messages', function(){
                //loads data everytime page is shown.
@@ -39,8 +26,7 @@ $(document).on('pageshow', '#page-messages', function(){
                       dataType: 'jsonp',
                       jsonp: 'jsoncallback',
                       timeout: 10000,
-                      tryCount : 0,
-                      retryLimit : 3,
+                      
                       success: function(data, status){ //Calls the server
                       
                       $.each(data, function(i,item){

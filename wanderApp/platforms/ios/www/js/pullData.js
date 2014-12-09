@@ -6,12 +6,12 @@
 
 // Makes back button return user to page they came from.
 
-jQuery(document).ready(function() {
-    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
-    $(document).on('click', '.toThisPost', function(){
-       $("#postThreadBack").attr("href", "#page-activity");
-    });
-});
+//jQuery(document).ready(function() {
+//    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
+//    $(document).on('click', '.toThisPost', function(){
+//       $("#postThreadBack").attr("href", "#page-activity");
+//    });
+//});
 
 // Calls server to populate main page with users posts.
 
@@ -90,9 +90,9 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                       }
                       if (xhr.status == 500) {
                       //handle error
-                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      output.text('There Was An Error Connecting to the Database. Please Restart The App.');
                       } else {
-                      output.text('There Was An Error Loading The Data.Please Restart The App.');
+                      output.text('There Was An Error Connecting to the Database. Please Restart The App.');
                       //handle error
                       }
                       }
