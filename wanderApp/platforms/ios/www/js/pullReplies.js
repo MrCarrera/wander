@@ -5,6 +5,7 @@
  */
 
 
+    //Function to get replies to the currently selected user post
                   
         $(document).on('pageshow', '#individualPost', function(){
                        //loads data everytime page is shown.
@@ -33,7 +34,10 @@
                                 if(item.mainPostId == replyIdCheck){
                                 //Filters relpies that are linked to the main post using dynamic string.
                                 //Only gets replies with matching userID from database
-                                        
+                                
+                                   
+                                //data-kode stores replyid from database for use within the app
+                                //data-replyProfileID stores profileID from database for use within app
                                         console.log(JSON.stringify(item)); //Inject data to the cells
                                                  $('#replyList').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><data-kode='+item.mainPostId+' data-replyProfileID='+item.replyUserProfileID+'><img class="feedImage" href="#page-IndividualProfile" src='+item.replyPic+'></img><p><strong>'+item.replyName+", "+item.replyGender+'</p></strong>'
                                                  + '<p>'+item.mainReplyPost+'<p>'

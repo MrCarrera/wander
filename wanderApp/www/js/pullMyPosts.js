@@ -5,20 +5,8 @@
  */
 
 
-// Makes back button return you to either the main feed page or the my posts page depending on where you came from
 
-//jQuery(document).ready(function() {
-//    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
-//    $(document).on('click', '.toThisPost', function(){
-//       $("#postThreadBack").attr("href", "#page-activity");
-//    });
-//    // CHANGES POST THREAD BACK BUTTON HREF TO #page-messages TO RETURN TO MY POSTS
-//    $(document).on('click', 'a.toMyPost', function(){
-//       $("#postThreadBack").attr("href", "#page-messages");
-//    });
-//});
-
-// Populates My Posts page with the users posts
+//Function to Populate My Posts page with the active user's posts
 
 $(document).on('pageshow', '#page-messages', function(){
                //loads data everytime page is shown.
@@ -45,7 +33,9 @@ $(document).on('pageshow', '#page-messages', function(){
                       $.each(data, function(i,item){
                              
                              if(item.myUserProfileID == $('#profileID').val()){
+                             //If statement only returns posts that match your unique profileID
                              
+                             //Hidden userID & ProfileID stored as data-attribute's for use within app.
                              console.log(JSON.stringify(item)); //Append data to list
                              $('#myPostsList').append('<li class="ui-nodisc-icon" data-icon="listIcon" id="' + item.myrandomPostId +'" >'+'<div class="behind"><a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn delete-btn">Delete</a></div>'+'<a href="" class="toMyPost" data-myProfile='+item.myUserProfileID+' data-myPokey='+item.myrandomPostId+' onClick=""><img class="feedImage" src='+item.myPic+'></img><p><strong>'+item.myName+", "+item.myGender+'</p></strong>'
                                                      + '<p>'+item.myPost+'<p>'
@@ -94,8 +84,6 @@ $(document).on('tap', '#myPostsList li a.toMyPost', function(){   //calls for th
                
                $.mobile.changePage( "#individualPost", { transition: "fade", changeHash: false });
                // Disply the new #individualPost page after tapping
-               
-               
                
                
                $("#myPost").empty();

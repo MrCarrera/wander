@@ -19,6 +19,9 @@
  *
 */
 
+//This plugin is used to view the facebook login page within the app //
+//Allows the facebook signup page to appear for password entering and then disapear after succesful login
+
 var exec = require('cordova/exec');
 var channel = require('cordova/channel');
 var modulemapper = require('cordova/modulemapper');

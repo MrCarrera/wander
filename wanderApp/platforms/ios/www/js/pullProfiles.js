@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-// Function to get other users profiles from database ///////////////////////////////////////////////////
+// Function to get other users profiles from database 
 
 $(document).on('pagebeforeshow', '#individualProfile', function(){
                //loads data everytime page is shown.
@@ -33,7 +33,7 @@ $(document).on('pagebeforeshow', '#individualProfile', function(){
                       
                       $.each(data, function(i,item){
                              
-                            
+                            //data-kkkode data attribute stores profileID selected user from database.
                              console.log(JSON.stringify(item)); //Append profile data to div
                              $('#otherProfileContainer').append('<div class="ui-nodisc-icon" data-icon="listIcon" style="text-align: center" ><data-kkkode='+item.otherUserProfileID+'><img class="otherProfilePicture" href="#" src='+item.otherUserProfilePic+'></img><p><strong>'+item.otherUserProfileName+", "+item.otherUserProfileGender+'</strong><br>'+item.otherUserProfileCity+'</p>'
                                                     

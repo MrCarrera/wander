@@ -1,3 +1,5 @@
+
+
 $(document).bind('deviceready', function(){
                  $(function(){
                    $('form#postForm').submit(function(){
@@ -6,7 +8,7 @@ $(document).bind('deviceready', function(){
                                              console.log(fullDate);
                                              //Thu May 19 2011 17:25:38 GMT+1000 {}
                                              
-                                             //Generate a random 10 letter ID for each post using Alphabetical Chars.
+                                            //Generate a random 10 letter 'userID' for each post using Alphabetical Chars.
                                              function randString(x){
                                              var s = "";
                                              while(s.length<x&&x>0){
@@ -17,10 +19,11 @@ $(document).bind('deviceready', function(){
                                              }
                                              //Place random ID within hidden div for extraction.
                                              document.getElementById("userID").value = randString(10);
+                                             //This id is unique to posts and is copied by reply posts..
+                                             //..that are posted in reply.
                                              
-                                             
+                                             //Provide variables to get values from elements throughout app
                                              var postTime = fullDate.toISOString();
-                                             var postDate = fullDate.getDate() +' / '+myMonth[fullDate.getMonth()];
                                              var postUser = $('#userName').text();
                                              var postGender = $('#userGender').text();
                                              var postPic = $('#userPic').attr('src');
@@ -32,7 +35,7 @@ $(document).bind('deviceready', function(){
                                              var postProfileID = $('#profileID').val();
                                              var postCity = $('#profileCity').text();
                                              var postAbout = $('#profileAbout').text();
-                                             
+                                             //Place values into ajax below
                                              
                 $.ajax({
                     beforeSend: function() { $.mobile.loading('show'); }, //Show spinner
@@ -44,7 +47,7 @@ $(document).bind('deviceready', function(){
                        timeout: 10000,
                        success: function(data){
                        console.log(data);
-                           // Post Alert
+                           // Post Alert On success
                             navigator.notification.alert(
                                     "Posted!",
                                     callBackFunctionB,
@@ -58,12 +61,13 @@ $(document).bind('deviceready', function(){
                                    }
                        
                                    $.mobile.changePage("#page-activity"); 
-                                                    
+                                   //After successful post - Change page back to post feed
                                   },
                                                     
                                     error: function(){
                                     console.log(data);
                                     alert('There Was An Error Adding Your Comment');
+                                    //Handle Errors
                                    }
                              });
                                              

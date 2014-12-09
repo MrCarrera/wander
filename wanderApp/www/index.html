@@ -29,7 +29,7 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
-<!---------------------------JavaScript  for Facebook Connection----->                
+<!---------------------------JavaScript for Facebook Connection----->
                 <script src="openfb.js"></script>
                 <script src="inappbrowser.js"></script>
                 
@@ -68,7 +68,7 @@
         
         
         
-        // Makes back button return you to either the main feed page or the my posts page depending on where you came from
+        //Makes back button return you to either the main feed page or the my posts page depending on where you came from
         
         jQuery(document).ready(function() {
                                // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
@@ -159,13 +159,21 @@
     </div> <!-- /header -->
     
     <div data-role="content" class="detailedPostStyle" id="detailedPost">       
+        
+            <!-- Div that holds cloned post when it is tapped -->
             <div id="myPost">
-            </div> <!-- Div for data inject from the clone -->
-            
-            
-            
-            <div id="replyid">              
+                
             </div>
+            
+            
+            
+            <div id="replyid"><!--Holds unique userID id from selected post that has been opened / tapped-->
+                              <!--Extracted by postReplies.js ajax function-->
+                              <!--Used to link replies to posts-->
+                              <!--The unique userID of each post is stored in database and then stored as a data attribute. When a post is 'tapped' value of attribute is passed into this div -->
+            </div>
+            
+            <!-- Holds replies that appear underneath main post -->
             <div id="replies">   
                 <div id="myPostsReplyId">                   
                 </div>
@@ -196,6 +204,7 @@
  	    
 	<div data-role="content">
         
+    <!--Input form for Posts-->
 	<div id="landmark-1" data-landmark-id="1">
             <form action="" id="postForm" name="postForm" >
                 
@@ -211,8 +220,13 @@
                 <input type="submit" value="Post" class="userInputButton" id="mainPostButton">
             </form>
         </div>
-            <div id='userID'>               
+    
+            <div id='userID'>
+            <!--Stores unique string given to each post to later identify it in database-->
+            <!--This string is also given to all reply posts that reply to this specific post-->
+            <!--This value is updated for each post and extracted by the post.js ajax function-->
             </div>
+            
         </div> <!-- /content -->
 </div>
 <!--------Create a  POST PAGE ends here---------->
@@ -233,7 +247,7 @@
     </div> <!-- /header -->
    
     <div data-role="content">
-        
+        <!--Input form for replies-->
         <div id="landmark-2" data-landmark-id="2">
             <form action="" id="replyForm" name="replyForm">
                 
@@ -265,7 +279,7 @@
     </div><!-- /header -->
 	
     <div data-role="content">
-       
+       <!--Listview where users own posts are injected by ajax - pullMyPosts.js -->
         <div id="myPosts">     
             
             <ul data-role="listview" id="myPostsList" class="swipe-delete">
@@ -273,7 +287,8 @@
             </ul>
             
         </div>
-        
+        <!--These divs hold the current lat, long of the user-->
+        <!--The ajax function in pullData.js extracts these values to help filter posts by location-->
         <div id='extraUserLong'>          
         </div>
         
@@ -312,6 +327,9 @@
     </div><!-- /content -->
     
     <div id="myPostIDStorage"></div>
+    <!--Holds value of swiped listitem - value comes from data-attribute 'data-myPoKey' stored in ajax listview data-->
+    
+    <!--This value is extraced by the delete swipe function in deletePosts.js and then when user confirms delete is sent to delete function 'deleteThisPost()' to delete selected post.-->
 	
 </div>
 
@@ -341,7 +359,8 @@
         <h1 class="profileTextAbout" ><span id="profileAbout"></span></h1>
       </div>
        <div id='profileID'></div> <!-- Store users unique profile ID. -->
-   
+       <!--unique to each user - extracted by pullProfiles.js function to identify users profile data-->
+       <!--This ID comes from users facebook information - their facebook profile ID -->
     </div><!-- /content -->
 	
 </div>
@@ -366,7 +385,8 @@
         <div id="otherProfileError"></div>
          
     </div><!-- /content -->
-    <div id='otherProfileID'></div>
+    <div id='otherProfileID'></div> <!--Holds profileID of selected posts author. extracted by pullProfiles.js ajax function-->
+    
     <div id='otherProfileMainID'></div>
     
 </div>
@@ -527,21 +547,6 @@ console.log(fullDate);
 //Thu May 19 2011 17:25:38 GMT+1000 {}
 
 var postDate = fullDate.getDate()
-// Take numerical month value and make it a month name
-var myMonth = new Array();
-myMonth[0] = "January";
-myMonth[1] = "February";
-myMonth[2] = "March";
-myMonth[3] = "April";
-myMonth[4] = "May";
-myMonth[5] = "June";
-myMonth[6] = "July";
-myMonth[7] = "August";
-myMonth[8] = "September";
-myMonth[9] = "October";
-myMonth[10] = "November";
-myMonth[11] = "December";
-var monthName = myMonth[fullDate.getMonth()];
 
 
     </script>

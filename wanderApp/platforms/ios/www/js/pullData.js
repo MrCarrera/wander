@@ -4,16 +4,8 @@
  * and open the template in the editor.
  */
 
-// Makes back button return user to page they came from.
 
-//jQuery(document).ready(function() {
-//    // CHANGES POST THREAD BACK BUTTON HREF TO #page-activity TO RETURN TO ALL POSTS
-//    $(document).on('click', '.toThisPost', function(){
-//       $("#postThreadBack").attr("href", "#page-activity");
-//    });
-//});
-
-// Calls server to populate main page with users posts.
+// Function to populate main page with all nearby users posts.
 
 $(document).on('pagebeforeshow', '#page-activity', function(){
                //loads data everytime page is shown.
@@ -50,6 +42,11 @@ $(document).on('pagebeforeshow', '#page-activity', function(){
                              
                              if (item.Gender=='male'&& $("#flip-1").val()=="on"){
                              //if statement used to filter by gender - if gender switches changed.
+                             
+                            //ID information from database stored as data-attributes for use within the app.
+                            //E.g 'data-key' = userID (unique id of each post)
+                            //E.g  'data-profileUserID' = profileID (Unique ID of each user)
+                            //Transference of values from database occurs in PHP files
                              
                              console.log(JSON.stringify(item)); //Output posts in a list.
                              $('#myListView').append('<li class="ui-nodisc-icon" data-icon="listIcon" ><a href="" class="toThisPost" data-key='+item.randomPostId+' data-profileUserID='+item.mainUserProfileID+'><img class="feedImage" src='+item.Pic+'></img><p><strong>'+item.Name+", "+item.Gender+'</p></strong>'
@@ -124,11 +121,10 @@ $(document).on('tap', '#myListView li a', function(){   //calls for the function
                //This allows us to pull the profile of the user who created the post by selecting a profile with a corresponding unique profileID
                
               
-               //$(this).attr("href", "#individualProfile");
-               
+                              
                $(this).clone().appendTo('#myPost').append('<div id="linkToProfile"><a href="#"></a></div>');
                //Clone selected listview Values.
-               
+               //Append anchor tag with href to div to allow it to link to selected post's user profile
               
                $('#myPost').value(function (index, value) {
                                   return value + ' at ' + index;

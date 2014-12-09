@@ -14,6 +14,8 @@
 
     // device APIs are available
     //
+
+    //On device ready get users location - Add options to get high accuracy
     function onDeviceReady() {
         
         var options = {maximumAge: 0, timeout: 15000, enableHighAccuracy:true};
@@ -23,7 +25,7 @@
 
 
     // onSuccess Geolocation
-    //
+    
     function onSuccess(position) {
         //Store lat and long for use in ajax posts
         document.getElementById('userLat').value = position.coords.latitude;
